@@ -14,57 +14,49 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <WhyChooseUs main />
+      <section className='space-y-16 mt-8'>
+        <WhyChooseUs />
 
-      {/* PRODUCTS */}
-      <section className='bg-gray-100'>
-        <div className='container mx-auto px-4 py-8 space-y-4 '>
+        {/* PRODUCTS */}
+        <section className='container mx-auto px-4 space-y-4'>
           <Heading title='products' />
-          <div className='grid grid-cols-1 gap-4'>
+          <div className='grid grid-cols-2 gap-4'>
             <Card
-              src='/sample.jpg'
-              alt='sample image'
-              width='640'
-              height='467'
+              textOnly
               title='3M Crystalline'
               desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quae! Impedit dignissimos iure quisquam a?'
               ctaURL='#'
             />
             <Card
-              src='/sample.jpg'
-              alt='sample image'
-              width='640'
-              height='467'
+              textOnly
               title='3M Ceramic IR'
               desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quae! Impedit dignissimos iure quisquam a?'
               ctaURL='#'
             />
             <Card
-              src='/sample.jpg'
-              alt='sample image'
-              width='640'
-              height='467'
+              textOnly
               title='3M Color Stable'
               desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quae! Impedit dignissimos iure quisquam a?'
               ctaURL='#'
             />
             <Card
-              src='/sample.jpg'
-              alt='sample image'
-              width='640'
-              height='467'
+              textOnly
               title='3M FX Premium'
               desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quae! Impedit dignissimos iure quisquam a?'
               ctaURL='#'
             />
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ABOUT US */}
-      <section className='bg-gray-50'>
-        <div className='container mx-auto px-4 py-8 space-y-4'>
+        {/* ABOUT US */}
+        <section className='container mx-auto px-4 pb-8 space-y-4'>
           <Heading title='about us' />
+          <Image
+            src='/sample.jpg'
+            alt='Card sample Image'
+            width={640}
+            height={427}
+          />
           <Description
             desc='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
             harum voluptatem quis. Velit quisquam iusto architecto at asperiores
@@ -72,7 +64,7 @@ export default function Home() {
             illo, magnam alias nulla non. Alias provident magnam ipsa, aliquid
             autem explicabo?'
           />
-        </div>
+        </section>
       </section>
       <Contact />
       <Map />
