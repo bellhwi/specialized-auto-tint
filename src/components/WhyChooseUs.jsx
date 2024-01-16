@@ -10,22 +10,22 @@ const WhyChooseUs = ({ main }) => {
           <div className='grid grid-cols-2 gap-4'>
             <Card
               title='3M Authorized Dealer'
-              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae modi magnam voluptatem reprehenderit animi a est distinctio placeat facere.'
+              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
               textOnly
             />
             <Card
               title='Computerized Machine Cut'
-              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae modi magnam voluptatem reprehenderit animi a est distinctio placeat facere.'
+              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
               textOnly
             />
             <Card
               title='Exquisite Finish'
-              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae modi magnam voluptatem reprehenderit animi a est distinctio placeat facere.'
+              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
               textOnly
             />
             <Card
               title='15+ Years of Experience'
-              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae modi magnam voluptatem reprehenderit animi a est distinctio placeat facere.'
+              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
               textOnly
             />
           </div>
@@ -33,7 +33,7 @@ const WhyChooseUs = ({ main }) => {
           <div className='grid grid-cols-1 gap-4'>
             <Card
               title='3M Authorized Dealer'
-              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae modi magnam voluptatem reprehenderit animi a est distinctio placeat facere.'
+              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
               src='/sample.jpg'
               alt='sample image'
               width='640'
@@ -41,7 +41,7 @@ const WhyChooseUs = ({ main }) => {
             />
             <Card
               title='Computerized Machine Cut'
-              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae modi magnam voluptatem reprehenderit animi a est distinctio placeat facere.'
+              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
               src='/sample.jpg'
               alt='sample image'
               width='640'
@@ -49,7 +49,7 @@ const WhyChooseUs = ({ main }) => {
             />
             <Card
               title='Exquisite Finish'
-              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae modi magnam voluptatem reprehenderit animi a est distinctio placeat facere.'
+              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
               src='/sample.jpg'
               alt='sample image'
               width='640'

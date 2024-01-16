@@ -30,8 +30,8 @@ const Navbar = () => {
       <ul
         className={
           showMobileNav
-            ? 'translate-x-0 w-72 fixed right-0 top-0 bottom-0 p-8 space-y-4 bg-black text-white flex flex-col z-50 transition-all duration-500'
-            : 'translate-x-72 w-72 fixed right-0 top-0 bottom-0 p-8 space-y-4 bg-black text-white flex flex-col z-50 transition-all duration-500'
+            ? 'translate-x-0 w-64 fixed right-0 top-0 bottom-0 p-8 space-y-4 bg-black text-white flex flex-col z-50 transition-all duration-500'
+            : 'translate-x-64 w-64 fixed right-0 top-0 bottom-0 p-8 space-y-4 bg-black text-white flex flex-col z-50 transition-all duration-500'
         }
       >
         <Link href='#' className='uppercase'>
