@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.animation-cursor {
+  animation: cursor-blink 1s infinite; /* Add blinking animation */
+}
+
+.slider {
+  animation: flowAnimation 10s linear infinite; /* Adjust the animation duration as needed */
+}
+
+@keyframes cursor-blink {
+  0%,
+  100% {
+    opacity: 1; /* Set opacity to 1 for the starting and ending keyframes */
+  }
+  50% {
+    opacity: 0; /* Set opacity to 0 for the middle keyframe */
+  }
+}

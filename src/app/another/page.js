@@ -14,7 +14,7 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <WhyChooseUs />
+      <WhyChooseUs alt />
 
       {/* PRODUCTS */}
       <section className='bg-gray-100'>

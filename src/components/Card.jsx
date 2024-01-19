@@ -5,9 +5,15 @@ import Description from './Description'
 
 const Card = ({ textOnly, title, desc, src, alt, width, height, ctaURL }) => {
   return (
-    <div className='rounded shadow-lg'>
+    <div className='rounded-sm shadow-lg'>
       {textOnly ? null : (
-        <Image src={src} alt={alt} width={width} height={height} />
+        <Image
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          className='w-full'
+        />
       )}
 
       <div className='p-4'>

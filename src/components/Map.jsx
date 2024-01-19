@@ -2,10 +2,12 @@ const Map = () => {
   return (
     <div>
       <iframe
-        src='https://www.google.com/maps/d/u/1/embed?mid=1NoAaU5pFpcSaTSoO6hWckpXcaazQFV4&ehbc=2E312F&noprof=1'
-        width='640'
-        height='480'
-        className='w-full'
+        width='600'
+        height='450'
+        loading='lazy'
+        allowfullscreen
+        src='https://www.google.com/maps/embed/v1/place?q=place_id:ChIJycWP7-Pn3IARTiG7pd2l22I&key=AIzaSyAsYP4vnD1mFgX4wWBRRd6CT0O1_hPhg6s'
+        className='w-full border-none'
       ></iframe>
     </div>
   )

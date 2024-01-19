@@ -3,68 +3,75 @@ import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import Heading from '@/components/Heading'
-import Card from '@/components/Card'
 import Description from '@/components/Description'
 import Contact from '@/components/Contact'
 import Map from '@/components/Map'
 import Footer from '@/components/Footer'
+import Accordion from '@/components/Accordion'
+import { products } from '@/data/data'
 
 export default function Home() {
   return (
     <main>
       <Navbar />
       <Hero />
-      <WhyChooseUs main />
+      <WhyChooseUs />
 
-      {/* PRODUCTS */}
+      {/* OUR PRODUCTS */}
       <section className='bg-gray-100'>
         <div className='container mx-auto px-4 py-8 space-y-4 '>
-          <Heading title='products' />
-          <div className='grid grid-cols-1 gap-4'>
-            <Card
-              src='/sample.jpg'
-              alt='sample image'
-              width='640'
-              height='467'
-              title='3M Crystalline'
-              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quae! Impedit dignissimos iure quisquam a?'
-              ctaURL='#'
-            />
-            <Card
-              src='/sample.jpg'
-              alt='sample image'
-              width='640'
-              height='467'
-              title='3M Ceramic IR'
-              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quae! Impedit dignissimos iure quisquam a?'
-              ctaURL='#'
-            />
-            <Card
-              src='/sample.jpg'
-              alt='sample image'
-              width='640'
-              height='467'
-              title='3M Color Stable'
-              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quae! Impedit dignissimos iure quisquam a?'
-              ctaURL='#'
-            />
-            <Card
-              src='/sample.jpg'
-              alt='sample image'
-              width='640'
-              height='467'
-              title='3M FX Premium'
-              desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quae! Impedit dignissimos iure quisquam a?'
-              ctaURL='#'
-            />
+          <Heading title='our products' />
+          <div className=''>
+            {products.map((product, index) => {
+              return (
+                <Accordion
+                  key={index}
+                  title={product.title}
+                  content={product.content}
+                  href={product.href}
+                />
+              )
+            })}
           </div>
         </div>
       </section>
+      {/* QUALITY ASSURANCE */}
+      <section className='relative text-white'>
+        <Image
+          src='/rolls-royce-side.jpg'
+          alt='rolls royce car'
+          width={1920}
+          height={1080}
+          className='absolute w-full h-full object-cover brightness-50'
+        />
+        <div className='relative space-y-4 container mx-auto px-4 py-8'>
+          <Heading white title='3M Lifetime Warranty' />
+          <p className='text-gray-200'>
+            3M warrants to the original purchaser that each 3M brand
+            Professional Line Product will be free from defects in materials and
+            manufacture for as long as you own it.{' '}
+            <a
+              href='https://multimedia.3m.com/mws/media/157410O/lifetime-warranty-and-limited-remedy.pdf'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='uppercase text-blue-400'
+            >
+              learn more
+            </a>
+          </p>
+        </div>
+      </section>
 
-      {/* ABOUT US */}
+      {/* ABOUT US & TESTIMONIAL*/}
       <section className='bg-gray-50'>
         <div className='container mx-auto px-4 py-8 space-y-4'>
           <Heading title='about us' />
+          <Image
+            src='/sample.png'
+            width='259'
+            height='194'
+            className='mx-auto w-full'
+          />
           <Description
             desc='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
             harum voluptatem quis. Velit quisquam iusto architecto at asperiores
@@ -74,6 +81,7 @@ export default function Home() {
           />
         </div>
       </section>
+
       <Contact />
       <Map />
       <Footer />
