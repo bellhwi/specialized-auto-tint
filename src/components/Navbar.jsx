@@ -14,7 +14,7 @@ const Navbar = ({ alt }) => {
     setShowQuotationModal(!showQuotationModal)
   }
   const [showMobileNav, setShowMobileNav] = useState(false)
-  const [showQuotationModal, setShowQuotationModal] = useState(false)
+  const [showQuotationModal, setShowQuotationModal] = useState(true)
 
   return (
     <nav>
@@ -53,11 +53,15 @@ const Navbar = ({ alt }) => {
           portfolio
         </Link>
         <hr className={`w-full border-gray-200 ${alt && 'border-gray-400'}`} />
-        <Link href='#' className='uppercase'>
+        <Link href='#about-us' className='uppercase' onClick={handleMobileMenu}>
           about us
         </Link>
         <hr className={`w-full border-gray-200 ${alt && 'border-gray-400'}`} />
-        <Link href='#' className='uppercase'>
+        <Link
+          href='#quality-assurance'
+          className='uppercase'
+          onClick={handleMobileMenu}
+        >
           quality assurance
         </Link>
         <div
@@ -87,9 +91,9 @@ const Navbar = ({ alt }) => {
             className='fixed top-0 left-0 bottom-0 right-0 bg-black opacity-50 z-10'
             onClick={handleQuotationModal}
           ></div>
-          <div className='fixed top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/3 bg-gray-50 p-8 z-20 w-3/4 rounded-sm text-center'>
-            <Subheading title='Request a quote by' />
-            <div className='flex items-center justify-center mt-8 space-x-2'>
+          <div className='fixed top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/3 bg-gray-50 p-8 z-20 w-4/5 rounded-sm text-center'>
+            <Subheading className='mt-4' title='Request a quote by' />
+            <div className='flex items-center justify-center mt-4 space-x-2'>
               <a
                 href='tel:949-341-9100'
                 className='hover:rounded-sm hover:bg-gray-200 p-4 transition-all ease-in duration-300'
@@ -111,7 +115,7 @@ const Navbar = ({ alt }) => {
               </a>
             </div>
             <div
-              className='text-gray-700 absolute top-0 right-0 mx-4 my-2 cursor-pointer'
+              className='text-gray-700 absolute top-0 right-0 m-4 cursor-pointer'
               onClick={handleQuotationModal}
             >
               <i class='fa-solid fa-x'></i>

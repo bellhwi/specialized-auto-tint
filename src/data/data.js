@@ -44,7 +44,7 @@ let specialties = [
   },
   {
     title: 'Reliable Customer Services',
-    desc: 'With a customer service approach rooted in honesty and kindness, we prioritize your satisfaction without any upselling tactics. .',
+    desc: 'With a customer service approach rooted in honesty and kindness, we prioritize your satisfaction without any upselling tactics.',
     src: '/sample.png',
     alt: 'sample image',
     width: '259',
