@@ -14,7 +14,7 @@ const Navbar = ({ alt }) => {
     setShowQuotationModal(!showQuotationModal)
   }
   const [showMobileNav, setShowMobileNav] = useState(false)
-  const [showQuotationModal, setShowQuotationModal] = useState(true)
+  const [showQuotationModal, setShowQuotationModal] = useState(false)
 
   return (
     <nav>
