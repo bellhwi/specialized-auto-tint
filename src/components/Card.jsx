@@ -3,7 +3,18 @@ import Link from 'next/link'
 import Subheading from './Subheading'
 import Description from './Description'
 
-const Card = ({ textOnly, title, desc, src, alt, width, height, ctaURL }) => {
+const Card = ({
+  light,
+  dark,
+  textOnly,
+  title,
+  desc,
+  src,
+  alt,
+  width,
+  height,
+  ctaURL,
+}) => {
   return (
     <div className='rounded-sm shadow-lg'>
       {textOnly ? null : (
@@ -17,8 +28,23 @@ const Card = ({ textOnly, title, desc, src, alt, width, height, ctaURL }) => {
       )}
 
       <div className='p-4'>
-        <Subheading title={title} />
-        <Description desc={desc} />
+        {light ? (
+          <>
+            <Subheading light title={title} />
+            <Description light desc={desc} />
+          </>
+        ) : dark ? (
+          <>
+            <Subheading dark title={title} />
+            <Description dark desc={desc} />
+          </>
+        ) : (
+          <>
+            <Subheading title={title} />
+            <Description desc={desc} />
+          </>
+        )}
+
         {ctaURL ? (
           <Link
             href={ctaURL}

@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section className='bg-black text-white py-8' id='contact'>
+    <section className='text-white py-8' id='contact'>
       <div className='grid grid-cols-1 gap-8'>
         <div className='flex flex-col items-center justify-center'>
           <h3 className='text-white text-xl font-semibold'>Call Us</h3>
@@ -11,7 +11,7 @@ const Contact = () => {
             </a>
           </div>
         </div>
-
+        <hr className='w-1/2 mx-auto border border-zinc-500' />
         <div className='flex flex-col items-center justify-center'>
           <h3 className='text-white text-xl font-semibold'>Email Us</h3>
           <div className='flex items-center mt-2'>
@@ -21,7 +21,7 @@ const Contact = () => {
             </a>
           </div>
         </div>
-
+        <hr className='w-1/2 mx-auto border border-zinc-500' />
         <div className='flex flex-col items-center justify-center'>
           <h3 className='text-white text-xl font-semibold'>Visit Us</h3>
           <div className='flex items-center mt-2 text-gray-200'>

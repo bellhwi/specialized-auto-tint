@@ -1,27 +1,23 @@
 let products = [
   {
-    title: '3M Crystalline',
+    title: 'Crystalline',
     content:
       'A clear breakthrough in automotive window films. The Crystalline Series rejects more heat than many dark films without changing the appearance of your vehicle, making it the superior choice for comfort.',
-    href: '#',
   },
   {
-    title: '3M Ceramic IR',
+    title: 'Ceramic IR',
     content:
       'Cover your glass in cool with 3M advanced nano-ceramic technology.',
-    href: '#',
   },
   {
-    title: '3M Color Stable',
+    title: 'Color Stable',
     content:
       'The Color Stable Series rivals tinted factory glass in its rich appearance. The nano-carbon is dispersed throughout the thickness of the film, ensuring  years of performance with no chance of the film turning purple.',
-    href: '#',
   },
   {
-    title: '3M FX Premium',
+    title: 'FX Premium',
     content:
       'Hot look on the outside, cool and private on the inside.  The FX-PM Series window film blocks up to 99% of UV light to keep you cool at an affordable price.',
-    href: '#',
   },
 ]
 

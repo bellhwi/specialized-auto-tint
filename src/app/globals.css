@@ -10,6 +10,10 @@
   animation: flowAnimation 10s linear infinite; /* Adjust the animation duration as needed */
 }
 
+.brightness-dark {
+  filter: brightness(25%);
+}
+
 @keyframes cursor-blink {
   0%,
   100% {

@@ -1,9 +1,9 @@
-const Subheading = ({ title, white, className }) => {
+const Subheading = ({ title, light, dark }) => {
   return (
     <h3
       className={`text-xl uppercase font-semibold ${
-        white ? 'text-white' : 'text-gray-700'
-      } ${className}`}
+        light ? 'text-gray-200' : dark ? 'text-gray-900' : 'text-gray-700'
+      }`}
     >
       {title}
     </h3>

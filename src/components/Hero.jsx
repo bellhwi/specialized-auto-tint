@@ -1,5 +1,5 @@
 'use client'
-// Import necessary dependencies
+import Navbar from './Navbar'
 import Image from 'next/image'
 import { useRef, useEffect } from 'react'
 
@@ -12,24 +12,17 @@ const Hero = () => {
     const textElement = textRef.current
 
     let index = 0
-    let reverse = false
 
     const typeText = () => {
-      if (!reverse && index <= text.length) {
+      if (index <= text.length) {
         textElement.textContent = text.substring(0, index)
         index++
-      } else if (!reverse) {
-        reverse = true
-      } else if (index >= 0) {
-        textElement.textContent = text.substring(0, index)
-        index--
       } else {
-        reverse = false
-        index = 0 // Reset index for next iteration
+        clearInterval(intervalId) // Clear the interval after typing is complete
       }
     }
 
-    const intervalId = setInterval(typeText, 80) // Adjust the interval for typing and removing speed
+    const intervalId = setInterval(typeText, 120) // Adjust the interval for typing speed
 
     return () => {
       clearInterval(intervalId) // Clear the interval on component unmount
@@ -39,13 +32,22 @@ const Hero = () => {
   return (
     <div className='relative text-white text-center'>
       <Image
-        src='/super-car.jpg'
-        alt='Super car'
-        width={640}
-        height={427}
-        className='absolute w-full h-full object-cover brightness-50'
+        src='/red-porsche.jpg'
+        alt='Red porsche'
+        width={2048}
+        height={1536}
+        className='absolute w-full h-full object-cover'
       />
-      <div className='relative space-y-4 container mx-auto px-4 py-16'>
+      <div class='absolute flex inset-0 opacity-70'>
+        <div className='w-1/6 h-full bg-zinc-400'></div>
+        <div className='w-1/6 h-full bg-zinc-500'></div>
+        <div className='w-1/6 h-full bg-zinc-600'></div>
+        <div className='w-1/6 h-full bg-zinc-700'></div>
+        <div className='w-1/6 h-full bg-zinc-800'></div>
+        <div className='w-1/6 h-full bg-zinc-950'></div>
+      </div>
+      <Navbar />
+      <div className='relative space-y-4 container mx-auto px-4 py-8'>
         <h1 className='text-4xl uppercase font-semibold'>auto window tint</h1>
         <div className='flex justify-center items-center'>
           <p
