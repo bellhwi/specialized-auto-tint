@@ -11,7 +11,7 @@
 }
 
 .brightness-dark {
-  filter: brightness(25%);
+  filter: brightness(30%);
 }
 
 @keyframes cursor-blink {

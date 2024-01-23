@@ -9,16 +9,16 @@ const Accordion = ({ title, content, style, isOpen, onToggle }) => {
   }
 
   const contentStyle = [
-    'bg-gradient-to-r from-orange-400 to-orange-600',
-    'bg-gradient-to-r from-violet-400 to-violet-600',
-    'bg-gradient-to-r from-indigo-400 to-indigo-600',
-    'bg-gradient-to-r from-pink-400 to-pink-600',
+    'bg-gradient-to-r from-orange-200 to-orange-500',
+    'bg-gradient-to-r from-violet-200 to-violet-500',
+    'bg-gradient-to-r from-indigo-200 to-indigo-500',
+    'bg-gradient-to-r from-pink-200 to-pink-500',
   ]
 
   return (
     <div
       className={`border-b px-2 py-3 border-gray-700 last:border-none text-gray-800 ${
-        isOpen && `${contentStyle[style]} border-none `
+        isOpen && `${contentStyle[style]} border-none rounded-sm`
       }`}
       onClick={toggleAccordion}
     >

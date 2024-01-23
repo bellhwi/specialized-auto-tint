@@ -22,15 +22,15 @@ const Navbar = () => {
         <Link href={`/`}>
           <Logo />
         </Link>
-        <div className='flex items-center space-x-4'>
+        <div className='flex items-center space-x-6'>
           <button
-            className='uppercase text-xs bg-primary text-white py-2 px-4 rounded-sm'
+            className='uppercase text-xs bg-primary font-semibold text-white py-2 px-4 rounded-sm'
             onClick={handleQuotationModal}
           >
             Quote
           </button>
           <Link href='#' onClick={handleMobileMenu}>
-            <i className='fa-solid fa-bars'></i>
+            <i className='fa-solid fa-bars text-xl'></i>
           </Link>
         </div>
       </div>

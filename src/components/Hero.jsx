@@ -36,7 +36,7 @@ const Hero = () => {
         alt='Red porsche'
         width={2048}
         height={1536}
-        className='absolute w-full h-full object-cover'
+        className='absolute w-full h-full object-cover brightness-50'
       />
       <div class='absolute flex inset-0 opacity-70'>
         <div className='w-1/6 h-full bg-zinc-400'></div>
