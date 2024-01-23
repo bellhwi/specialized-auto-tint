@@ -15,7 +15,7 @@ const Products = () => {
   return (
     <section>
       <div className='container mx-auto px-4 py-8 space-y-4 '>
-        <Heading title='our products' />
+        <Heading light title='our products' />
         <div>
           {products.map((product, index) => {
             return (

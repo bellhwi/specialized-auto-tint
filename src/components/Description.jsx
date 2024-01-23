@@ -11,7 +11,7 @@ const Description = ({ desc, nomargin, light, dark, href, blue }) => {
           : dark
           ? 'text-gray-800'
           : blue
-          ? 'text-blue-400'
+          ? 'text-blue-600'
           : 'text-gray-600'
       }`}
     >
@@ -21,7 +21,7 @@ const Description = ({ desc, nomargin, light, dark, href, blue }) => {
           href={href}
           target='_blank'
           rel='noopener noreferrer'
-          className='uppercase text-blue-400 inline'
+          className='uppercase text-blue-600 inline'
         >
           learn more
         </a>

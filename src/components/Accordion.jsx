@@ -10,10 +10,10 @@ const Accordion = ({ title, content, style, isOpen, onToggle }) => {
   }
 
   const contentStyle = [
-    'bg-gradient-to-r from-orange-200 to-orange-500',
-    'bg-gradient-to-r from-violet-200 to-violet-500',
-    'bg-gradient-to-r from-indigo-200 to-indigo-500',
-    'bg-gradient-to-r from-pink-200 to-pink-500',
+    'bg-gradient-to-r from-orange-500 to-orange-700',
+    'bg-gradient-to-r from-violet-500 to-violet-700',
+    'bg-gradient-to-r from-indigo-500 to-indigo-700',
+    'bg-gradient-to-r from-pink-500 to-pink-700',
   ]
 
   return (
@@ -32,19 +32,19 @@ const Accordion = ({ title, content, style, isOpen, onToggle }) => {
             height='12'
             className='w-8 mr-2'
           />
-          <Subheading dark title={title} />
+          <Subheading light title={title} />
         </div>
         <button>
           {isOpen ? (
-            <i className='fa-solid fa-chevron-up text-gray-800'></i>
+            <i className='fa-solid fa-chevron-up text-gray-300'></i>
           ) : (
-            <i className='fa-solid fa-chevron-down text-gray-800'></i>
+            <i className='fa-solid fa-chevron-down text-gray-300'></i>
           )}
         </button>
       </div>
       {isOpen && (
         <div className='p-2'>
-          <Description dark desc={content} />
+          <Description light desc={content} />
         </div>
       )}
     </div>

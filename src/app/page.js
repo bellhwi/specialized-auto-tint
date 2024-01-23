@@ -14,14 +14,14 @@ export default function Home() {
       <Hero />
       <WhyChooseUs />
 
-      <section className='bg-gradient-to-b from-zinc-100 to-zinc-950'>
+      <section className='bg-gradient-to-b from-zinc-950 to-zinc-100'>
         <Products />
         {/* ABOUT US */}
         <section id='about-us'>
           <div className='container mx-auto px-4 py-8 space-y-4'>
-            <Heading dark title='about us' />
+            <Heading light title='about us' />
             <Description
-              dark
+              light
               desc='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
             harum voluptatem quis. Velit quisquam iusto architecto at asperiores
             fugiat quod distinctio voluptas debitis ullam ipsum enim quos sed
@@ -40,13 +40,13 @@ export default function Home() {
         {/* QUALITY ASSURANCE */}
         <section className='relative' id='quality-assurance'>
           <div className='relative space-y-4 container mx-auto px-4 py-8'>
-            <Heading light title='quality assurance' />
+            <Heading dark title='quality assurance' />
             <Description
+              dark
               desc='3M warrants to the original purchaser that each 3M brand
               Professional Line Product will be free from defects in materials
               and manufacture for as long as you own it.'
               href='https://multimedia.3m.com/mws/media/157410O/lifetime-warranty-and-limited-remedy.pdf'
-              light
             />
           </div>
         </section>
