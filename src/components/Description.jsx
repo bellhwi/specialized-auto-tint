@@ -1,11 +1,31 @@
-const Description = ({ desc, nomargin, light, dark }) => {
+import { Open_Sans } from 'next/font/google'
+
+const open_sans = Open_Sans({ subsets: ['latin'] })
+
+const Description = ({ desc, nomargin, light, dark, href, blue }) => {
   return (
     <p
-      className={` ${nomargin ? null : 'mt-2'} ${
-        light ? 'text-gray-300' : dark ? 'text-gray-800' : 'text-gray-600'
+      className={`${open_sans.className} ${nomargin ? null : 'mt-2'} ${
+        light
+          ? 'text-gray-300'
+          : dark
+          ? 'text-gray-800'
+          : blue
+          ? 'text-blue-400'
+          : 'text-gray-600'
       }`}
     >
-      {desc}
+      {desc}{' '}
+      {href && (
+        <a
+          href={href}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='uppercase text-blue-400 inline'
+        >
+          learn more
+        </a>
+      )}
     </p>
   )
 }

@@ -2,6 +2,9 @@
 import Navbar from './Navbar'
 import Image from 'next/image'
 import { useRef, useEffect } from 'react'
+import { Open_Sans } from 'next/font/google'
+
+const open_sans = Open_Sans({ subsets: ['latin'] })
 
 // Define the Hero component
 const Hero = () => {
@@ -22,7 +25,7 @@ const Hero = () => {
       }
     }
 
-    const intervalId = setInterval(typeText, 120) // Adjust the interval for typing speed
+    const intervalId = setInterval(typeText, 100) // Adjust the interval for typing speed
 
     return () => {
       clearInterval(intervalId) // Clear the interval on component unmount
@@ -51,7 +54,7 @@ const Hero = () => {
         <h1 className='text-4xl uppercase font-semibold'>auto window tint</h1>
         <div className='flex justify-center items-center'>
           <p
-            className='text-2xl overflow-hidden whitespace-nowrap'
+            className={`text-2xl overflow-hidden whitespace-nowrap ${open_sans.className}`}
             ref={textRef}
           ></p>
           <span className='animation-cursor w-0.5 h-8 bg-white'></span>

@@ -41,19 +41,13 @@ export default function Home() {
         <section className='relative' id='quality-assurance'>
           <div className='relative space-y-4 container mx-auto px-4 py-8'>
             <Heading light title='quality assurance' />
-            <p className='text-gray-300'>
-              3M warrants to the original purchaser that each 3M brand
+            <Description
+              desc='3M warrants to the original purchaser that each 3M brand
               Professional Line Product will be free from defects in materials
-              and manufacture for as long as you own it.{' '}
-              <a
-                href='https://multimedia.3m.com/mws/media/157410O/lifetime-warranty-and-limited-remedy.pdf'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='uppercase text-blue-400 inline'
-              >
-                learn more
-              </a>
-            </p>
+              and manufacture for as long as you own it.'
+              href='https://multimedia.3m.com/mws/media/157410O/lifetime-warranty-and-limited-remedy.pdf'
+              light
+            />
           </div>
         </section>
         <Contact />

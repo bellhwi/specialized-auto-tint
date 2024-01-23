@@ -1,6 +1,7 @@
 'use client'
 import Subheading from './Subheading'
 import Image from 'next/image'
+import Description from './Description'
 
 // Modify the Accordion component
 const Accordion = ({ title, content, style, isOpen, onToggle }) => {
@@ -18,7 +19,7 @@ const Accordion = ({ title, content, style, isOpen, onToggle }) => {
   return (
     <div
       className={`border-b px-2 py-3 border-gray-700 last:border-none text-gray-800 ${
-        isOpen && `${contentStyle[style]} border-none rounded-sm`
+        isOpen && `${contentStyle[style]} border-none rounded-b`
       }`}
       onClick={toggleAccordion}
     >
@@ -41,7 +42,11 @@ const Accordion = ({ title, content, style, isOpen, onToggle }) => {
           )}
         </button>
       </div>
-      {isOpen && <div className={`p-2 `}>{content} </div>}
+      {isOpen && (
+        <div className='p-2'>
+          <Description dark desc={content} />
+        </div>
+      )}
     </div>
   )
 }
