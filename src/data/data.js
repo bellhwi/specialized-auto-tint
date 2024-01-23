@@ -47,4 +47,31 @@ let specialties = [
     height: '194',
   },
 ]
-export { products, specialties }
+
+let specialtiesPPF = [
+  {
+    title: 'Lorem Ipsum Dolor',
+    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati harum voluptatem quis. Velit quisquam iusto architecto at asperiores fugiat quod distinctio voluptas debitis ullam ipsum enim quos sed illo, magnam alias nulla non. Alias provident magnam ipsa, aliquid autem explicabo?',
+    src: '/sample.png',
+    alt: 'sample image',
+    width: '259',
+    height: '194',
+  },
+  {
+    title: 'Lorem Ipsum Dolor',
+    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati harum voluptatem quis. Velit quisquam iusto architecto at asperiores fugiat quod distinctio voluptas debitis ullam ipsum enim quos sed illo, magnam alias nulla non. Alias provident magnam ipsa, aliquid autem explicabo?',
+    src: '/sample.png',
+    alt: 'sample image',
+    width: '259',
+    height: '194',
+  },
+  {
+    title: 'Lorem Ipsum Dolor',
+    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati harum voluptatem quis. Velit quisquam iusto architecto at asperiores fugiat quod distinctio voluptas debitis ullam ipsum enim quos sed illo, magnam alias nulla non. Alias provident magnam ipsa, aliquid autem explicabo?',
+    src: '/sample.png',
+    alt: 'sample image',
+    width: '259',
+    height: '194',
+  },
+]
+export { products, specialties, specialtiesPPF }

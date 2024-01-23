@@ -30,7 +30,7 @@ const Navbar = () => {
             Quote
           </button>
           <Link href='#' onClick={handleMobileMenu}>
-            <i className='fa-solid fa-bars text-xl'></i>
+            <i className='fa-solid fa-bars text-xl text-white'></i>
           </Link>
         </div>
       </div>
