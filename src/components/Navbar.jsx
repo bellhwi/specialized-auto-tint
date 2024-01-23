@@ -14,7 +14,7 @@ const Navbar = () => {
     setShowQuotationModal(!showQuotationModal)
   }
   const [showMobileNav, setShowMobileNav] = useState(false)
-  const [showQuotationModal, setShowQuotationModal] = useState(false)
+  const [showQuotationModal, setShowQuotationModal] = useState(true)
 
   return (
     <nav className='relative z-10'>
