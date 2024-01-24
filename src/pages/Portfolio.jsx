@@ -17,11 +17,11 @@ const Portfolio = () => {
 
   useEffect(() => {
     document.addEventListener('touchstart', handleTouchStart, false)
-    document.addEventListener('touchmove', handleTouchMove, false)
+    document.addEventListener('touchend', handleTouchEnd, false)
 
     return () => {
       document.removeEventListener('touchstart', handleTouchStart)
-      document.removeEventListener('touchmove', handleTouchMove)
+      document.removeEventListener('touchend', handleTouchEnd)
     }
   }, [])
 
@@ -37,25 +37,28 @@ const Portfolio = () => {
     xDown = event.touches[0].clientX
   }
 
-  function handleTouchMove(event) {
+  function handleTouchEnd(event) {
     if (!xDown) {
       return
     }
 
-    let xUp = event.touches[0].clientX
+    let xUp = event.changedTouches[0].clientX
     let xDiff = xUp - xDown
 
     // Swipe to right
     if (xDiff < 0) {
-      navigateToNextPage()
+      let abs = Math.abs(xDiff)
+      abs > 100 && navigateToNextPage()
     }
     // Swipe to left
     else {
-      navigateToPreviousPage()
+      let abs = Math.abs(xDiff)
+      abs > 100 && navigateToPreviousPage()
     }
 
     xDown = null
   }
+
   return (
     <section className='bg-zinc-950 relative'>
       <Pager next='/' previous='/auto-surface-protection' />
