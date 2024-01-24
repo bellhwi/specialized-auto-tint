@@ -1,3 +1,5 @@
+'use client'
+
 import Title from '@/components/Title'
 import Navbar from '@/components/Navbar'
 import Description from '@/components/Description'
@@ -6,10 +8,57 @@ import Image from 'next/image'
 import Contact from '@/components/Contact'
 import Map from '@/components/Map'
 import Footer from '@/components/Footer'
+import Pager from '@/components/Pager'
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
 const Portfolio = () => {
+  const router = useRouter()
+
+  useEffect(() => {
+    document.addEventListener('touchstart', handleTouchStart, false)
+    document.addEventListener('touchmove', handleTouchMove, false)
+
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart)
+      document.removeEventListener('touchmove', handleTouchMove)
+    }
+  }, [])
+
+  let xDown = null
+  const navigateToNextPage = () => {
+    router.push('/')
+  }
+  const navigateToPreviousPage = () => {
+    router.push('/auto-surface-protection')
+  }
+
+  function handleTouchStart(event) {
+    xDown = event.touches[0].clientX
+  }
+
+  function handleTouchMove(event) {
+    if (!xDown) {
+      return
+    }
+
+    let xUp = event.touches[0].clientX
+    let xDiff = xUp - xDown
+
+    // Swipe to right
+    if (xDiff < 0) {
+      navigateToNextPage()
+    }
+    // Swipe to left
+    else {
+      navigateToPreviousPage()
+    }
+
+    xDown = null
+  }
   return (
-    <section className='bg-zinc-950 overflow-hidden'>
+    <section className='bg-zinc-950 relative'>
+      <Pager next='/' previous='/auto-surface-protection' />
       <Navbar />
       <div className='max-w-sm text-center mx-auto p-4'>
         <Title title='portfolio' />

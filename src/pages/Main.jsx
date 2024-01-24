@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Products from '@/components/Products'
 import Hero from '@/components/Hero'
@@ -7,10 +9,59 @@ import Description from '@/components/Description'
 import Contact from '@/components/Contact'
 import Map from '@/components/Map'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
+import Pager from '@/components/Pager'
 
 export default function Main() {
+  const router = useRouter()
+
+  useEffect(() => {
+    document.addEventListener('touchstart', handleTouchStart, false)
+    document.addEventListener('touchmove', handleTouchMove, false)
+
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart)
+      document.removeEventListener('touchmove', handleTouchMove)
+    }
+  }, [])
+
+  let xDown = null
+  const navigateToNextPage = () => {
+    router.push('/auto-surface-protection')
+  }
+  const navigateToPreviousPage = () => {
+    router.push('/portfolio')
+  }
+
+  function handleTouchStart(event) {
+    xDown = event.touches[0].clientX
+  }
+
+  function handleTouchMove(event) {
+    if (!xDown) {
+      return
+    }
+
+    let xUp = event.touches[0].clientX
+    let xDiff = xUp - xDown
+
+    // Swipe to right
+    if (xDiff < 0) {
+      navigateToNextPage()
+    }
+    // Swipe to left
+    else {
+      navigateToPreviousPage()
+    }
+
+    xDown = null
+  }
+
   return (
-    <section>
+    <section className='relative'>
+      <Pager next='/auto-surface-protection' previous='/portfolio' />
       <Hero main />
       <WhyChooseUs />
 

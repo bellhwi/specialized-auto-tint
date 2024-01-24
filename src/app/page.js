@@ -1,5 +1,5 @@
-import SwiperContainer from '@/pages/SwiperContainer'
+import Main from '@/pages/Main'
 
 export default function Home() {
-  return <SwiperContainer />
+  return <Main />
 }

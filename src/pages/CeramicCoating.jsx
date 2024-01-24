@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Products from '@/components/Products'
 import Hero from '@/components/Hero'
@@ -7,10 +9,57 @@ import Description from '@/components/Description'
 import Contact from '@/components/Contact'
 import Map from '@/components/Map'
 import Footer from '@/components/Footer'
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
+import Pager from '@/components/Pager'
 
 export default function CeramicCoating() {
+  const router = useRouter()
+
+  useEffect(() => {
+    document.addEventListener('touchstart', handleTouchStart, false)
+    document.addEventListener('touchmove', handleTouchMove, false)
+
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart)
+      document.removeEventListener('touchmove', handleTouchMove)
+    }
+  }, [])
+
+  let xDown = null
+  const navigateToNextPage = () => {
+    router.push('/portfolio')
+  }
+  const navigateToPreviousPage = () => {
+    router.push('/')
+  }
+
+  function handleTouchStart(event) {
+    xDown = event.touches[0].clientX
+  }
+
+  function handleTouchMove(event) {
+    if (!xDown) {
+      return
+    }
+
+    let xUp = event.touches[0].clientX
+    let xDiff = xUp - xDown
+
+    // Swipe to right
+    if (xDiff < 0) {
+      navigateToNextPage()
+    }
+    // Swipe to left
+    else {
+      navigateToPreviousPage()
+    }
+
+    xDown = null
+  }
   return (
-    <section className='overflow-hidden'>
+    <section className='relative'>
+      <Pager next='/portfolio' previous='/' />
       <Hero />
       <WhyChooseUs />
 
