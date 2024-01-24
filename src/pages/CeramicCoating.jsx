@@ -30,10 +30,10 @@ export default function CeramicCoating() {
   let yDown = null
 
   const navigateToNextPage = () => {
-    router.push('/auto-surface-protection')
+    router.push('/portfolio')
   }
   const navigateToPreviousPage = () => {
-    router.push('/portfolio')
+    router.push('/')
   }
 
   function handleTouchStart(event) {
