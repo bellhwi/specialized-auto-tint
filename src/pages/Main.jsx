@@ -28,6 +28,8 @@ export default function Main() {
   }, [])
 
   let xDown = null
+  let yDown = null
+
   const navigateToNextPage = () => {
     router.push('/auto-surface-protection')
   }
@@ -37,28 +39,35 @@ export default function Main() {
 
   function handleTouchStart(event) {
     xDown = event.touches[0].clientX
+    yDown = event.touches[0].clientY
   }
 
   function handleTouchEnd(event) {
+    const xThreshold = 60
+    const yThreshold = 120
     if (!xDown) {
       return
     }
 
     let xUp = event.changedTouches[0].clientX
+    let yUp = event.changedTouches[0].clientY
     let xDiff = xUp - xDown
+    let yDiff = yUp - yDown
 
+    if (yDiff > yThreshold) return
     // Swipe to right
     if (xDiff < 0) {
       let abs = Math.abs(xDiff)
-      abs > 100 && navigateToNextPage()
+      abs > xThreshold && navigateToNextPage()
     }
     // Swipe to left
     else {
       let abs = Math.abs(xDiff)
-      abs > 100 && navigateToPreviousPage()
+      abs > xThreshold && navigateToPreviousPage()
     }
 
     xDown = null
+    yDown = null
   }
 
   return (
