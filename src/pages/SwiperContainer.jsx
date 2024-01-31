@@ -16,7 +16,7 @@ const SwiperContainer = () => {
       spaceBetween={0}
       slidesPerView={1}
       autoHeight={true}
-      onSlidesUpdated={handleSlideChange}
+      onSlideChange={handleSlideChange}
       loop={true}
     >
       <SwiperSlide>

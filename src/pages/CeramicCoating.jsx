@@ -10,7 +10,7 @@ import Footer from '@/components/Footer'
 
 export default function CeramicCoating() {
   return (
-    <section className='overflow-hidden'>
+    <section>
       <Hero />
       <WhyChooseUs />
 

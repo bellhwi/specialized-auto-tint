@@ -17,7 +17,7 @@ const Navbar = () => {
   const [showQuotationModal, setShowQuotationModal] = useState(false)
 
   return (
-    <nav className='relative z-10'>
+    <nav className='absolute left-0 top-0 right-0 text-white z-10'>
       <div className='container mx-auto p-4 flex justify-between items-center'>
         <Link href={`/`}>
           <Logo />
@@ -37,7 +37,7 @@ const Navbar = () => {
 
       {/* MOBILE SIDE MENU */}
       <ul
-        className={`text-sm w-60 fixed right-0 top-0 bottom-0 p-6 space-y-4 text-left flex flex-col z-50 transition-all duration-500 ${
+        className={`text-sm w-60 fixed right-0 top-0 bottom-0 p-6 space-y-4 text-left flex flex-col z-20 transition-all duration-500 ${
           showMobileNav ? 'translate-x-0 ' : 'translate-x-60'
         } bg-gradient-to-r from-zinc-900 from-30% via-zinc-800 via-60% to-zinc-600`}
       >
@@ -89,23 +89,17 @@ const Navbar = () => {
             className='fixed top-0 left-0 bottom-0 right-0 bg-black opacity-75 z-10'
             onClick={handleQuotationModal}
           ></div>
-          <div className='fixed top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/3 p-8 z-20 w-4/5 rounded-sm text-center bg-gradient-to-b from-zinc-400 from-20% via-zinc-200 via-70% to-zinc-50'>
+          <div className='absolute mt-24 left-1/2 transform -translate-x-1/2 p-8 z-20 w-4/5 rounded-sm text-center bg-gradient-to-b from-zinc-400 from-20% via-zinc-200 via-70% to-zinc-50'>
             <Subheading className='mt-4' title='Request a quote by' />
             <div className='flex items-center justify-center mt-4 space-x-2'>
-              <a
-                href='tel:949-341-9100'
-                className='hover:rounded-sm hover:bg-gray-200 p-4 transition-all ease-in duration-300'
-              >
+              <a href='tel:949-341-9100' className='p-4'>
                 <div className='flex flex-col items-center justify-center'>
                   <i className='fa-solid fa-phone text-black'></i>
                   <Description desc='Calling Us' />
                 </div>
               </a>
               <div className='h-16 border-l border-gray-200'></div>
-              <a
-                href='mailto:irvinetint@gmail.com'
-                className='hover:rounded-sm hover:bg-gray-200 p-4 transition-all duration-300'
-              >
+              <a href='mailto:irvinetint@gmail.com' className='p-4'>
                 <div className='flex flex-col items-center justify-center'>
                   <i className='fa-solid fa-envelope text-black'></i>
                   <Description desc='Emailing Us' />

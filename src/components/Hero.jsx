@@ -58,30 +58,29 @@ const Hero = ({ main }) => {
           </div>
         </>
       )}
-
-      <Navbar />
-      <div className='relative space-y-4 container mx-auto px-4 py-8'>
-        {main ? (
-          <>
+      {main ? (
+        <div className='relative space-y-4 container mx-auto px-4 py-16'>
+          <div className='mt-8'>
             <Title title='auto window tint' />
-            <div className='flex justify-center items-center'>
+            <div className='flex justify-center items-center mt-4'>
               <p
                 className={`text-2xl overflow-hidden whitespace-nowrap ${open_sans.className}`}
                 ref={textRef}
               ></p>
-
               <span className='animation-cursor w-0.5 h-8 bg-white'></span>
             </div>
-          </>
-        ) : (
-          <>
+          </div>
+        </div>
+      ) : (
+        <div className='relative space-y-4 container mx-auto px-4 py-8'>
+          <div className='mt-12'>
             <Title title='auto surface protection' />
             <p className={`text-2xl ${open_sans.className}`}>
               Ceramic Coating <br></br>&<br></br> Paint Protection Film
             </p>
-          </>
-        )}
-      </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

@@ -10,8 +10,7 @@ import Footer from '@/components/Footer'
 const Portfolio = () => {
   return (
     <section className='bg-zinc-950 overflow-hidden'>
-      <Navbar />
-      <div className='max-w-sm text-center mx-auto p-4'>
+      <div className='max-w-sm text-center mx-auto px-4 mt-20'>
         <Title title='portfolio' />
         <div className='mt-4'>
           <Description
