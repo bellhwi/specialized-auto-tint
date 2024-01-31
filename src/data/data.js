@@ -1,8 +1,10 @@
 let products = [
   {
     title: 'Crystalline',
+    heading: 'Block UV rays, not envy.',
     content:
       'A clear breakthrough in automotive window films. The Crystalline Series rejects more heat than many dark films without changing the appearance of your vehicle, making it the superior choice for comfort.',
+    features: <div className=''></div>,
   },
   {
     title: 'Ceramic IR',

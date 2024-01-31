@@ -9,13 +9,13 @@ const Description = ({ desc, nomargin, light, dark, href, blue, white }) => {
         light
           ? 'text-gray-300'
           : dark
-          ? 'text-gray-800'
+          ? 'text-gray-700'
           : blue
           ? 'text-blue-600'
           : white
           ? 'text-white'
-          : 'text-gray-600'
-      }`}
+          : 'text-gray-500'
+      } text-sm`}
     >
       {desc}{' '}
       {href && (

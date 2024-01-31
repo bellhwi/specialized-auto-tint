@@ -1,7 +1,7 @@
 const Heading = ({ title, light, dark }) => {
   return (
     <h2
-      className={`text-2xl uppercase font-semibold ${
+      className={`text-3xl uppercase font-bold tracking-tighter	 ${
         light ? 'text-gray-100' : dark ? 'text-black' : 'text-gray-800'
       }`}
     >

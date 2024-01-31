@@ -1,7 +1,11 @@
-'use client'
-
-import Main from '@/pages/Main'
+import SwiperContainer from '@/pages/SwiperContainer'
+import Pager from '@/components/Pager'
 
 export default function Home() {
-  return <Main />
+  return (
+    <>
+      <Pager />
+      <SwiperContainer />
+    </>
+  )
 }
