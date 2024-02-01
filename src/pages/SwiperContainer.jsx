@@ -5,10 +5,12 @@ import Main from '@/pages/Main'
 import Portfolio from './Portfolio'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
+import Pager from '@/components/Pager'
 
 const SwiperContainer = () => {
-  const handleSlideChange = () => {
+  const handleSlideChange = (swiper) => {
     window.scrollTo(0, 0)
+    // console.log(swiper.activeIndex)
   }
 
   return (
@@ -16,14 +18,15 @@ const SwiperContainer = () => {
       spaceBetween={0}
       slidesPerView={1}
       autoHeight={true}
-      loop={true}
-      onSlidesUpdated={handleSlideChange}
+      initialSlide={1}
+      onSlideChange={handleSlideChange}
     >
-      <SwiperSlide>
-        <Main />
-      </SwiperSlide>
+      <Pager />
       <SwiperSlide>
         <CeramicCoating />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Main />
       </SwiperSlide>
       <SwiperSlide>
         <Portfolio />
