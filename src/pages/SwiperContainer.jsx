@@ -6,11 +6,20 @@ import Portfolio from './Portfolio'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import Pager from '@/components/Pager'
+import { useState } from 'react'
 
 const SwiperContainer = () => {
+  const [direction, setDirection] = useState('both')
   const handleSlideChange = (swiper) => {
     window.scrollTo(0, 0)
-    // console.log(swiper.activeIndex)
+
+    if (swiper.activeIndex === 1) {
+      setDirection('both')
+    } else if (swiper.activeIndex === 0) {
+      setDirection('right')
+    } else {
+      setDirection('left')
+    }
   }
 
   return (
@@ -21,7 +30,7 @@ const SwiperContainer = () => {
       initialSlide={1}
       onSlideChange={handleSlideChange}
     >
-      <Pager />
+      <Pager direction={direction} />
       <SwiperSlide>
         <CeramicCoating />
       </SwiperSlide>
