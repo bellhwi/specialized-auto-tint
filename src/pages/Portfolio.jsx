@@ -10,7 +10,8 @@ import Footer from '@/components/Footer'
 const Portfolio = () => {
   return (
     <section className='bg-zinc-950 overflow-hidden'>
-      <div className='max-w-sm text-center mx-auto px-4 mt-20'>
+      <Navbar />
+      <div className='max-w-sm text-center mx-auto px-4 mt-24'>
         <Title title='portfolio' />
         <div className='mt-4'>
           <Description
@@ -22,8 +23,8 @@ const Portfolio = () => {
       </div>
 
       {/* CARS */}
-      <div className='space-y-8 mt-8'>
-        <div className='bg-gradient-to-b from-zinc-950 to-zinc-800'>
+      <div className='space-y-8 mt-12'>
+        <div className='bg-gradient-to-b from-zinc-950 to-zinc-600'>
           <div className='text-left px-4'>
             <div className='text-lg'>
               <Description nomargin desc='Lorem Ipsum Dolor' light />
@@ -34,11 +35,11 @@ const Portfolio = () => {
             </div>
           </div>
           <Image
-            src='/portfolio-car-1.png'
+            src='/portfolio-car-1-2-shadow.png'
             alt='portfolio car 1'
             width='1599'
             height='320'
-            className='w-full px-16 pb-8'
+            className='w-full'
           />
         </div>
         <div className='bg-gradient-to-b from-zinc-950 to-zinc-600'>
@@ -52,11 +53,11 @@ const Portfolio = () => {
             </div>
           </div>
           <Image
-            src='/portfolio-car-2.png'
+            src='/portfolio-car-1-3-shadow.png'
             alt='portfolio car 1'
             width='1599'
             height='320'
-            className='w-full px-16 pb-8'
+            className='w-full'
           />
         </div>
       </div>

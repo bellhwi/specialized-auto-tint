@@ -6,7 +6,7 @@ import { useState } from 'react'
 import Description from './Description'
 import Subheading from './Subheading'
 
-const Navbar = () => {
+const Navbar = ({ main }) => {
   const handleMobileMenu = () => {
     setShowMobileNav(!showMobileNav)
   }
@@ -19,9 +19,7 @@ const Navbar = () => {
   return (
     <nav className='absolute left-0 top-0 right-0 text-white z-10'>
       <div className='container mx-auto p-4 flex justify-between items-center'>
-        <Link href={`/`}>
-          <Logo />
-        </Link>
+        <Link href={`/`}>{main ? <Logo main /> : <Logo />}</Link>
         <div className='flex items-center space-x-6'>
           <button
             className='uppercase text-xs bg-primary font-semibold text-white py-2 px-4 rounded-sm'

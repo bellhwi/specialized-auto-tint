@@ -4,7 +4,15 @@ import Image from 'next/image'
 import Description from './Description'
 
 // Modify the Accordion component
-const Accordion = ({ title, content, style, isOpen, onToggle }) => {
+const Accordion = ({
+  title,
+  content,
+  heading,
+  features,
+  style,
+  isOpen,
+  onToggle,
+}) => {
   const toggleAccordion = () => {
     onToggle() // Notify the parent component to toggle the open state
   }
@@ -44,7 +52,9 @@ const Accordion = ({ title, content, style, isOpen, onToggle }) => {
       </div>
       {isOpen && (
         <div className='p-2'>
+          <h4 className='text-gray-100 font-semibold text-lg'>{heading}</h4>
           <Description light desc={content} />
+          {features}
         </div>
       )}
     </div>

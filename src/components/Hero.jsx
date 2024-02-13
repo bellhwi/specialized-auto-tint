@@ -72,10 +72,10 @@ const Hero = ({ main }) => {
           </div>
         </div>
       ) : (
-        <div className='relative space-y-4 container mx-auto px-4 py-8'>
+        <div className='relative space-y-4 container mx-auto px-4 py-12'>
           <div className='mt-12'>
             <Title title='auto surface protection' />
-            <p className={`text-2xl ${open_sans.className}`}>
+            <p className={`text-2xl mt-4 ${open_sans.className}`}>
               Ceramic Coating <br></br>&<br></br> Paint Protection Film
             </p>
           </div>

@@ -7,10 +7,12 @@ import Description from '@/components/Description'
 import Contact from '@/components/Contact'
 import Map from '@/components/Map'
 import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar'
 
 export default function Main() {
   return (
     <section>
+      <Navbar main />
       <Hero main />
       <WhyChooseUs main />
 

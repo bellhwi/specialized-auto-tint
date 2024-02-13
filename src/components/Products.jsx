@@ -23,6 +23,8 @@ const Products = () => {
                 key={index}
                 title={product.title}
                 content={product.content}
+                heading={product.heading}
+                features={product.features}
                 href={product.href}
                 isOpen={openAccordion === index}
                 onToggle={() => handleToggleAccordion(index)}

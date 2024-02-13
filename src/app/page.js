@@ -3,10 +3,5 @@ import Pager from '@/components/Pager'
 import Navbar from '@/components/Navbar'
 
 export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <SwiperContainer />
-    </>
-  )
+  return <SwiperContainer />
 }

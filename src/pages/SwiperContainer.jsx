@@ -9,14 +9,15 @@ import Pager from '@/components/Pager'
 import { useState } from 'react'
 
 const SwiperContainer = () => {
-  const [direction, setDirection] = useState('both')
-  const handleSlideChange = (swiper) => {
+  const [direction, setDirection] = useState('right')
+  const handleScrollToTop = (swiper) => {
     window.scrollTo(0, 0)
-
-    if (swiper.activeIndex === 1) {
-      setDirection('both')
-    } else if (swiper.activeIndex === 0) {
+  }
+  const handlePagerDirection = (swiper) => {
+    if (swiper.activeIndex === 0) {
       setDirection('right')
+    } else if (swiper.activeIndex === 1) {
+      setDirection('both')
     } else {
       setDirection('left')
     }
@@ -27,15 +28,15 @@ const SwiperContainer = () => {
       spaceBetween={0}
       slidesPerView={1}
       autoHeight={true}
-      initialSlide={1}
-      onSlideChange={handleSlideChange}
+      onSlideChange={handlePagerDirection}
+      onSlideChangeTransitionEnd={handleScrollToTop}
     >
       <Pager direction={direction} />
       <SwiperSlide>
-        <CeramicCoating />
+        <Main />
       </SwiperSlide>
       <SwiperSlide>
-        <Main />
+        <CeramicCoating />
       </SwiperSlide>
       <SwiperSlide>
         <Portfolio />
