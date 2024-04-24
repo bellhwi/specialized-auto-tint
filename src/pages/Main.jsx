@@ -20,13 +20,6 @@ export default function Main() {
     'bg-ir-ceramic.png',
     'bg-cr-crystalline.png',
   ]
-  // useEffect(() => {
-  //   if (isOpen) {
-  //     document.body.style.overflow = 'hidden'
-  //   } else {
-  //     document.body.style.overflow = 'auto'
-  //   }
-  // }, [isOpen])
 
   return (
     <section className='lg:mx-auto lg:relative main'>
@@ -86,15 +79,16 @@ export default function Main() {
             </h2>
             <Products isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
-          {isOpen !== null && (
+          {productsImageName.map((imageName, index) => (
             <Image
-              src={`/img/services/${productsImageName[isOpen]}`}
+              key={imageName}
+              src={`/img/services/${imageName}`}
               width={1036}
               height={6388}
-              priority={true}
+              style={{ display: isOpen === index ? 'block' : 'none' }}
               alt='services background'
             />
-          )}
+          ))}
         </div>
       </section>
 
@@ -122,7 +116,7 @@ export default function Main() {
         {/* why choose us */}
         <section className='relative z-20 mt-8'>
           <div className='container mx-auto px-8 text-sm text-gray-300 space-y-8 lg:text-base'>
-            <h2 className='flex justify-center relative text-3xl text-white font-bold mx-auto w-max px-10 py-2 lg:text-4xl'>
+            <h2 className='flex justify-center relative text-3xl	 text-white font-bold mx-auto w-full text-center lg:w-max px-10 py-2 lg:text-4xl lg:text-left'>
               <Image
                 src='/img/auto-window-tint/quote-1.png'
                 width={63}
@@ -170,7 +164,13 @@ export default function Main() {
                 <span className='text-4xl font-bold mr-2'>2</span> Shaved Top
                 Window Edge
               </p>
-              <video width='320' height='240' controls className='w-full'>
+              <video
+                width='320'
+                height='240'
+                controls
+                className='w-full'
+                poster='/img/auto-window-tint/edging-thumb.png'
+              >
                 <source
                   src='/img/auto-window-tint/edging.mp4'
                   type='video/mp4'
@@ -195,7 +195,13 @@ export default function Main() {
                 <span className='text-4xl font-bold mr-2'>3</span> Prepare with
                 Heat Shrinking Method
               </p>
-              <video width='320' height='240' controls className='w-full'>
+              <video
+                width='320'
+                height='240'
+                controls
+                className='w-full'
+                poster='/img/auto-window-tint/heat-shrinking-thumb.png'
+              >
                 <source
                   src='/img/auto-window-tint/heat-shrinking.mp4'
                   type='video/mp4'
