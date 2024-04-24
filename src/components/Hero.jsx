@@ -42,25 +42,17 @@ const Hero = ({ main }) => {
       {main && (
         <>
           <Image
-            src='/red-porsche.jpg'
-            alt='Red porsche'
-            width={2048}
-            height={1536}
-            className='absolute w-full h-full object-cover brightness-50'
+            src='/img/auto-window-tint/hero.jpg'
+            alt='gray car window tint'
+            width={3840}
+            height={2160}
+            className='absolute w-full h-full object-cover'
           />
-          <div class='absolute flex inset-0 opacity-70'>
-            <div className='w-1/6 h-full bg-zinc-400'></div>
-            <div className='w-1/6 h-full bg-zinc-500'></div>
-            <div className='w-1/6 h-full bg-zinc-600'></div>
-            <div className='w-1/6 h-full bg-zinc-700'></div>
-            <div className='w-1/6 h-full bg-zinc-800'></div>
-            <div className='w-1/6 h-full bg-zinc-950'></div>
-          </div>
         </>
       )}
       {main ? (
-        <div className='relative space-y-4 container mx-auto px-4 py-16'>
-          <div className='mt-8'>
+        <div className='relative space-y-4 container mx-auto px-4 py-40'>
+          {/* <div className='mt-8'>
             <Title title='auto window tint' />
             <div className='flex justify-center items-center mt-4'>
               <p
@@ -69,7 +61,7 @@ const Hero = ({ main }) => {
               ></p>
               <span className='animation-cursor w-0.5 h-8 bg-white'></span>
             </div>
-          </div>
+          </div> */}
         </div>
       ) : (
         <div className='relative space-y-4 container mx-auto px-4 py-12'>

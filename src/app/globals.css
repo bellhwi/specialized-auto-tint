@@ -23,3 +23,9 @@
     opacity: 0; /* Set opacity to 0 for the middle keyframe */
   }
 }
+
+@media (min-width: 1024px) {
+  .main {
+    width: 1036px;
+  }
+}

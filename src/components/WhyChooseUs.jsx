@@ -4,8 +4,8 @@ import { specialties, specialtiesPPF } from '@/data/data'
 
 const WhyChooseUs = ({ main }) => {
   return (
-    <section className='bg-gradient-to-b from-zinc-100 to-zinc-950'>
-      <div className='container mx-auto px-4 py-8 space-y-4'>
+    <section>
+      <div className='relative z-30 container mx-auto px-4 py-8 space-y-4'>
         <Heading title='what makes us better' />
         <div className='grid grid-cols-1 gap-4'>
           {main

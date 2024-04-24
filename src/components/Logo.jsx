@@ -1,18 +1,13 @@
 import Image from 'next/image'
 
-const Logo = ({ footer, main }) => {
+const Logo = ({ footer }) => {
   return (
     <Image
-      src={
-        footer
-          ? '/logo-black.webp'
-          : main
-          ? '/logo.webp'
-          : '/door_logo_white.webp'
-      }
+      src='/img/logos/logo.webp'
       alt='company logo'
-      width={140}
-      height={42}
+      width={264}
+      height={56}
+      className={`${footer ? 'w-36' : 'w-28 lg:w-48'}`}
     />
   )
 }

@@ -2,36 +2,70 @@
 
 import { products } from '@/data/data'
 import Accordion from './Accordion'
-import { useState } from 'react'
-import Heading from './Heading'
+import { useState, useEffect } from 'react'
 
-const Products = () => {
-  const [openAccordion, setOpenAccordion] = useState(null)
+const Products = ({ isOpen, setIsOpen, rest }) => {
+  const [openAccordion, setOpenAccordion] = useState(isOpen)
+  const modifiedProducts = products.slice(0, openAccordion + 1)
+
+  const [restProducts, setRestProducts] = useState([])
 
   const handleToggleAccordion = (index) => {
-    setOpenAccordion(openAccordion === index ? null : index)
+    setIsOpen(openAccordion === index ? null : index)
   }
 
+  const updateProducts = () => {
+    if (isOpen !== null) {
+      const updatedRestProducts = products.filter(
+        (product, index) => index > isOpen
+      )
+      setRestProducts(updatedRestProducts)
+    }
+  }
+
+  const scrollToProducts = () => {
+    const products = document.getElementById('products')
+    products.scrollIntoView({ block: 'end', behavior: 'smooth' })
+  }
+
+  useEffect(() => {
+    setOpenAccordion(isOpen)
+    updateProducts()
+  }, [isOpen])
+
   return (
-    <section>
-      <div className='container mx-auto px-4 py-8 space-y-4 '>
-        <Heading light title='our products' />
-        <div>
-          {products.map((product, index) => {
-            return (
-              <Accordion
-                key={index}
-                title={product.title}
-                content={product.content}
-                heading={product.heading}
-                features={product.features}
-                href={product.href}
-                isOpen={openAccordion === index}
-                onToggle={() => handleToggleAccordion(index)}
-                style={index}
-              />
-            )
-          })}
+    <section className='relative grow'>
+      <div className='container mx-auto '>
+        <div className='space-y-4'>
+          {!rest
+            ? openAccordion === null
+              ? products.map((product, index) => (
+                  <Accordion
+                    key={index}
+                    title={product.title}
+                    isOpen={openAccordion === index}
+                    onToggle={() => handleToggleAccordion(index)}
+                  />
+                ))
+              : modifiedProducts.map((product, index) => (
+                  <Accordion
+                    key={index}
+                    title={product.title}
+                    isOpen={openAccordion === index}
+                    onToggle={() => handleToggleAccordion(index)}
+                  />
+                ))
+            : restProducts.map((product, index) => (
+                <Accordion
+                  key={index}
+                  title={product.title}
+                  isOpen={openAccordion === product.index}
+                  onToggle={() => {
+                    handleToggleAccordion(product.index)
+                    scrollToProducts()
+                  }}
+                />
+              ))}
         </div>
       </div>
     </section>
