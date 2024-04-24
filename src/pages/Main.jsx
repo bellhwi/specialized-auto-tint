@@ -151,9 +151,9 @@ export default function Main() {
               />
               <p>
                 Computerized Film Cutting System-digitally generates and cuts
-                window tint patterns to your vehicle's exact specifications,
-                ensuring the best tint service every time. Unlike other vehicle
-                window tint services,
+                window tint patterns to your vehicle&apos;s exact
+                specifications, ensuring the best tint service every time.
+                Unlike other vehicle window tint services,
                 <span className='italic font-bold'>
                   we do not cut window tint on your vehicle,{' '}
                 </span>
