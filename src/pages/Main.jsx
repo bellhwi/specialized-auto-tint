@@ -33,7 +33,7 @@ export default function Main() {
       />
 
       {/* main */}
-      <section className='relative z-20 pt-52 lg:pt-72'>
+      <section className='relative z-20 pt-52 lg:pt-72 '>
         <div className='container mx-auto'>
           <div className='text-white pt-8 px-8'>
             <p className='text-2xl font-semibold lg:text-5xl'>
@@ -74,7 +74,7 @@ export default function Main() {
             id='products'
             className='flex text-white mt-8 items-start space-x-4 px-8'
           >
-            <h2 className='uppercase text-xl font-semibold lg:text-2xl'>
+            <h2 className='uppercase text-lg font-semibold lg:text-2xl'>
               Product
             </h2>
             <Products isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -123,7 +123,7 @@ export default function Main() {
                 height={62}
                 className='w-8 absolute top-0 left-0'
               />
-              How we provide <br className='md:hidden' />
+              How we provide <br />
               best quality of services
               <Image
                 src='/img/auto-window-tint/quote-2.png'
@@ -142,6 +142,7 @@ export default function Main() {
                 src='/img/services/computerized-film-cutting-system.jpg'
                 width={600}
                 height={400}
+                className='aspect-video rounded'
               />
               <p>
                 Computerized Film Cutting System-digitally generates and cuts
@@ -168,7 +169,7 @@ export default function Main() {
                 width='320'
                 height='240'
                 controls
-                className='w-full'
+                className='w-full aspect-video'
                 poster='/img/auto-window-tint/edging-thumb.png'
               >
                 <source
@@ -199,7 +200,7 @@ export default function Main() {
                 width='320'
                 height='240'
                 controls
-                className='w-full'
+                className='w-full aspect-video'
                 poster='/img/auto-window-tint/heat-shrinking-thumb.png'
               >
                 <source
@@ -306,7 +307,12 @@ export default function Main() {
         </section>
 
         {/* map and footer */}
-        <section>
+        <section
+          className='relative z-20'
+          style={{
+            backgroundImage: 'linear-gradient(to bottom, #1a1a1a 30%, white)',
+          }}
+        >
           <div className='container mx-auto px-8'>
             <Map />
             <Footer />

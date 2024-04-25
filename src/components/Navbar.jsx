@@ -32,15 +32,15 @@ const Navbar = ({ main }) => {
       ) : (
         <div className='lg:hidden'>
           <Image
-            src='/img/navbar-bg-alt.png'
-            width={975}
+            src='/img/navbar-bg-both-sides.png'
+            width={1037}
             height={107}
-            className='absolute inset-0  z-40'
+            className='absolute inset-0 z-40'
           />
         </div>
       )}
 
-      <div className='z-40 container mx-auto p-4 flex justify-between items-center relative z-20 lg:mt-4 lg:px-8'>
+      <div className='z-40 container mx-auto p-3 flex justify-between items-center relative z-20 md:mt-4 lg:px-8'>
         <Link href={`/`}>
           <Logo />
         </Link>

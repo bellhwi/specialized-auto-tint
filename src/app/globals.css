@@ -14,6 +14,10 @@
   filter: brightness(30%);
 }
 
+.text-color-primary {
+  color: #405f8d;
+}
+
 @keyframes cursor-blink {
   0%,
   100% {
@@ -27,5 +31,6 @@
 @media (min-width: 1024px) {
   .main {
     width: 1036px;
+    max-width: 50%;
   }
 }

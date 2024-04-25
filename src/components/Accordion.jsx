@@ -20,18 +20,23 @@ const Accordion = ({ title, isOpen, onToggle }) => {
       <div className='flex justify-between items-center space-x-2 '>
         <div className='flex items-center'>
           <p
-            className={`text-base font-semibold lg:text-lg ${
+            className={`text-sm font-semibold lg:text-lg ${
               isOpen ? 'text-blue-400' : 'text-white'
             }`}
           >
             {title}
           </p>
         </div>
-        <button>
+        <button className='text-xs text-blue-400'>
           {isOpen ? (
-            <i className='fa-solid fa-chevron-down text-blue-400'></i>
+            <i className='fa-solid fa-chevron-up text-blue-400'></i>
           ) : (
-            <small className='text-blue-400'>Learn More</small>
+            <>
+              <span className='md:hidden'>
+                <i className='fa-solid fa-chevron-down text-white'></i>
+              </span>
+              <span className='hidden md:block'>Learn More</span>
+            </>
           )}
         </button>
       </div>

@@ -35,12 +35,12 @@ const Footer = () => {
           </a>
         </div>
         {/* COPYWRITING */}
-        <small className='text-white'>
-          &copy; {currentYear} Specialized Auto Tint x Powered by{' '}
+        <p className='text-sm text-center'>
+          &copy; {currentYear} Specialized Auto Tint <br /> Powered by{' '}
           <a href='https://webtamin.co/en' target='_blank' rel='noopener'>
             Webtamin
           </a>
-        </small>
+        </p>
       </div>
     </section>
   )
