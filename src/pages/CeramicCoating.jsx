@@ -12,7 +12,7 @@ import Accordion from '@/components/Accordion'
 import { useState, useRef, useEffect } from 'react'
 import { products } from '@/data/data'
 
-export default function CeramicCoating() {
+export default function CeramicCoating({ setOpenNav }) {
   const [isOpen, setIsOpen] = useState(null)
   const productsImageName = [
     'bg-fx-premium.png',
@@ -23,41 +23,41 @@ export default function CeramicCoating() {
 
   return (
     <section className='lg:mx-auto lg:relative bg-white'>
-      <Navbar />
+      <Navbar setOpenNav={setOpenNav} />
       <Image
         src='/img/ceramic-coating/hero.png'
-        width={331}
-        height={504}
+        width={1181}
+        height={1705}
         alt='super car'
         className='absolute inset-0 w-full z-20'
       />
 
       {/* main */}
-      <section className='relative z-20 pt-52 lg:pt-72 '>
+      <section className='relative z-20 pt-48 lg:pt-72 '>
         <div className='container mx-auto'>
-          <div className='text-center pt-8 px-8'>
-            <p className='text-2xl text-gray-500 lg:text-5xl'>
-              Best Quality of <span className='text-primary-color'>AUTO</span>
+          <div className='text-center font-godic-bold text-xl  pt-8 px-8'>
+            <p className='text-gray-600 lg:text-5xl '>
+              Best Quality of <span className='text-color-primary'>AUTO</span>
             </p>
-            <p className='text-2xl text-primary-color lg:text-5xl'>
+            <p className='text-color-primary lg:text-5xl font-godic-bold'>
               SURFACE PROTECTION
             </p>
-            <h1 className='uppercase text-3xl font-bold lg:text-6xl'>
+            <h1 className='text-color-primary uppercase text-2xl lg:text-6xl'>
               ceramic coating
             </h1>
-            <p className='text-2xl text-primary-color lg:text-5xl'>
+            <p className='text-base text-color-primary lg:text-5xl'>
               THE LEGENDARY COATING REINVENTED
             </p>
             <div className='mt-4 text-left'>
               <p className='font-semibold text-color-primary'>
                 REVOLUTIONARY TECHNOLOGY
               </p>
-              <p>
+              <p className='font-godic-regular text-justify'>
                 Q2 MOHS EVO uses fluoro modified polysilazanes for the first
                 time in the car care industry.
               </p>
               <p className='text-color-primary'>Why is that so important?</p>
-              <p>
+              <p className='font-godic-regular text-justify'>
                 Modifying polysilazanes at the precursory stages bring enormous
                 benefits on all levels: durability, chemical resistance or ease
                 of use. Amazingly easy to apply and wipe off, yet extremely
@@ -68,7 +68,7 @@ export default function CeramicCoating() {
           </div>
         </div>
         {/* Maintenance */}
-        <div className='space-y-4'>
+        <div className='space-y-4 mt-8'>
           <div className='container mx-auto px-8'>
             <h2 className='uppercase text-3xl lg:text-5xl text-color-primary'>
               SPECIALIZED AUTO <br />{' '}
@@ -84,8 +84,10 @@ export default function CeramicCoating() {
               className='mt-4'
             />
             <div className='border border-b border-black w-36 mx-auto my-4'></div>
-            <h3 className='text-center text-4xl lg:text-4xl'>Car Wash</h3>
-            <p className='my-4'>
+            <h3 className='text-center text-4xl lg:text-4xl font-sarang font-light'>
+              Car Wash
+            </h3>
+            <p className='my-4 font-godic-thin text-justify'>
               Our car washing process involves a meticulous 100% hand wash,
               followed by careful drying of the exterior. Additionally, we
               thoroughly clean both the interior and exterior windows. Finally,
@@ -93,7 +95,7 @@ export default function CeramicCoating() {
             </p>
           </div>
           <Image
-            src='/img/ceramic-coating/car-wash.png'
+            src='/img/ceramic-coating/car-wash.jpg'
             width={331}
             height={151}
             className='w-full'
@@ -102,15 +104,17 @@ export default function CeramicCoating() {
         <div className='space-y-4 pt-4'>
           <div className='container mx-auto px-8'>
             <div className='border border-b border-black w-36 mx-auto my-4'></div>
-            <h3 className='text-center text-4xl lg:text-4xl'>Clay & Prep</h3>
-            <p className='my-4'>
+            <h3 className='text-center text-4xl lg:text-4xl font-sarang font-light'>
+              Clay & Prep
+            </h3>
+            <p className='my-4 font-godic-thin text-justify'>
               Once the surface is clean, it is important to Clay & Prep the
               paint to remove any surface contamination that washing may not
               have been able to remove.
             </p>
           </div>
           <Image
-            src='/img/ceramic-coating/clay-prep.png'
+            src='/img/ceramic-coating/clay-prep.jpeg'
             width={330}
             height={151}
             className='w-full'
@@ -119,17 +123,17 @@ export default function CeramicCoating() {
         <div className='space-y-4 pt-4'>
           <div className='container mx-auto px-8'>
             <div className='border border-b border-black w-36 mx-auto my-4'></div>
-            <h3 className='text-center text-4xl lg:text-4xl'>
+            <h3 className='text-center text-4xl lg:text-4xl font-sarang font-light'>
               Coating Application
             </h3>
-            <p className='my-4'>
+            <p className='my-4 font-godic-thin text-justify'>
               Apply the product liberally to a whole panel, Once temperature and
               humidity rise, apply to smaller sections and wipe off immediately.
             </p>
           </div>
           <Image
-            src='/img/ceramic-coating/coating.png'
-            width={330}
+            src='/img/ceramic-coating/coating.jpg'
+            width={870}
             height={151}
             className='w-full'
           />
@@ -137,7 +141,7 @@ export default function CeramicCoating() {
 
         {/* Benefits */}
         <div className='mx-auto container p-8'>
-          <h2 className='uppercase text-3xl lg:text-5xl text-color-primary'>
+          <h2 className='uppercase text-3xl lg:text-5xl text-color-primary font-thin'>
             Major
             <br /> <span className='font-bold'>benefits</span>
           </h2>
@@ -147,8 +151,9 @@ export default function CeramicCoating() {
           </p>
           <Image
             src='/img/ceramic-coating/benefits.png'
-            width={276}
-            height={68}
+            width={870}
+            height={221}
+            className='mt-4'
           />
           {/* Details */}
           <div className='mt-8'>
@@ -163,8 +168,8 @@ export default function CeramicCoating() {
             <p>SELF-CLEANING | &#9733; &#9733; &#9733; &#9733; &#9733;</p>
           </div>
           <div className='mt-4'>
-            <p>Quality Assurance</p>
-            <p className='mt-2'>
+            <p className='text-xl'>Quality Assurance</p>
+            <p className='mt-2 font-thin text-justify'>
               Our ceramic coating with Gyeonquartz warranty on the product
               itself, and Specialized Auto Tint 1 year limited warranty as well.
             </p>

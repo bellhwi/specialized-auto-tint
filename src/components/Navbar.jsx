@@ -7,9 +7,10 @@ import Description from './Description'
 import Subheading from './Subheading'
 import Image from 'next/image'
 
-const Navbar = ({ main }) => {
+const Navbar = ({ main, setOpenNav }) => {
   const handleMobileMenu = () => {
     setShowMobileNav(!showMobileNav)
+    setOpenNav()
   }
   const handleQuotationModal = () => {
     setShowQuotationModal(!showQuotationModal)
@@ -18,7 +19,7 @@ const Navbar = ({ main }) => {
   const [showQuotationModal, setShowQuotationModal] = useState(false)
 
   return (
-    <nav className='absolute left-0 top-0 right-0 text-white'>
+    <nav className='absolute left-0 top-0 right-0 text-white z-30'>
       {/* background */}
       {main ? (
         <div className='lg:hidden'>
@@ -26,7 +27,7 @@ const Navbar = ({ main }) => {
             src='/img/navbar-bg.png'
             width={975}
             height={107}
-            className='absolute inset-0  z-40'
+            className='absolute inset-0 '
           />
         </div>
       ) : (
@@ -35,18 +36,18 @@ const Navbar = ({ main }) => {
             src='/img/navbar-bg-both-sides.png'
             width={1037}
             height={107}
-            className='absolute inset-0 z-40'
+            className='absolute inset-0'
           />
         </div>
       )}
 
-      <div className='z-40 container mx-auto p-3 flex justify-between items-center relative z-20 md:mt-4 lg:px-8'>
+      <div className='container mx-auto px-3 pt-2 flex justify-between items-center relative md:mt-4 lg:px-8'>
         <Link href={`/`}>
           <Logo />
         </Link>
-        <div className='flex items-center space-x-4 lg:hidden'>
+        <div className='flex items-center space-x-3 lg:hidden'>
           <button
-            className='text-sm uppercase relative bottom-0.5'
+            className='text-xs uppercase relative bottom-0.5 font-sarang'
             onClick={handleQuotationModal}
           >
             CONTACT
@@ -82,8 +83,8 @@ const Navbar = ({ main }) => {
 
       {/* MOBILE SIDE MENU */}
       <ul
-        className={`text-sm w-60 fixed right-0 top-0 bottom-0 p-6 space-y-4 text-left flex flex-col transition-all duration-500 ${
-          showMobileNav ? 'translate-x-0  z-50 ' : 'translate-x-60'
+        className={`text-sm w-60 fixed right-0 top-0 bottom-0 p-6 space-y-4 text-left flex flex-col transition-all duration-500 z-50 ${
+          showMobileNav ? 'translate-x-0' : 'translate-x-60'
         } bg-gradient-to-r from-zinc-900 from-30% via-zinc-800 via-60% to-zinc-600`}
       >
         <Link href='#' className='uppercase'>

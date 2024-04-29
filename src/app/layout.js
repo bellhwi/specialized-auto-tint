@@ -1,7 +1,4 @@
 import './globals.css'
-import { Montserrat } from 'next/font/google'
-
-const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'SPECIALIZED AUTO TINT',
@@ -18,7 +15,8 @@ export default function RootLayout({ children }) {
         crossorigin='anonymous'
         referrerPolicy='no-referrer'
       />
-      <body className={montserrat.className}>{children}</body>
+
+      <body>{children}</body>
     </html>
   )
 }

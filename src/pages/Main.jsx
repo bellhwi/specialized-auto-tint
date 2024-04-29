@@ -12,7 +12,7 @@ import Accordion from '@/components/Accordion'
 import { useState, useRef, useEffect } from 'react'
 import { products } from '@/data/data'
 
-export default function Main() {
+export default function Main({ setOpenNav }) {
   const [isOpen, setIsOpen] = useState(null)
   const productsImageName = [
     'bg-fx-premium.png',
@@ -22,8 +22,8 @@ export default function Main() {
   ]
 
   return (
-    <section className='lg:mx-auto lg:relative main'>
-      <Navbar main />
+    <section className='relative lg:mx-auto lg:relative'>
+      <Navbar main setOpenNav={setOpenNav} />
       <Image
         src='/img/services/bg-main.png'
         width={1036}
@@ -33,24 +33,20 @@ export default function Main() {
       />
 
       {/* main */}
-      <section className='relative z-20 pt-52 lg:pt-72 '>
+      <section className='relative z-20 pt-40 lg:pt-72 '>
         <div className='container mx-auto'>
-          <div className='text-white pt-8 px-8'>
-            <p className='text-2xl font-semibold lg:text-5xl'>
-              The Highest Standard of
-            </p>
-            <h1 className='uppercase text-3xl font-bold lg:text-6xl'>
-              auto window tint
-            </h1>
-            <div className='flex items-center space-x-4 mt-2'>
+          <div className='text-white w-full pt-8 px-8'>
+            <p className='text-xl lg:text-5xl'>The Highest Standard of</p>
+            <h1 className='uppercase lg:text-6xl w-screen'>auto window tint</h1>
+            <div className='flex items-center space-x-2'>
               <Image
                 src='/img/logos/3m.png'
                 width={574}
                 height={296}
-                className='w-1/6 lg:w-1/12'
+                className='w-16 lg:w-1/12'
               />
               <div className='w-5/6'>
-                <p className='font-semibold text-primary text-2xl lg:text-3xl'>
+                <p className=' text-primary text-xl lg:text-3xl font-godic-bold -mb-1'>
                   Authorized Dealer
                 </p>
                 <div className='flex items-center space-x-2'>
@@ -72,11 +68,9 @@ export default function Main() {
           {/* Top Products */}
           <div
             id='products'
-            className='flex text-white mt-8 items-start space-x-4 px-8'
+            className='flex text-white mt-8 items-start space-x-2 px-8'
           >
-            <h2 className='uppercase text-lg font-semibold lg:text-2xl'>
-              Product
-            </h2>
+            <h2 className='uppercase text-lg lg:text-2xl'>Product</h2>
             <Products isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
           {productsImageName.map((imageName, index) => (
@@ -87,20 +81,21 @@ export default function Main() {
               height={6388}
               style={{ display: isOpen === index ? 'block' : 'none' }}
               alt='services background'
+              className='w-full md:w-1/2 md:mx-auto'
             />
           ))}
         </div>
       </section>
 
-      <section>
+      <section className='relative'>
+        <Image
+          src='/img/bg-overlay.png'
+          width={1036}
+          height={7867}
+          alt='main background'
+          className='absolute inset-0 h-full'
+        />
         <div className='relative container mx-auto justify-between px-8 pt-8 flex text-white items-start '>
-          <Image
-            src='/img/bg-overlay.png'
-            width={1036}
-            height={7867}
-            alt='main background'
-            className='absolute inset-0'
-          />
           {isOpen === null || isOpen === 3 ? null : (
             // Bottom Products
             <>
@@ -114,14 +109,14 @@ export default function Main() {
           )}
         </div>
         {/* why choose us */}
-        <section className='relative z-20 mt-8'>
-          <div className='container mx-auto px-8 text-sm text-gray-300 space-y-8 lg:text-base'>
-            <h2 className='flex justify-center relative text-3xl	 text-white font-bold mx-auto w-full text-center lg:w-max px-10 py-2 lg:text-4xl lg:text-left'>
+        <section className='relative z-20'>
+          <div className='container mx-auto px-8 text-sm text-gray-300 space-y-4 lg:text-base'>
+            <h2 className='flex text-center justify-center relative text-2xl	 text-white w-full lg:w-max px-4 lg:text-4xl lg:text-left'>
               <Image
                 src='/img/auto-window-tint/quote-1.png'
                 width={63}
                 height={62}
-                className='w-8 absolute top-0 left-0'
+                className='w-6 absolute top-0 left-0'
               />
               How we provide <br />
               best quality of services
@@ -129,14 +124,16 @@ export default function Main() {
                 src='/img/auto-window-tint/quote-2.png'
                 width={63}
                 height={62}
-                className='w-8 absolute bottom-0 right-0'
+                className='w-6 absolute bottom-0 right-0'
               />
             </h2>
 
-            <div className='space-y-4'>
-              <p className='text-white text-lg font-semibold lg:text-2xl'>
-                <span className='text-4xl font-bold mr-2'>1</span> Computerized
-                Film Cutting System
+            <div className='space-y-4 text-gray-100'>
+              <p className='text-white text-lg lg:text-2xl'>
+                <span className='text-5xl font-godic-bold mr-1 relative top-1'>
+                  1
+                </span>{' '}
+                Computerized Film Cutting System
               </p>
               <Image
                 src='/img/services/computerized-film-cutting-system.jpg'
@@ -144,7 +141,7 @@ export default function Main() {
                 height={400}
                 className='aspect-video rounded'
               />
-              <p>
+              <p className='text-justify'>
                 Computerized Film Cutting System-digitally generates and cuts
                 window tint patterns to your vehicle&apos;s exact
                 specifications, ensuring the best tint service every time.
@@ -154,36 +151,36 @@ export default function Main() {
                 </span>
                 which may risk damage to the glass and rubber seals.
               </p>
-              <p>
+              <p className='text-justify'>
                 Specialized Auto Tint computers pre-cut every vehicle window
                 tint to the exact make and model of your vehicle to provide the
                 very best tint accuracy and vehicle security for our customers.
               </p>
             </div>
-            <div className='space-y-4'>
-              <p className='text-white text-lg font-semibold lg:text-2xl'>
-                <span className='text-4xl font-bold mr-2'>2</span> Shaved Top
-                Window Edge
+            <div className='space-y-4 text-gray-100'>
+              <p className='text-white text-lg lg:text-2xl'>
+                <span className='text-5xl font-godic-bold mr-1'>2</span> Shaved
+                Top Window Edge
               </p>
               <video
                 width='320'
                 height='240'
                 controls
                 className='w-full aspect-video'
-                poster='/img/auto-window-tint/edging-thumb.png'
+                poster='/img/auto-window-tint/topshaving-thumb.png'
               >
                 <source
-                  src='/img/auto-window-tint/edging.mp4'
+                  src='/img/auto-window-tint/topshaving.mp4'
                   type='video/mp4'
                 />
                 Your browser does not support the video tag.
               </video>
-              <p>
+              <p className='text-justify'>
                 Filed edges is a process where the film is positioned just over
                 the edge of the window and then filed so that no actual gap is
                 there to be seen.
               </p>
-              <p>
+              <p className='text-justify'>
                 Our Shaved Top Window Edge{' '}
                 <span className='italic font-bold'>
                   produce your auto window much more of a factory look and is
@@ -191,11 +188,14 @@ export default function Main() {
                 </span>
               </p>
             </div>
-            <div className='space-y-4'>
-              <p className='text-white text-lg font-semibold lg:text-2xl'>
-                <span className='text-4xl font-bold mr-2'>3</span> Prepare with
-                Heat Shrinking Method
-              </p>
+            <div className='space-y-4 text-gray-100'>
+              <div className='flex items-center'>
+                <p className='text-5xl font-godic-bold mr-2'>3</p>
+
+                <p className='text-white text-lg leading-6 lg:text-2xl'>
+                  Prepare with <br></br>Heat Shrinking Method
+                </p>
+              </div>
               <video
                 width='320'
                 height='240'
@@ -209,7 +209,7 @@ export default function Main() {
                 />
                 Your browser does not support the video tag.
               </video>
-              <p>
+              <p className='text-justify'>
                 The wet heat shrinking method is a technique used to install
                 window tint with better control over the film and{' '}
                 <span className='italic font-bold'>
@@ -219,19 +219,21 @@ export default function Main() {
                 wet shrinking involves applying a solution to both the window
                 and the tint film.
               </p>
-              <p>
+              <p className='text-justify'>
                 This added moisture allows for easy manipulation of the film
                 during installation, ensuring a precise fit and minimizing the
                 risk of creases or air bubbles.
               </p>
             </div>
-            <div className='space-y-4'>
-              <p className='text-white text-lg font-semibold lg:text-2xl'>
-                <span className='text-4xl font-bold mr-2'>4</span> More than 15
-                years of experience
+            <div className='space-y-4 text-gray-100'>
+              <p className='text-white text-lg lg:text-2xl'>
+                <span className='text-5xl font-godic-bold mr-1 relative top-1'>
+                  4
+                </span>{' '}
+                More than 15 years of experience
               </p>
 
-              <p>
+              <p className='text-justify'>
                 <span className='italic font-bold'>
                   Improve Your Comfort with Quality Window Tints
                 </span>{' '}
@@ -245,63 +247,68 @@ export default function Main() {
                 have your window tints installed quickly and correctly.
               </p>
             </div>
-            <div className='space-y-4'>
-              <p className='text-white text-lg font-semibold lg:text-2xl'>
-                <span className='text-4xl font-bold mr-2'>5</span> Quality
-                Assurance
+            <div className='space-y-4 text-gray-100'>
+              <p className='text-white text-lg lg:text-2xl'>
+                <span className='text-5xl font-godic-bold mr-1 relative top-1'>
+                  5
+                </span>{' '}
+                Quality Assurance
               </p>
 
-              <p>
+              <div className='text-justify'>
                 Our window tinting{' '}
                 <span className='italic font-bold'>
                   comes with 3M lifetime warranty
                 </span>{' '}
                 on the product itself, as well as a lifetime warranty on all
                 labor.{' '}
-                <a
-                  href='https://multimedia.3m.com/mws/media/157410O/lifetime-warranty-and-limited-remedy.pdf'
-                  target='_blank'
-                  rel='noopener'
-                  className='text-blue-400'
-                >
-                  Learn more
-                </a>
-              </p>
+                <div className='flex justify-end'>
+                  <a
+                    href='https://multimedia.3m.com/mws/media/157410O/lifetime-warranty-and-limited-remedy.pdf'
+                    target='_blank'
+                    rel='noopener'
+                    className='inline-block text-blue-300'
+                  >
+                    Learn more
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* contact */}
         <section className='my-8 relative z-20'>
-          <div className='container mx-auto px-8 text-gray-300 text-sm mt-8 space-y-4'>
-            <Image
-              src='/img/bg-overlay.png'
-              width={1036}
-              height={7867}
-              alt='main background'
-              className='absolute inset-0'
-            />
-            <h2 className='relative text-2xl text-white font-semibold uppercase'>
+          <div className='container mx-auto px-8 text-gray-100 text-sm mt-8 space-y-4'>
+            <h2 className='relative text-xl text-white uppercase font-godic-bold '>
               contact us & map
             </h2>
-            <div className='flex items-center relative'>
-              <i className='fa-solid fa-phone mr-2'></i>
-              <p className='mr-2 w-20 text-base font-semibold'>Call Us</p>
-              <a href='tel:9493419100' className='text-blue-400'>
-                (949)341-9100
-              </a>
-            </div>
-            <div className='flex items-center relative'>
-              <i className='fa-solid fa-envelope mr-2'></i>
-              <p className='mr-2 w-20 text-base font-semibold'>Email Us</p>
-              <a href='mailto:irvinetint@gmail.com' className='text-blue-400'>
-                irvinetint@gmail.com
-              </a>
-            </div>
-            <div className='flex items-center relative'>
-              <i className='fa-solid fa-location-dot mr-2'></i>
-              <p className='mr-2 w-20 text-base font-semibold'>Visit Us</p>
-              <p>8787 Irvine Center Dr, Irvine, CA 92618</p>
+            <div className='relative flex text-white justify-between space-x-4'>
+              <div className='text-lg text-nowrap space-y-1'>
+                <div>
+                  <i className='fa-solid fa-phone mr-1'></i> Call Us
+                </div>
+                <div>
+                  <i className='fa-solid fa-envelope mr-1'></i> Email Us
+                </div>
+                <div>
+                  <i className='fa-solid fa-location-dot mr-2'></i> Visit Us
+                </div>
+              </div>
+              <div className='text-base leading-7 grow space-y-1'>
+                <a href='tel:9493419100' className='block text-blue-300'>
+                  (949)341-9100
+                </a>
+                <a
+                  href='mailto:irvinetint@gmail.com'
+                  className='block text-blue-300'
+                >
+                  irvinetint@gmail.com
+                </a>
+                <p className='block text-gray-100 leading-normal	'>
+                  8787 Irvine Center Dr. <br></br>Irvine, CA 92618
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -310,7 +317,8 @@ export default function Main() {
         <section
           className='relative z-20'
           style={{
-            backgroundImage: 'linear-gradient(to bottom, #1a1a1a 30%, white)',
+            backgroundImage:
+              'linear-gradient(to bottom, #1a1a1a 30%, white 85%)',
           }}
         >
           <div className='container mx-auto px-8'>

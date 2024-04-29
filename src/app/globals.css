@@ -1,7 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'Batman';
+  src: url('../../public/fonts/batman.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Sarang';
+  src: url('../../public/fonts/sarang.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Godic_thin';
+  src: url('../../public/fonts/godic_thin.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Godic_regular';
+  src: url('../../public/fonts/godic_regular.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'Godic_bold';
+  src: url('../../public/fonts/godic_bold.ttf') format('truetype');
+}
 
+body {
+  font-family: 'font-godic-regular', sans-serif;
+}
+h1 {
+  font-family: 'Batman', sans-serif;
+}
+
+.font-godic-thin {
+  font-family: 'Godic_thin', sans-serif;
+}
+.font-godic-regular {
+  font-family: 'Godic_regular', sans-serif;
+}
+.font-godic-bold {
+  font-family: 'Godic_bold', sans-serif;
+}
+.font-sarang {
+  font-family: 'Sarang', sans-serif;
+}
 .animation-cursor {
   animation: cursor-blink 1s infinite; /* Add blinking animation */
 }
@@ -15,7 +54,7 @@
 }
 
 .text-color-primary {
-  color: #405f8d;
+  color: #364f84;
 }
 
 @keyframes cursor-blink {
