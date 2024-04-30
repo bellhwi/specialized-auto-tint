@@ -3,23 +3,23 @@
 @tailwind utilities;
 @font-face {
   font-family: 'Batman';
-  src: url('../../public/fonts/batman.ttf') format('truetype');
+  src: url('/fonts/batman.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Sarang';
-  src: url('../../public/fonts/sarang.ttf') format('truetype');
+  src: url('/fonts/sarang.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Godic_thin';
-  src: url('../../public/fonts/godic_thin.ttf') format('truetype');
+  src: url('/fonts/godic_thin.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Godic_regular';
-  src: url('../../public/fonts/godic_regular.TTF') format('truetype');
+  src: url('/fonts/godic_regular.TTF') format('truetype');
 }
 @font-face {
   font-family: 'Godic_bold';
-  src: url('../../public/fonts/godic_bold.ttf') format('truetype');
+  src: url('/fonts/godic_bold.ttf') format('truetype');
 }
 
 body {
