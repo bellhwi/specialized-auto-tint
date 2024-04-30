@@ -39,7 +39,9 @@ export default function Main({ setOpenNav, setOpenQuote }) {
             <p className='text-xl lg:text-5xl text-white'>
               The Highest Standard of
             </p>
-            <h1 className='uppercase lg:text-6xl text-lg'>auto window tint</h1>
+            <h1 className='uppercase lg:text-6xl text-xl tracking-tight'>
+              auto window tint
+            </h1>
             <div className='flex items-center space-x-2'>
               <Image
                 src='/img/logos/3m.png'
@@ -97,11 +99,11 @@ export default function Main({ setOpenNav, setOpenQuote }) {
           alt='main background'
           className='absolute inset-0 h-full'
         />
-        <div className='relative container mx-auto justify-between px-8 pt-8 flex text-white items-start '>
+        <div className='relative container mx-auto justify-between px-8 flex text-white items-start '>
           {isOpen === null || isOpen === 3 ? null : (
             // Bottom Products
             <>
-              <h2 className='uppercase text-xl mr-4 font-semibold relative z-20'>
+              <h2 className='uppercase text-xl mr-4 pt-8 font-semibold relative z-20'>
                 Product
               </h2>
               <div className='relative z-20 grow'>
@@ -111,9 +113,9 @@ export default function Main({ setOpenNav, setOpenQuote }) {
           )}
         </div>
         {/* why choose us */}
-        <section className='relative z-20'>
+        <section className='relative z-20 mt-8'>
           <div className='container mx-auto px-8 text-sm text-gray-300 space-y-4 lg:text-base'>
-            <h2 className='flex text-center justify-center relative text-2xl	 text-white w-full lg:w-max px-4 lg:text-4xl lg:text-left'>
+            <h2 className='flex justify-center relative text-2xl	 text-white w-full lg:w-max px-4 lg:text-4xl'>
               <Image
                 src='/img/auto-window-tint/quote-1.png'
                 width={63}
