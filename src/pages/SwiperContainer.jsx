@@ -11,9 +11,13 @@ import { useState, useRef } from 'react'
 const SwiperContainer = () => {
   const [direction, setDirection] = useState('right')
   const [openNav, setOpenNav] = useState(false)
+  const [openQuote, setOpenQuote] = useState(false)
   const swiperRef = useRef(null)
   const handleOpenNav = () => {
     openNav ? setOpenNav(false) : setOpenNav(true)
+  }
+  const handleOpenQuote = () => {
+    openQuote ? setOpenQuote(false) : setOpenQuote(true)
   }
   const handleScrollToTop = (swiper) => {
     window.scrollTo(0, 0)
@@ -47,20 +51,23 @@ const SwiperContainer = () => {
         swiperRef.current = swiper
       }}
     >
-      {!openNav && (
+      {!openNav && !openQuote && (
         <div onClick={(e) => handlePagerClick(e)}>
           <Pager direction={direction} />
         </div>
       )}
 
       <SwiperSlide>
-        <Main setOpenNav={handleOpenNav} />
+        <Main setOpenNav={handleOpenNav} setOpenQuote={handleOpenQuote} />
       </SwiperSlide>
       <SwiperSlide>
-        <CeramicCoating setOpenNav={handleOpenNav} />
+        <CeramicCoating
+          setOpenNav={handleOpenNav}
+          setOpenQuote={handleOpenQuote}
+        />
       </SwiperSlide>
       <SwiperSlide>
-        <Portfolio setOpenNav={handleOpenNav} />
+        <Portfolio setOpenNav={handleOpenNav} setOpenQuote={handleOpenQuote} />
       </SwiperSlide>
     </Swiper>
   )

@@ -12,7 +12,7 @@ import Accordion from '@/components/Accordion'
 import { useState, useRef, useEffect } from 'react'
 import { products } from '@/data/data'
 
-export default function Main({ setOpenNav }) {
+export default function Main({ setOpenNav, setOpenQuote }) {
   const [isOpen, setIsOpen] = useState(null)
   const productsImageName = [
     'bg-fx-premium.png',
@@ -23,7 +23,7 @@ export default function Main({ setOpenNav }) {
 
   return (
     <section className='relative lg:mx-auto lg:relative'>
-      <Navbar main setOpenNav={setOpenNav} />
+      <Navbar main setOpenNav={setOpenNav} setOpenQuote={setOpenQuote} />
       <Image
         src='/img/services/bg-main.png'
         width={1036}
@@ -36,8 +36,10 @@ export default function Main({ setOpenNav }) {
       <section className='relative z-20 pt-40 lg:pt-72 '>
         <div className='container mx-auto'>
           <div className='text-white w-full pt-8 px-8'>
-            <p className='text-xl lg:text-5xl'>The Highest Standard of</p>
-            <h1 className='uppercase lg:text-6xl w-screen'>auto window tint</h1>
+            <p className='text-xl lg:text-5xl text-white'>
+              The Highest Standard of
+            </p>
+            <h1 className='uppercase lg:text-6xl text-lg'>auto window tint</h1>
             <div className='flex items-center space-x-2'>
               <Image
                 src='/img/logos/3m.png'
@@ -50,7 +52,7 @@ export default function Main({ setOpenNav }) {
                   Authorized Dealer
                 </p>
                 <div className='flex items-center space-x-2'>
-                  <p className='w-max text-xs lg:text-sm'>
+                  <p className='w-max text-xs lg:text-sm text-white'>
                     Automotive Window Films
                   </p>
                   <div className='h-2 flex flex-grow lg:w-48 lg:flex-none'>
@@ -141,7 +143,7 @@ export default function Main({ setOpenNav }) {
                 height={400}
                 className='aspect-video rounded'
               />
-              <p className='text-justify'>
+              <p className='text-justify text-gray-100'>
                 Computerized Film Cutting System-digitally generates and cuts
                 window tint patterns to your vehicle&apos;s exact
                 specifications, ensuring the best tint service every time.
@@ -151,7 +153,7 @@ export default function Main({ setOpenNav }) {
                 </span>
                 which may risk damage to the glass and rubber seals.
               </p>
-              <p className='text-justify'>
+              <p className='text-justify text-gray-100'>
                 Specialized Auto Tint computers pre-cut every vehicle window
                 tint to the exact make and model of your vehicle to provide the
                 very best tint accuracy and vehicle security for our customers.
@@ -175,12 +177,12 @@ export default function Main({ setOpenNav }) {
                 />
                 Your browser does not support the video tag.
               </video>
-              <p className='text-justify'>
+              <p className='text-justify text-gray-100'>
                 Filed edges is a process where the film is positioned just over
                 the edge of the window and then filed so that no actual gap is
                 there to be seen.
               </p>
-              <p className='text-justify'>
+              <p className='text-justify text-gray-100'>
                 Our Shaved Top Window Edge{' '}
                 <span className='italic font-bold'>
                   produce your auto window much more of a factory look and is
@@ -190,7 +192,7 @@ export default function Main({ setOpenNav }) {
             </div>
             <div className='space-y-4 text-gray-100'>
               <div className='flex items-center'>
-                <p className='text-5xl font-godic-bold mr-2'>3</p>
+                <p className='text-5xl text-white font-godic-bold mr-2'>3</p>
 
                 <p className='text-white text-lg leading-6 lg:text-2xl'>
                   Prepare with <br></br>Heat Shrinking Method
@@ -209,7 +211,7 @@ export default function Main({ setOpenNav }) {
                 />
                 Your browser does not support the video tag.
               </video>
-              <p className='text-justify'>
+              <p className='text-justify text-gray-100'>
                 The wet heat shrinking method is a technique used to install
                 window tint with better control over the film and{' '}
                 <span className='italic font-bold'>
@@ -219,7 +221,7 @@ export default function Main({ setOpenNav }) {
                 wet shrinking involves applying a solution to both the window
                 and the tint film.
               </p>
-              <p className='text-justify'>
+              <p className='text-justify text-gray-100'>
                 This added moisture allows for easy manipulation of the film
                 during installation, ensuring a precise fit and minimizing the
                 risk of creases or air bubbles.
@@ -233,7 +235,7 @@ export default function Main({ setOpenNav }) {
                 More than 15 years of experience
               </p>
 
-              <p className='text-justify'>
+              <p className='text-justify text-gray-100'>
                 <span className='italic font-bold'>
                   Improve Your Comfort with Quality Window Tints
                 </span>{' '}
@@ -242,7 +244,7 @@ export default function Main({ setOpenNav }) {
                 Specialized Auto Tint, Irvine provide you with quality window
                 tinting.
               </p>
-              <p>
+              <p className='text-justify text-gray-100'>
                 With over 15 years of experience, you can be sure our team will
                 have your window tints installed quickly and correctly.
               </p>
@@ -255,7 +257,7 @@ export default function Main({ setOpenNav }) {
                 Quality Assurance
               </p>
 
-              <div className='text-justify'>
+              <p className='text-justify text-gray-100'>
                 Our window tinting{' '}
                 <span className='italic font-bold'>
                   comes with 3M lifetime warranty
@@ -272,7 +274,7 @@ export default function Main({ setOpenNav }) {
                     Learn more
                   </a>
                 </div>
-              </div>
+              </p>
             </div>
           </div>
         </section>
@@ -296,12 +298,12 @@ export default function Main({ setOpenNav }) {
                 </div>
               </div>
               <div className='text-base leading-7 grow space-y-1'>
-                <a href='tel:9493419100' className='block text-blue-300'>
-                  (949)341-9100
+                <a href='tel:9493419100' className='w-max block text-blue-300'>
+                  (949) 341-9100
                 </a>
                 <a
                   href='mailto:irvinetint@gmail.com'
-                  className='block text-blue-300'
+                  className='w-max block text-blue-300'
                 >
                   irvinetint@gmail.com
                 </a>

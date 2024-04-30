@@ -15,7 +15,7 @@ import 'photoswipe/dist/photoswipe.css'
 
 import { Gallery, Item } from 'react-photoswipe-gallery'
 
-export default function Portfolio({ setOpenNav }) {
+export default function Portfolio({ setOpenNav, setOpenQuote }) {
   const suvArr = Array.from({ length: 34 }, (_, index) => index)
   const truckArr = Array.from({ length: 5 }, (_, index) => index)
   const sedanArr = Array.from({ length: 56 }, (_, index) => index)
@@ -30,8 +30,14 @@ export default function Portfolio({ setOpenNav }) {
   ]
 
   return (
-    <section className='lg:mx-auto lg:relative bg-black'>
-      <Navbar setOpenNav={setOpenNav} />
+    <section className='lg:mx-auto relative'>
+      <Image
+        src='/img/bg-overlay.png'
+        width={1025}
+        height={6155}
+        className='inset-0 absolute h-full'
+      />
+      <Navbar setOpenNav={setOpenNav} setOpenQuote={setOpenQuote} />
       <Image
         src='/img/portfolio/hero.png'
         width={1036}
@@ -51,7 +57,7 @@ export default function Portfolio({ setOpenNav }) {
             years. We promise to continue to provide the best quality and
             service for customer satisfaction. <br />
           </p>
-          <p className='text-white text-xs ml-auto font-thin text-gray-100 mt-2'>
+          <p className='text-white w-max text-xs ml-auto font-thin text-gray-100 mt-2'>
             -Specialized Auto Tint owner / Jae H Park
           </p>
           <Image
@@ -77,7 +83,7 @@ export default function Portfolio({ setOpenNav }) {
       <section className='py-8'>
         <div className='container mx-auto px-8'>
           <h3 className='relative text-lg text-white font-thin'>SUV & Truck</h3>
-          <div className='grid grid-cols-2 gap-4 mt-4'>
+          <div className='grid grid-cols-2 gap-4 mt-2 relative'>
             <Gallery>
               {suvArr.map((pic, index) => {
                 return (
@@ -93,6 +99,7 @@ export default function Portfolio({ setOpenNav }) {
                         ref={ref}
                         onClick={open}
                         src={`/img/portfolio/suv/${pic}.jpg`}
+                        className='object-cover aspect-thumb'
                       />
                     )}
                   </Item>
@@ -112,6 +119,7 @@ export default function Portfolio({ setOpenNav }) {
                         ref={ref}
                         onClick={open}
                         src={`/img/portfolio/truck/${pic}.jpg`}
+                        className='object-cover aspect-thumb'
                       />
                     )}
                   </Item>
@@ -122,7 +130,7 @@ export default function Portfolio({ setOpenNav }) {
           <h3 className='relative text-lg text-white font-thin mt-8'>
             Sedan & Sports
           </h3>
-          <div className='grid grid-cols-2 gap-4 mt-4'>
+          <div className='grid grid-cols-2 gap-4 mt-2 relative'>
             <Gallery>
               {sedanArr.map((pic, index) => {
                 return (
@@ -138,6 +146,7 @@ export default function Portfolio({ setOpenNav }) {
                         ref={ref}
                         onClick={open}
                         src={`/img/portfolio/sedan/${pic}.jpg`}
+                        className='object-cover w-full h-full'
                       />
                     )}
                   </Item>
@@ -157,6 +166,7 @@ export default function Portfolio({ setOpenNav }) {
                         ref={ref}
                         onClick={open}
                         src={`/img/portfolio/sport/${pic}.jpg`}
+                        className='object-cover w-full h-full'
                       />
                     )}
                   </Item>

@@ -7,13 +7,14 @@ import Description from './Description'
 import Subheading from './Subheading'
 import Image from 'next/image'
 
-const Navbar = ({ main, setOpenNav }) => {
+const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
   const handleMobileMenu = () => {
     setShowMobileNav(!showMobileNav)
     setOpenNav()
   }
   const handleQuotationModal = () => {
     setShowQuotationModal(!showQuotationModal)
+    setOpenQuote()
   }
   const [showMobileNav, setShowMobileNav] = useState(false)
   const [showQuotationModal, setShowQuotationModal] = useState(false)
@@ -45,7 +46,7 @@ const Navbar = ({ main, setOpenNav }) => {
         <Link href={`/`}>
           <Logo />
         </Link>
-        <div className='flex items-center space-x-3 lg:hidden'>
+        <div className='flex items-center space-x-4 lg:hidden'>
           <button
             className='text-xs uppercase relative bottom-0.5 font-sarang'
             onClick={handleQuotationModal}
@@ -135,20 +136,22 @@ const Navbar = ({ main, setOpenNav }) => {
             className='fixed top-0 left-0 bottom-0 right-0 bg-black opacity-75 z-40'
             onClick={handleQuotationModal}
           ></div>
-          <div className='absolute mt-24 left-1/2 transform -translate-x-1/2 p-8 z-50 w-4/5 rounded-sm text-center bg-gradient-to-b from-zinc-400 from-20% via-zinc-200 via-70% to-zinc-50'>
-            <Subheading className='mt-4' title='Request a quote by' />
+          <div className='absolute mt-24 left-1/2 transform -translate-x-1/2 p-8 z-50 w-4/5 rounded text-center bg-gradient-to-b from-zinc-400 from-20% to-white'>
+            <p className='text-lg uppercase font-godic-bold text-black'>
+              request a quote by
+            </p>
             <div className='flex items-center justify-center mt-4 space-x-2'>
               <a href='tel:949-341-9100' className='p-4'>
                 <div className='flex flex-col items-center justify-center'>
-                  <i className='fa-solid fa-phone text-black'></i>
-                  <Description desc='Calling Us' />
+                  <i className='fa-solid fa-phone text-blue-600'></i>
+                  <p className='text-sm mt-2 text-blue-600'>Calling Us</p>
                 </div>
               </a>
               <div className='h-16 border-l border-gray-200'></div>
               <a href='mailto:irvinetint@gmail.com' className='p-4'>
                 <div className='flex flex-col items-center justify-center'>
-                  <i className='fa-solid fa-envelope text-black'></i>
-                  <Description desc='Emailing Us' />
+                  <i className='fa-solid fa-envelope text-blue-600'></i>
+                  <p className='text-sm mt-2 text-blue-600'>Emailing Us</p>
                 </div>
               </a>
             </div>
