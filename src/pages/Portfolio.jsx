@@ -64,11 +64,11 @@ export default function Portfolio({ setOpenNav }) {
             Check our customer reviews on Google and Yelp.
           </h2>
           <p className='text-sm font-thin text-gray-400 mt-4 text-center'>
-            "I got my 2023 Tesla Model X tinted with the best tint, 3M
+            &quot;I got my 2023 Tesla Model X tinted with the best tint, 3M
             Crystalline. Comparing another tint shops when it comes to the
             workmanship and tint quality, Specialized Auto Tint is on another
-            level. Thanks for the great work gentlemen." <br></br> - Dec.20.2023
-            Yelp -
+            level. Thanks for the great work gentlemen.&quot; <br></br> -
+            Dec.20.2023 Yelp -
           </p>
         </div>
       </section>
