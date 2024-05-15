@@ -11,6 +11,7 @@ module.exports = {
         primary: '#F02E35',
       },
       spacing: {
+        18: '4.5rem',
         100: '28rem',
         104: '30rem',
         108: '32rem',

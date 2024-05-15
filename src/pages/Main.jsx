@@ -57,7 +57,9 @@ export default function Main({ setOpenNav, setOpenQuote }) {
     })
 
     return () => {
-      document.body.removeChild(preloadDiv)
+      if (document.body.contains(preloadDiv)) {
+        document.body.removeChild(preloadDiv)
+      }
     }
   }, [])
 
@@ -367,14 +369,15 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 </span>{' '}
                 on the product itself, as well as a lifetime warranty on all
                 labor.{' '}
-                <div className='flex justify-end'>
+                <div className='flex justify-end mt-1 lg:mt-0'>
                   <a
                     href='https://multimedia.3m.com/mws/media/157410O/lifetime-warranty-and-limited-remedy.pdf'
                     target='_blank'
                     rel='noopener'
                     className='inline-block text-blue-300'
                   >
-                    Download - 3M Lifetime Warranty.pdf
+                    <i className='fa-solid fa-download mr-1'></i> 3M Lifetime
+                    Warranty.pdf
                   </a>
                 </div>
               </p>
@@ -429,7 +432,12 @@ export default function Main({ setOpenNav, setOpenQuote }) {
               {/* COPYWRITING */}
               <p className='hidden lg:block text-xs text-center text-gray-600 mt-4'>
                 &copy; {currentYear} Specialized Auto Tint x Powered by{' '}
-                <a href='https://webtamin.co/en' target='_blank' rel='noopener'>
+                <a
+                  href='https://webtamin.co/'
+                  target='_blank'
+                  rel='noopener'
+                  className='hover:text-primary'
+                >
                   Webtamin
                 </a>
               </p>
@@ -452,7 +460,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
           className='relative z-20 lg:hidden'
           style={{
             backgroundImage:
-              'linear-gradient(to bottom, #1a1a1a 30%, white 85%)',
+              'linear-gradient(to bottom, transparent 30%, white 85%)',
           }}
         >
           <div className='container mx-auto px-8'>

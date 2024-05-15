@@ -72,8 +72,8 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
 
       {/* MOBILE SIDE MENU */}
       <ul
-        className={`text-sm w-60 fixed right-0 top-0 bottom-0 p-6 space-y-4 text-left flex flex-col transition-all duration-500 z-50 ${
-          showMobileNav ? 'translate-x-0' : 'translate-x-60'
+        className={`text-sm w-48 fixed right-0 top-0 bottom-0 p-6 space-y-3 text-left flex flex-col transition-all duration-500 z-50 ${
+          showMobileNav ? 'translate-x-0' : 'translate-x-48'
         } bg-gradient-to-r from-zinc-900 from-30% via-zinc-800 via-60% to-zinc-600`}
       >
         <Link href='/' className='uppercase'>

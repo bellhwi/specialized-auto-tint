@@ -186,7 +186,7 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
       <section
         className='relative z-20'
         style={{
-          backgroundImage: 'linear-gradient(to bottom, white 30%, #ccc)',
+          backgroundImage: 'linear-gradient(to bottom, transparent 30%, #ccc)',
         }}
       >
         <section className='container mx-auto px-8'>

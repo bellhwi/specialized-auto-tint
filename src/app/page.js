@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar'
 import Main from '@/pages/Main'
 import Link from 'next/link'
 import NavbarDesktop from '@/components/NavbarDesktop'
+import TopBtn from '@/components/TopBtn'
 
 export default function Home() {
   return (
@@ -16,22 +17,23 @@ export default function Home() {
         <div className='w-1/12' style={{ backgroundColor: '#141414' }}></div>
       </div>
 
-      {/* Desktop Screen */}
+      <Main />
+
+      {/* Desktop Navbar */}
       <div className='hidden lg:block'>
-        <Main />
         <NavbarDesktop main />
       </div>
-      {/* Mobile Screen */}
-      <div className='lg:hidden'>
-        <SwiperContainer />
-      </div>
+
+      {/* Mobile Call Button  */}
       <a href='tel:+19493419100' class='lg:hidden'>
-        <div class='z-10 fixed right-0 bottom-0 m-4'>
-          <div class='flex items-center justify-center rounded-full bg-primary text-white w-12 h-12 md:w-auto md:h-auto md:p-4'>
-            <i class='fa-solid fa-phone md:mr-2'></i>
+        <div class='z-20 fixed right-0 bottom-0 m-4'>
+          <div class='flex items-center justify-center rounded-full bg-primary text-white w-12 h-12'>
+            <i class='fa-solid fa-phone'></i>
           </div>
         </div>
       </a>
+
+      <TopBtn />
     </section>
   )
 }
