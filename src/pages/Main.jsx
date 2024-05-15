@@ -12,17 +12,17 @@ export default function Main({ setOpenNav, setOpenQuote }) {
   const [isOpen, setIsOpen] = useState(null)
 
   const mobileProductsImageName = [
-    'bg-fx-premium.png',
-    'bg-color-stable.png',
-    'bg-ir-ceramic.png',
-    'bg-cr-crystalline.png',
+    'bg-fx-premium.webp',
+    'bg-color-stable.webp',
+    'bg-ir-ceramic.webp',
+    'bg-cr-crystalline.webp',
   ]
 
   const desktopProductsImageName = [
-    'bg-fx-premium_desktop.png',
-    'bg-color-stable_desktop.png',
-    'bg-ir-ceramic_desktop.png',
-    'bg-cr-crystalline_desktop.png',
+    'bg-fx-premium_desktop.webp',
+    'bg-color-stable_desktop.webp',
+    'bg-ir-ceramic_desktop.webp',
+    'bg-cr-crystalline_desktop.webp',
   ]
 
   const allProductsImageName = [
@@ -60,7 +60,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
     <section className='relative lg:mx-auto lg:w-2/3 lg:max-w-screen-lg'>
       <Navbar main setOpenNav={setOpenNav} setOpenQuote={setOpenQuote} />
       <Image
-        src='/img/services/bg-main.png'
+        src='/img/services/bg-main.webp'
         width={1036}
         height={7200}
         alt='main background'
@@ -80,7 +80,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
             </h1>
             <div className='flex items-center space-x-2'>
               <Image
-                src='/img/logos/3m.png'
+                src='/img/logos/3m.webp'
                 width={574}
                 height={296}
                 className='w-16 lg:w-20'
@@ -148,7 +148,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
 
       <section className='relative'>
         <Image
-          src='/img/bg-overlay.png'
+          src='/img/bg-overlay.webp'
           width={1036}
           height={7867}
           alt='main background'
@@ -172,7 +172,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
           <div className='container mx-auto px-8 text-sm text-gray-300 space-y-4 lg:text-base'>
             <h2 className='flex justify-center relative text-3xl	font-godic-regular text-gray-300 w-full px-4 lg:text-4xl lg:w-max lg:mx-auto lg:px-8'>
               <Image
-                src='/img/auto-window-tint/quote-1.png'
+                src='/img/auto-window-tint/quote-1.webp'
                 width={63}
                 height={62}
                 className='w-6 absolute top-0 left-0'
@@ -180,7 +180,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
               How we provide <br className='lg:hidden' />
               best quality of services
               <Image
-                src='/img/auto-window-tint/quote-2.png'
+                src='/img/auto-window-tint/quote-2.webp'
                 width={63}
                 height={62}
                 className='w-6 absolute bottom-0 right-0'
@@ -257,7 +257,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                   controls
                   muted
                   className='rounded w-full aspect-thumb lg:hidden object-cover'
-                  poster='/img/auto-window-tint/topshaving-thumb.png'
+                  poster='/img/auto-window-tint/topshaving-thumb.webp'
                 >
                   <source
                     src='/img/auto-window-tint/topshaving.mp4'
@@ -281,7 +281,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 controls
                 muted
                 className='rounded hidden w-full aspect-thumb lg:block lg:h-full lg:w-1/3 object-cover'
-                poster='/img/auto-window-tint/topshaving-thumb.png'
+                poster='/img/auto-window-tint/topshaving-thumb.webp'
               >
                 <source
                   src='/img/auto-window-tint/topshaving.mp4'
@@ -307,7 +307,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                   controls
                   muted
                   className='rounded w-full aspect-thumb lg:hidden object-cover'
-                  poster='/img/auto-window-tint/heat-shrinking-thumb.png'
+                  poster='/img/auto-window-tint/heat-shrinking-thumb.webp'
                 >
                   <source
                     src='/img/auto-window-tint/heat-shrinking.mp4'
@@ -337,7 +337,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 controls
                 muted
                 className='rounded w-full aspect-thumb hidden lg:block lg:w-1/3 lg:h-full object-cover'
-                poster='/img/auto-window-tint/heat-shrinking-thumb.png'
+                poster='/img/auto-window-tint/heat-shrinking-thumb.webp'
               >
                 <source
                   src='/img/auto-window-tint/heat-shrinking.mp4'

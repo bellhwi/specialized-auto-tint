@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       <body className='relative'>
         <nav className='hidden absolute left-0 top-0 right-0 text-white z-30 lg:block'>
           <Image
-            src='/img/navbar-bg.png'
+            src='/img/navbar-bg.webp'
             width={5709}
             height={321}
             className='absolute inset-0 h-12 w-full'

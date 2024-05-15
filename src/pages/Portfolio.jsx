@@ -14,14 +14,14 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
   return (
     <section className='lg:mx-auto relative  lg:w-2/3 lg:max-w-screen-lg'>
       <Image
-        src='/img/bg-overlay.png'
+        src='/img/bg-overlay.webp'
         width={1025}
         height={6155}
         className='inset-0 absolute h-full'
       />
       <Navbar setOpenNav={setOpenNav} setOpenQuote={setOpenQuote} />
       <Image
-        src='/img/portfolio/hero.png'
+        src='/img/portfolio/hero.webp'
         width={1036}
         height={1243}
         alt='car'
@@ -43,7 +43,7 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
             -Specialized Auto Tint owner / Jae H Park
           </p>
           <Image
-            src='/img/portfolio/owner.png'
+            src='/img/portfolio/owner.webp'
             width={643}
             height={421}
             className='w-full my-4'
@@ -75,8 +75,8 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
                 return (
                   <Item
                     key={index}
-                    original={`/img/portfolio/suv-and-truck/${pic}.jpg`}
-                    thumbnail={`/img/portfolio/suv-and-truck/${pic}.jpg`}
+                    original={`/img/portfolio/suv-and-truck/${pic}.webp`}
+                    thumbnail={`/img/portfolio/suv-and-truck/${pic}.webp`}
                     width='4000'
                     height='3000'
                   >
@@ -84,7 +84,7 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
                       <img
                         ref={ref}
                         onClick={open}
-                        src={`/img/portfolio/suv-and-truck/${pic}.jpg`}
+                        src={`/img/portfolio/suv-and-truck/${pic}.webp`}
                         className='object-cover aspect-thumb'
                       />
                     )}
@@ -102,8 +102,8 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
                 return (
                   <Item
                     key={index}
-                    original={`/img/portfolio/sedan-and-sport/${pic}.jpg`}
-                    thumbnail={`/img/portfolio/sedan-and-sport/${pic}.jpg`}
+                    original={`/img/portfolio/sedan-and-sport/${pic}.webp`}
+                    thumbnail={`/img/portfolio/sedan-and-sport/${pic}.webp`}
                     width='4000'
                     height='3000'
                   >
@@ -111,7 +111,7 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
                       <img
                         ref={ref}
                         onClick={open}
-                        src={`/img/portfolio/sedan-and-sport/${pic}.jpg`}
+                        src={`/img/portfolio/sedan-and-sport/${pic}.webp`}
                         className='object-cover w-full h-full'
                       />
                     )}

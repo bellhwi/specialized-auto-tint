@@ -21,7 +21,7 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
     <nav className='absolute left-0 top-0 right-0 text-white z-30 lg:hidden'>
       <div className='lg:hidden'>
         <Image
-          src='/img/navbar-bg.png'
+          src='/img/navbar-bg.webp'
           width={1037}
           height={98}
           className='absolute inset-0 h-10'

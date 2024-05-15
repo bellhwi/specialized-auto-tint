@@ -1,10 +1,14 @@
 'use client'
-
-import { products } from '@/data/data'
 import Accordion from './Accordion'
 import { useState, useEffect } from 'react'
 
 const Products = ({ isOpen, setIsOpen, rest }) => {
+  const products = [
+    '3M FX Premium',
+    '3M Color Stable',
+    '3M Ceramic IR',
+    '3M Crystalline',
+  ]
   const [openAccordion, setOpenAccordion] = useState(isOpen)
   const modifiedProducts = products.slice(0, openAccordion + 1)
 
@@ -42,7 +46,7 @@ const Products = ({ isOpen, setIsOpen, rest }) => {
               ? products.map((product, index) => (
                   <Accordion
                     key={index}
-                    title={product.title}
+                    title={product}
                     isOpen={openAccordion === index}
                     onToggle={() => handleToggleAccordion(index)}
                   />
@@ -50,7 +54,7 @@ const Products = ({ isOpen, setIsOpen, rest }) => {
               : modifiedProducts.map((product, index) => (
                   <Accordion
                     key={index}
-                    title={product.title}
+                    title={product}
                     isOpen={openAccordion === index}
                     onToggle={() => handleToggleAccordion(index)}
                   />
@@ -58,7 +62,7 @@ const Products = ({ isOpen, setIsOpen, rest }) => {
             : restProducts.map((product, index) => (
                 <Accordion
                   key={index}
-                  title={product.title}
+                  title={product}
                   isOpen={openAccordion === product.index}
                   onToggle={() => {
                     handleToggleAccordion(product.index)

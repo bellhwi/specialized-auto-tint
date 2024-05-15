@@ -8,7 +8,7 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
     <section className='lg:mx-auto lg:relative bg-white lg:w-2/3 lg:max-w-screen-lg'>
       <Navbar setOpenNav={setOpenNav} setOpenQuote={setOpenQuote} />
       <Image
-        src='/img/ceramic-coating/hero.png'
+        src='/img/ceramic-coating/hero.webp'
         width={1181}
         height={1705}
         alt='super car'
@@ -56,7 +56,7 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
               </span>
             </h2>
             <Image
-              src='/img/ceramic-coating/maintenance.png'
+              src='/img/ceramic-coating/maintenance.webp'
               width={914}
               height={312}
               className='mt-8 mx-auto lg:w-2/3'
@@ -75,7 +75,7 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
             </p>
           </div>
           <Image
-            src='/img/ceramic-coating/car-wash.jpg'
+            src='/img/ceramic-coating/car-wash.webp'
             width={331}
             height={151}
             className='w-full pt-8'
@@ -94,7 +94,7 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
             </p>
           </div>
           <Image
-            src='/img/ceramic-coating/clay-prep.jpeg'
+            src='/img/ceramic-coating/clay-prep.webp'
             width={330}
             height={151}
             className='w-full pt-8'
@@ -113,7 +113,7 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
             </p>
           </div>
           <Image
-            src='/img/ceramic-coating/coating.jpg'
+            src='/img/ceramic-coating/coating.webp'
             width={870}
             height={151}
             className='w-full pt-8'
@@ -131,7 +131,7 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
             APPLIES TO ALL PAINT & CERTIFIED COATINGS
           </p>
           <Image
-            src='/img/ceramic-coating/benefits.png'
+            src='/img/ceramic-coating/benefits.webp'
             width={870}
             height={221}
             className='mt-4 w-full lg:w-2/3'
