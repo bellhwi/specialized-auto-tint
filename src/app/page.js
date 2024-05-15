@@ -1,8 +1,4 @@
-import SwiperContainer from '@/pages/SwiperContainer'
-import Pager from '@/components/Pager'
-import Navbar from '@/components/Navbar'
 import Main from '@/pages/Main'
-import Link from 'next/link'
 import NavbarDesktop from '@/components/NavbarDesktop'
 import TopBtn from '@/components/TopBtn'
 

@@ -1,7 +1,4 @@
 'use client'
-import Subheading from './Subheading'
-import Image from 'next/image'
-import Description from './Description'
 
 // Modify the Accordion component
 const Accordion = ({ title, isOpen, onToggle }) => {
@@ -32,9 +29,6 @@ const Accordion = ({ title, isOpen, onToggle }) => {
             <i className='fa-solid fa-chevron-down text-blue-300'></i>
           ) : (
             <>
-              {/* <span className='md:hidden'>
-                <i className='fa-solid fa-chevron-down text-white'></i>
-              </span> */}
               <span className='md:block font-godic-thin'>Learn More</span>
             </>
           )}

@@ -1,17 +1,10 @@
 'use client'
 import Image from 'next/image'
 import Products from '@/components/Products'
-import Hero from '@/components/Hero'
-import WhyChooseUs from '@/components/WhyChooseUs'
-import Heading from '@/components/Heading'
-import Description from '@/components/Description'
-import Contact from '@/components/Contact'
 import Map from '@/components/Map'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
-import Accordion from '@/components/Accordion'
-import { useState, useRef, useEffect } from 'react'
-import { products } from '@/data/data'
+import { useState, useEffect } from 'react'
 import Logo from '@/components/Logo'
 
 export default function Main({ setOpenNav, setOpenQuote }) {

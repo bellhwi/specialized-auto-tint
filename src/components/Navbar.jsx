@@ -3,8 +3,6 @@
 import Link from 'next/link'
 import Logo from './Logo'
 import { useState } from 'react'
-import Description from './Description'
-import Subheading from './Subheading'
 import Image from 'next/image'
 
 const Navbar = ({ main, setOpenNav, setOpenQuote }) => {

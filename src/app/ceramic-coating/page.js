@@ -1,8 +1,4 @@
-import SwiperContainer from '@/pages/SwiperContainer'
-import Pager from '@/components/Pager'
-import Navbar from '@/components/Navbar'
 import CeramicCoating from '@/pages/CeramicCoating'
-import Link from 'next/link'
 import NavbarDesktop from '@/components/NavbarDesktop'
 import TopBtn from '@/components/TopBtn'
 export default function Home() {

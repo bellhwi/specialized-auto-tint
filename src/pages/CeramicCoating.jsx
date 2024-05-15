@@ -1,27 +1,9 @@
 'use client'
 import Image from 'next/image'
-import Products from '@/components/Products'
-import Hero from '@/components/Hero'
-import WhyChooseUs from '@/components/WhyChooseUs'
-import Heading from '@/components/Heading'
-import Description from '@/components/Description'
-import Contact from '@/components/Contact'
-import Map from '@/components/Map'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
-import Accordion from '@/components/Accordion'
-import { useState, useRef, useEffect } from 'react'
-import { products } from '@/data/data'
 
 export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
-  const [isOpen, setIsOpen] = useState(null)
-  const productsImageName = [
-    'bg-fx-premium.png',
-    'bg-color-stable.png',
-    'bg-ir-ceramic.png',
-    'bg-cr-crystalline.png',
-  ]
-
   return (
     <section className='lg:mx-auto lg:relative bg-white lg:w-2/3 lg:max-w-screen-lg'>
       <Navbar setOpenNav={setOpenNav} setOpenQuote={setOpenQuote} />

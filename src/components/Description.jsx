@@ -1,11 +1,7 @@
-import { Open_Sans } from 'next/font/google'
-
-const open_sans = Open_Sans({ subsets: ['latin'] })
-
 const Description = ({ desc, nomargin, light, dark, href, blue, white }) => {
   return (
     <p
-      className={`${open_sans.className} ${nomargin ? null : 'mt-2'} ${
+      className={`${nomargin ? null : 'mt-2'} ${
         light
           ? 'text-gray-300'
           : dark
