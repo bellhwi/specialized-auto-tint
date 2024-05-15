@@ -20,27 +20,15 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
   const [showQuotationModal, setShowQuotationModal] = useState(false)
 
   return (
-    <nav className='absolute left-0 top-0 right-0 text-white z-30'>
-      {/* background */}
-      {main ? (
-        <div className='lg:hidden'>
-          <Image
-            src='/img/navbar-bg.png'
-            width={975}
-            height={107}
-            className='absolute inset-0 '
-          />
-        </div>
-      ) : (
-        <div className='lg:hidden'>
-          <Image
-            src='/img/navbar-bg-both-sides.png'
-            width={1037}
-            height={107}
-            className='absolute inset-0'
-          />
-        </div>
-      )}
+    <nav className='absolute left-0 top-0 right-0 text-white z-30 lg:hidden'>
+      <div className='lg:hidden'>
+        <Image
+          src='/img/navbar-bg.png'
+          width={1037}
+          height={98}
+          className='absolute inset-0 h-10'
+        />
+      </div>
 
       <div className='container mx-auto px-3 pt-2 flex justify-between items-center relative md:mt-4 lg:px-8'>
         <Link href={`/`}>
@@ -48,10 +36,10 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
         </Link>
         <div className='flex items-center space-x-4 lg:hidden'>
           <button
-            className='text-xs uppercase relative bottom-0.5 font-sarang'
+            className='contact-text bg-primary p-1 rounded-full text-xs uppercase relative bottom-0.5 font-sarang'
             onClick={handleQuotationModal}
           >
-            CONTACT
+            contact & appointment
           </button>
           <Link href='#' onClick={handleMobileMenu}>
             <i className='fa-solid fa-bars text-xl text-white'></i>
@@ -88,28 +76,16 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
           showMobileNav ? 'translate-x-0' : 'translate-x-60'
         } bg-gradient-to-r from-zinc-900 from-30% via-zinc-800 via-60% to-zinc-600`}
       >
-        <Link href='#' className='uppercase'>
-          auto window tint
+        <Link href='/' className='uppercase'>
+          window tint
         </Link>
         <hr className={`w-full border-gray-200 `} />
-        <Link href='#' className='uppercase'>
-          ceramic coating & PPF
+        <Link href='/ceramic-coating' className='uppercase'>
+          ceramic coating
         </Link>
         <hr className={`w-full border-gray-200 `} />
-        <Link href='#' className='uppercase'>
+        <Link href='/portfolio' className='uppercase'>
           portfolio
-        </Link>
-        <hr className={`w-full border-gray-200 `} />
-        <Link href='#about-us' className='uppercase' onClick={handleMobileMenu}>
-          about us
-        </Link>
-        <hr className={`w-full border-gray-200 `} />
-        <Link
-          href='#quality-assurance'
-          className='uppercase'
-          onClick={handleMobileMenu}
-        >
-          quality assurance
         </Link>
         <div
           className={`top-8 mx-auto relative w-8 h-8 rounded-full flex items-center justify-center border p-4 cursor-pointer transition hover:rotate-90`}

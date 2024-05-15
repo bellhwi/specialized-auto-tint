@@ -1,4 +1,7 @@
 import './globals.css'
+import Image from 'next/image'
+import Link from 'next/link'
+import Logo from '@/components/Logo'
 
 export const metadata = {
   title: 'SPECIALIZED AUTO TINT',
@@ -16,7 +19,23 @@ export default function RootLayout({ children }) {
         referrerPolicy='no-referrer'
       />
 
-      <body>{children}</body>
+      <body className='relative'>
+        <nav className='hidden absolute left-0 top-0 right-0 text-white z-30 lg:block'>
+          <Image
+            src='/img/navbar-bg.png'
+            width={5709}
+            height={321}
+            className='absolute inset-0 h-12 w-full'
+          />
+
+          <div className='w-2/12 flex justify-between items-center relative mt-2.5'>
+            <Link href={`/`} className='ml-auto pr-4'>
+              <Logo footer />
+            </Link>
+          </div>
+        </nav>
+        {children}
+      </body>
     </html>
   )
 }

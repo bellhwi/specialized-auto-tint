@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import Products from '@/components/Products'
 import Hero from '@/components/Hero'
@@ -16,10 +17,8 @@ import 'photoswipe/dist/photoswipe.css'
 import { Gallery, Item } from 'react-photoswipe-gallery'
 
 export default function Portfolio({ setOpenNav, setOpenQuote }) {
-  const suvArr = Array.from({ length: 34 }, (_, index) => index)
-  const truckArr = Array.from({ length: 5 }, (_, index) => index)
-  const sedanArr = Array.from({ length: 56 }, (_, index) => index)
-  const sportArr = Array.from({ length: 10 }, (_, index) => index)
+  const suvTruckArr = Array.from({ length: 27 }, (_, index) => index)
+  const sedanSportArr = Array.from({ length: 40 }, (_, index) => index)
 
   const [isOpen, setIsOpen] = useState(null)
   const productsImageName = [
@@ -30,7 +29,7 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
   ]
 
   return (
-    <section className='lg:mx-auto relative'>
+    <section className='lg:mx-auto relative  lg:w-2/3 lg:max-w-screen-lg'>
       <Image
         src='/img/bg-overlay.png'
         width={1025}
@@ -47,17 +46,17 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
       />
 
       {/* main */}
-      <section className='relative z-20 pt-56 lg:pt-72 '>
-        <div className='container mx-auto text-center px-8'>
-          <h1 className='text-white uppercase text-2xl lg:text-6xl'>
+      <section className='relative z-20 pt-56 lg:pt-108'>
+        <div className='max-w-screen-md mx-auto px-8'>
+          <h1 className='text-white uppercase text-center text-2xl lg:text-6xl'>
             portfolio
           </h1>
-          <p className='text-sm font-thin text-gray-100 mt-4 text-justify'>
+          <p className='font-thin text-gray-100 mt-4 '>
             We sincerely thank our customers for their support over the past 15
             years. We promise to continue to provide the best quality and
             service for customer satisfaction. <br />
           </p>
-          <p className='text-white w-max text-xs ml-auto font-thin text-gray-100 mt-2'>
+          <p className='text-white w-max text-sm ml-auto font-thin text-gray-100 mt-2'>
             -Specialized Auto Tint owner / Jae H Park
           </p>
           <Image
@@ -66,15 +65,17 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
             height={421}
             className='w-full my-4'
           />
-          <h2 className='relative text-2xl text-white font-thin'>
+          <h2 className='relative text-gray-400 text-center text-2xl font-thin'>
             Check our customer reviews on Google and Yelp.
           </h2>
-          <p className='text-sm font-thin text-gray-400 mt-4 text-center'>
+          <p className='max-w-lg mx-auto  font-thin text-gray-100 mt-4 text-center'>
             &quot;I got my 2023 Tesla Model X tinted with the best tint, 3M
             Crystalline. Comparing another tint shops when it comes to the
             workmanship and tint quality, Specialized Auto Tint is on another
-            level. Thanks for the great work gentlemen.&quot; <br></br> -
-            Dec.20.2023 Yelp -
+            level. Thanks for the great work gentlemen.&quot; <br></br>{' '}
+            <span className='text-gray-400 text-sm inline-block mt-2'>
+              - Dec. 20. 2023 Yelp -
+            </span>
           </p>
         </div>
       </section>
@@ -82,15 +83,17 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
       {/* Portfolio images */}
       <section className='py-8'>
         <div className='container mx-auto px-8'>
-          <h3 className='relative text-lg text-white font-thin'>SUV & Truck</h3>
+          <h3 className='relative text-xl lg:text-2xl text-white font-thin'>
+            SUV & Truck
+          </h3>
           <div className='grid grid-cols-2 gap-4 mt-2 relative'>
             <Gallery>
-              {suvArr.map((pic, index) => {
+              {suvTruckArr.map((pic, index) => {
                 return (
                   <Item
                     key={index}
-                    original={`/img/portfolio/suv/${pic}.jpg`}
-                    thumbnail={`/img/portfolio/suv/${pic}.jpg`}
+                    original={`/img/portfolio/suv-and-truck/${pic}.jpg`}
+                    thumbnail={`/img/portfolio/suv-and-truck/${pic}.jpg`}
                     width='4000'
                     height='3000'
                   >
@@ -98,27 +101,7 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
                       <img
                         ref={ref}
                         onClick={open}
-                        src={`/img/portfolio/suv/${pic}.jpg`}
-                        className='object-cover aspect-thumb'
-                      />
-                    )}
-                  </Item>
-                )
-              })}
-              {truckArr.map((pic, index) => {
-                return (
-                  <Item
-                    key={index}
-                    original={`/img/portfolio/truck/${pic}.jpg`}
-                    thumbnail={`/img/portfolio/truck/${pic}.jpg`}
-                    width='4000'
-                    height='3000'
-                  >
-                    {({ ref, open }) => (
-                      <img
-                        ref={ref}
-                        onClick={open}
-                        src={`/img/portfolio/truck/${pic}.jpg`}
+                        src={`/img/portfolio/suv-and-truck/${pic}.jpg`}
                         className='object-cover aspect-thumb'
                       />
                     )}
@@ -127,17 +110,17 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
               })}
             </Gallery>
           </div>
-          <h3 className='relative text-lg text-white font-thin mt-8'>
+          <h3 className='relative text-xl lg:text-2xl text-white font-thin mt-8'>
             Sedan & Sports
           </h3>
           <div className='grid grid-cols-2 gap-4 mt-2 relative'>
             <Gallery>
-              {sedanArr.map((pic, index) => {
+              {sedanSportArr.map((pic, index) => {
                 return (
                   <Item
                     key={index}
-                    original={`/img/portfolio/sedan/${pic}.jpg`}
-                    thumbnail={`/img/portfolio/sedan/${pic}.jpg`}
+                    original={`/img/portfolio/sedan-and-sport/${pic}.jpg`}
+                    thumbnail={`/img/portfolio/sedan-and-sport/${pic}.jpg`}
                     width='4000'
                     height='3000'
                   >
@@ -145,27 +128,7 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
                       <img
                         ref={ref}
                         onClick={open}
-                        src={`/img/portfolio/sedan/${pic}.jpg`}
-                        className='object-cover w-full h-full'
-                      />
-                    )}
-                  </Item>
-                )
-              })}
-              {sportArr.map((pic, index) => {
-                return (
-                  <Item
-                    key={index}
-                    original={`/img/portfolio/sport/${pic}.jpg`}
-                    thumbnail={`/img/portfolio/sport/${pic}.jpg`}
-                    width='4000'
-                    height='3000'
-                  >
-                    {({ ref, open }) => (
-                      <img
-                        ref={ref}
-                        onClick={open}
-                        src={`/img/portfolio/sport/${pic}.jpg`}
+                        src={`/img/portfolio/sedan-and-sport/${pic}.jpg`}
                         className='object-cover w-full h-full'
                       />
                     )}
@@ -181,11 +144,10 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
       <section
         className='relative z-20'
         style={{
-          backgroundImage: 'linear-gradient(to bottom, black 30%, white 85%)',
+          backgroundImage: 'linear-gradient(to bottom, transparent, white 85%)',
         }}
       >
         <section className='container mx-auto px-8'>
-          <Map />
           <Footer />
         </section>
       </section>

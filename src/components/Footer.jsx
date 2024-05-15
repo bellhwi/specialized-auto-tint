@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Footer = () => {
   const currentYear = new Date().getFullYear()
   return (
-    <section className='py-8 relative z-20'>
+    <section className='font-godic-regular py-8 relative z-20'>
       <div className='flex flex-col justify-center items-center space-y-4'>
         <Logo footer />
         {/* SNS CONTAINER */}

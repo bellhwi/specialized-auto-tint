@@ -33,6 +33,10 @@ p {
   color: #1f2937;
 }
 
+.contact-text {
+  font-size: 0.5rem;
+}
+
 .font-godic-thin {
   font-family: 'Godic_thin', sans-serif;
 }
@@ -76,8 +80,7 @@ p {
 }
 
 @media (min-width: 1024px) {
-  .main {
-    width: 1036px;
-    max-width: 50%;
+  .contact {
+    background-image: linear-gradient(to bottom, transparent 50%, white 80%);
   }
 }

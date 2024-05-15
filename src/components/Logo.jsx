@@ -7,7 +7,7 @@ const Logo = ({ footer }) => {
       alt='company logo'
       width={264}
       height={56}
-      className={`${footer ? 'w-36' : 'w-16 md:w-full'}`}
+      className={`${footer ? 'w-36' : 'w-24 md:w-full'}`}
     />
   )
 }
