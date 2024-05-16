@@ -1,6 +1,5 @@
 import NavbarDesktop from '@/components/NavbarDesktop'
 import Portfolio from '@/pages/Portfolio'
-import TopBtn from '@/components/TopBtn'
 export const metadata = {
   title: 'Portfolio | Specialized Auto Tint',
   description:

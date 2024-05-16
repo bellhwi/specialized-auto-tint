@@ -1,7 +1,5 @@
 import CeramicCoating from '@/pages/CeramicCoating'
 import NavbarDesktop from '@/components/NavbarDesktop'
-import TopBtn from '@/components/TopBtn'
-import Image from 'next/image'
 export const metadata = {
   title: 'Ceramic Coating for Cars | Specialized Auto Tint',
   description:

@@ -472,7 +472,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 width='600'
                 height='450'
                 loading='lazy'
-                allowfullscreen
+                allowFullScreen
                 src='https://www.google.com/maps/embed/v1/place?q=place_id:ChIJycWP7-Pn3IARTiG7pd2l22I&key=AIzaSyAsYP4vnD1mFgX4wWBRRd6CT0O1_hPhg6s'
                 className='w-full h-full absolute top-0 left-0 rounded border-0'
               ></iframe>

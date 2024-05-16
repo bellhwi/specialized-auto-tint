@@ -22,6 +22,7 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
       <div className='lg:hidden'>
         <Image
           src='/img/navbar-bg.webp'
+          priority
           width={1037}
           height={98}
           className='absolute inset-0 h-10'
