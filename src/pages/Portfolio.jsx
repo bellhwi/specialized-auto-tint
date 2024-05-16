@@ -83,11 +83,14 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
                     height='3000'
                   >
                     {({ ref, open }) => (
-                      <img
+                      <Image
                         ref={ref}
                         onClick={open}
                         src={`/img/portfolio/suv-and-truck/${pic}.webp`}
                         className='object-cover aspect-thumb'
+                        width='4000'
+                        height='3000'
+                        alt={`suv and truck ${pic}`}
                       />
                     )}
                   </Item>
@@ -110,11 +113,14 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
                     height='3000'
                   >
                     {({ ref, open }) => (
-                      <img
+                      <Image
                         ref={ref}
                         onClick={open}
                         src={`/img/portfolio/sedan-and-sport/${pic}.webp`}
                         className='object-cover w-full h-full'
+                        width='4000'
+                        height='3000'
+                        alt={`sedan and sports car ${pic}`}
                       />
                     )}
                   </Item>

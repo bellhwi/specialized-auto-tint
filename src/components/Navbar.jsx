@@ -128,7 +128,12 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
             <div className='flex items-center justify-center mt-4 space-x-2'>
               <a href='tel:949-341-9100' className='p-4'>
                 <div className='flex flex-col items-center justify-center'>
-                  <Image src='/icons/phone-black.svg' width={24} height={24} />
+                  <Image
+                    src='/icons/phone-black.svg'
+                    width={24}
+                    height={24}
+                    alt='phone icon'
+                  />
                   <p className='text-sm mt-2 '>Calling Us</p>
                 </div>
               </a>

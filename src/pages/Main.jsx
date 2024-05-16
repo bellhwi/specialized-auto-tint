@@ -407,6 +407,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                       width={16}
                       height={16}
                       className='mr-1'
+                      alt='phone icon'
                     />{' '}
                     Call Us
                   </div>
