@@ -1,5 +1,5 @@
 'use client'
-
+import Image from 'next/image'
 // Modify the Accordion component
 const Accordion = ({ title, isOpen, onToggle }) => {
   const toggleAccordion = (e) => {
@@ -26,7 +26,12 @@ const Accordion = ({ title, isOpen, onToggle }) => {
         </div>
         <button className='text-sm text-blue-300'>
           {isOpen ? (
-            <i className='fa-solid fa-chevron-down text-blue-300'></i>
+            <Image
+              src='/icons/chevron-down.svg'
+              width={24}
+              height={24}
+              alt='chevron down icon'
+            />
           ) : (
             <>
               <span className='md:block font-godic-thin'>Learn More</span>

@@ -18,13 +18,14 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
         width={1025}
         height={6155}
         className='inset-0 absolute h-full'
+        alt='gradient background'
       />
       <Navbar setOpenNav={setOpenNav} setOpenQuote={setOpenQuote} />
       <Image
         src='/img/portfolio/hero.webp'
         width={1036}
         height={1243}
-        alt='car'
+        alt='super car'
         className='absolute inset-0 w-full z-20'
       />
 
@@ -47,6 +48,7 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
             width={643}
             height={421}
             className='w-full my-4'
+            alt='owner of Specialized Auto Tint'
           />
           <h2 className='relative text-gray-400 text-center text-2xl font-thin'>
             Check our customer reviews on Google and Yelp.

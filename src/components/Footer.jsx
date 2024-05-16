@@ -19,6 +19,7 @@ const Footer = () => {
               width={1224}
               height={1533}
               className='w-4'
+              alt='yelp logo'
             />
           </a>
           <a
@@ -31,6 +32,7 @@ const Footer = () => {
               width={900}
               height={900}
               className='w-4'
+              alt='google logo'
             />
           </a>
         </div>

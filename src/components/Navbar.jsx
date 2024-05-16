@@ -25,6 +25,7 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
           width={1037}
           height={98}
           className='absolute inset-0 h-10'
+          alt='navigation bar background'
         />
       </div>
 
@@ -34,13 +35,18 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
         </Link>
         <div className='flex items-center space-x-4 lg:hidden'>
           <button
-            className='contact-text bg-primary p-1 rounded-full text-xs uppercase relative bottom-0.5 font-sarang'
+            className='contact-text bg-primary p-1 rounded-full text-xs uppercase font-sarang'
             onClick={handleQuotationModal}
           >
             contact & appointment
           </button>
           <Link href='#' onClick={handleMobileMenu}>
-            <i className='fa-solid fa-bars text-xl text-white'></i>
+            <Image
+              src='/icons/menu.svg'
+              width={24}
+              height={24}
+              alt='menu icon'
+            />
           </Link>
         </div>
 
@@ -86,10 +92,15 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
           portfolio
         </Link>
         <div
-          className={`top-8 mx-auto relative w-8 h-8 rounded-full flex items-center justify-center border p-4 cursor-pointer transition hover:rotate-90`}
+          className={`top-8 mx-auto relative w-8 h-8 rounded-full flex items-center justify-center border cursor-pointer transition hover:rotate-90`}
           onClick={handleMobileMenu}
         >
-          <i class='fa-solid fa-x'></i>
+          <Image
+            src='/icons/close.svg'
+            width={16}
+            height={16}
+            alt='close icon'
+          />
         </div>
       </ul>
 
@@ -117,15 +128,20 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
             <div className='flex items-center justify-center mt-4 space-x-2'>
               <a href='tel:949-341-9100' className='p-4'>
                 <div className='flex flex-col items-center justify-center'>
-                  <i className='fa-solid fa-phone text-blue-600'></i>
-                  <p className='text-sm mt-2 text-blue-600'>Calling Us</p>
+                  <Image src='/icons/phone-black.svg' width={24} height={24} />
+                  <p className='text-sm mt-2 '>Calling Us</p>
                 </div>
               </a>
-              <div className='h-16 border-l border-gray-200'></div>
+              <div className='h-16 border-l border-black'></div>
               <a href='mailto:irvinetint@gmail.com' className='p-4'>
                 <div className='flex flex-col items-center justify-center'>
-                  <i className='fa-solid fa-envelope text-blue-600'></i>
-                  <p className='text-sm mt-2 text-blue-600'>Emailing Us</p>
+                  <Image
+                    src='/icons/mail-black.svg'
+                    width={24}
+                    height={24}
+                    alt='mail icon'
+                  />
+                  <p className='text-sm mt-2 '>Emailing Us</p>
                 </div>
               </a>
             </div>
@@ -133,7 +149,12 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
               className='text-gray-700 absolute top-0 right-0 m-4 cursor-pointer'
               onClick={handleQuotationModal}
             >
-              <i class='fa-solid fa-x'></i>
+              <Image
+                src='/icons/close-black.svg'
+                width={24}
+                height={24}
+                alt='close icon'
+              />
             </div>
           </div>
         </>

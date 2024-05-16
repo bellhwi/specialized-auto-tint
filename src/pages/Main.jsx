@@ -84,6 +84,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 width={574}
                 height={296}
                 className='w-16 lg:w-20'
+                alt='3m logo'
               />
               <div className='w-5/6'>
                 <p className=' text-primary text-xl lg:text-3xl font-godic-bold -mb-1'>
@@ -124,7 +125,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 width={1036}
                 height={6388}
                 style={{ display: isOpen === index ? 'block' : 'none' }}
-                alt='services background'
+                alt={`${imageName} features`}
                 className='w-full md:w-1/2 md:mx-auto'
               />
             ))}
@@ -138,7 +139,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 width={1036}
                 height={6388}
                 style={{ display: isOpen === index ? 'block' : 'none' }}
-                alt='services background'
+                alt={`${imageName} features`}
                 className='w-full'
               />
             ))}
@@ -151,7 +152,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
           src='/img/bg-overlay.webp'
           width={1036}
           height={7867}
-          alt='main background'
+          alt='gradient background'
           className='absolute inset-0 h-full'
         />
         <div className='relative container mx-auto justify-between px-8 flex text-white items-start '>
@@ -176,6 +177,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 width={63}
                 height={62}
                 className='w-6 absolute top-0 left-0'
+                alt='quote icon left'
               />
               How we provide <br className='lg:hidden' />
               best quality of services
@@ -184,6 +186,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 width={63}
                 height={62}
                 className='w-6 absolute bottom-0 right-0'
+                alt='quote icon right'
               />
             </h2>
             {/* Service 1 */}
@@ -218,6 +221,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                   width={600}
                   height={400}
                   className='aspect-thumb rounded lg:hidden'
+                  alt='computerized film cutting system'
                 />
                 <p className='font-godic-thin text-gray-100'>
                   Computerized Film Cutting System-digitally generates and cuts
@@ -241,6 +245,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 width={600}
                 height={400}
                 className='hidden aspect-thumb rounded w-1/3 lg:block'
+                alt='computerized film cutting system'
               />
             </div>
             {/* Service 3 */}
@@ -367,10 +372,16 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                     href='https://multimedia.3m.com/mws/media/157410O/lifetime-warranty-and-limited-remedy.pdf'
                     target='_blank'
                     rel='noopener'
-                    className='inline-block text-blue-300'
+                    className='flex items-center text-blue-300'
                   >
-                    <i className='fa-solid fa-download mr-1'></i> 3M Lifetime
-                    Warranty.pdf
+                    <Image
+                      src='/icons/download.svg'
+                      width={24}
+                      height={24}
+                      alt='download icon'
+                      className='relative bottom-0.5'
+                    />{' '}
+                    3M Lifetime Warranty.pdf
                   </a>
                 </div>
               </p>
@@ -390,14 +401,34 @@ export default function Main({ setOpenNav, setOpenQuote }) {
               </h2>
               <div className='font-godic-regular relative flex text-white justify-between space-x-4'>
                 <div className='text-lg text-nowrap space-y-1'>
-                  <div>
-                    <i className='fa-solid fa-phone mr-1'></i> Call Us
+                  <div className='flex items-center'>
+                    <Image
+                      src='/icons/phone.svg'
+                      width={16}
+                      height={16}
+                      className='mr-1'
+                    />{' '}
+                    Call Us
                   </div>
-                  <div>
-                    <i className='fa-solid fa-envelope mr-1'></i> Email Us
+                  <div className='flex items-center'>
+                    <Image
+                      src='/icons/mail.svg'
+                      width={16}
+                      height={16}
+                      alt='mail icon'
+                      className='mr-1'
+                    />{' '}
+                    Email Us
                   </div>
-                  <div>
-                    <i className='fa-solid fa-location-dot mr-2'></i> Visit Us
+                  <div className='flex items-center'>
+                    <Image
+                      src='/icons/location.svg'
+                      width={16}
+                      height={16}
+                      alt='location icon'
+                      className='mr-1'
+                    />{' '}
+                    Visit Us
                   </div>
                 </div>
                 <div className='text-base leading-7 grow space-y-1'>

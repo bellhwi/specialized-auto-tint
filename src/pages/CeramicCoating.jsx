@@ -11,7 +11,7 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
         src='/img/ceramic-coating/hero.webp'
         width={1181}
         height={1705}
-        alt='super car'
+        alt='ceramic coating car'
         className='absolute inset-0 w-full z-20'
       />
 
@@ -60,6 +60,7 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
               width={914}
               height={312}
               className='mt-8 mx-auto lg:w-2/3'
+              alt='car maintenance'
             />
             <div className='border border-b border-gray-700 w-32 mx-auto mt-8'></div>
             <h3 className='mt-4 text-gray-700 text-center text-3xl lg:text-5xl font-sarang '>
@@ -76,9 +77,10 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
           </div>
           <Image
             src='/img/ceramic-coating/car-wash.webp'
-            width={331}
-            height={151}
+            width={1700}
+            height={775}
             className='w-full pt-8'
+            alt='car wash'
           />
         </div>
         <div className='space-y-4 pt-8'>
@@ -95,9 +97,10 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
           </div>
           <Image
             src='/img/ceramic-coating/clay-prep.webp'
-            width={330}
-            height={151}
+            width={860}
+            height={440}
             className='w-full pt-8'
+            alt='clay and prep'
           />
         </div>
         <div className='space-y-4 pt-8'>
@@ -114,9 +117,10 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
           </div>
           <Image
             src='/img/ceramic-coating/coating.webp'
-            width={870}
-            height={151}
+            width={1200}
+            height={800}
             className='w-full pt-8'
+            alt='coating application'
           />
         </div>
 
@@ -135,6 +139,7 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
             width={870}
             height={221}
             className='mt-4 w-full lg:w-2/3'
+            alt='ceramic coating benefits'
           />
           {/* Details */}
           <div className='mt-8'>

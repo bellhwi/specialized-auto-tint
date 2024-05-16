@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 const TopBtn = () => {
   const [showButton, setShowButton] = useState(false)
@@ -24,7 +25,12 @@ const TopBtn = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           <div className='flex items-center justify-center rounded-full bg-gray-400 text-white w-12 h-12'>
-            <i className='fa-solid fa-arrow-up'></i>
+            <Image
+              src='/icons/arrow-up.svg'
+              width={24}
+              height={24}
+              alt='arrow up icon'
+            />
           </div>
         </div>
       )}
