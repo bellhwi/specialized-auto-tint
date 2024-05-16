@@ -13,21 +13,22 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
         height={1705}
         alt='ceramic coating car'
         className='absolute inset-0 w-full z-20'
+        priority
       />
 
       {/* main */}
-      <section className='relative z-20 pt-44 lg:pt-80 xl:pt-100 2xl:pt-104 '>
+      <section className='relative z-20 pt-44 md:pt-88 xl:pt-100 2xl:pt-104 '>
         <div className='container mx-auto'>
           <div className='pt-8 px-8'>
-            <p className='text-gray-600 lg:text-4xl font-godic-bold'>
+            <p className='text-gray-600 md:text-3xl lg:text-4xl font-godic-bold'>
               Best Quality of Auto Surface Protection
             </p>
-            <h1 className='lg:py-2 text-color-primary uppercase text-2xl lg:text-5xl'>
+            <h1 className='md:py-2 text-color-primary uppercase text-2xl md:text-5xl'>
               ceramic coating <br className='lg:hidden'></br>
               <span className='lg:text-2xl'>for cars</span>
             </h1>
             <div className='mt-4 text-left'>
-              <p className='font-godic-bold text-color-primary lg:text-xl'>
+              <p className='font-godic-bold text-color-primary md:text-xl'>
                 REVOLUTIONARY TECHNOLOGY
               </p>
               <p className='leading-normal'>
@@ -48,22 +49,22 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
         {/* Maintenance */}
         <div className='space-y-4 mt-16'>
           <div className='container mx-auto px-8'>
-            <h2 className='uppercase text-3xl font-godic-thin lg:text-5xl text-color-primary'>
+            <h2 className='uppercase text-3xl font-godic-thin md:text-5xl text-color-primary'>
               SPECIALIZED AUTO <br />{' '}
-              <span className='font-godic-bold font-bold lg:text-6xl'>
+              <span className='font-godic-bold font-bold md:text-6xl'>
                 MAINTENANCE <br />
                 SYSTEM
               </span>
             </h2>
             <Image
               src='/img/ceramic-coating/maintenance.webp'
-              width={914}
-              height={312}
-              className='mt-8 mx-auto lg:w-2/3'
+              width={640}
+              height={218}
+              className='mt-8 mx-auto md:w-2/3'
               alt='car maintenance'
             />
             <div className='border border-b border-gray-700 w-32 mx-auto mt-8'></div>
-            <h3 className='mt-4 text-gray-700 text-center text-3xl lg:text-5xl font-sarang '>
+            <h3 className='mt-4 text-gray-700 text-center text-3xl md:text-5xl font-sarang '>
               Car Wash
             </h3>
             <p className='my-4 font-godic-thin  leading-normal text-center'>
@@ -77,8 +78,8 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
           </div>
           <Image
             src='/img/ceramic-coating/car-wash.webp'
-            width={1700}
-            height={775}
+            width={1024}
+            height={467}
             className='w-full pt-8'
             alt='car wash'
           />
@@ -86,7 +87,7 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
         <div className='space-y-4 pt-8'>
           <div className='container mx-auto px-8'>
             <div className='border border-b border-gray-700 w-32 mx-auto my-4'></div>
-            <h3 className='text-gray-700 text-center text-3xl lg:text-5xl font-sarang '>
+            <h3 className='text-gray-700 text-center text-3xl md:text-5xl font-sarang '>
               Clay & Prep
             </h3>
             <p className='my-4 text-center font-godic-thin  leading-normal'>
@@ -97,8 +98,8 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
           </div>
           <Image
             src='/img/ceramic-coating/clay-prep.webp'
-            width={860}
-            height={440}
+            width={1024}
+            height={467}
             className='w-full pt-8'
             alt='clay and prep'
           />
@@ -106,7 +107,7 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
         <div className='space-y-4 pt-8'>
           <div className='container mx-auto px-8'>
             <div className='border border-b border-gray-700 w-32 mx-auto my-4'></div>
-            <h3 className='text-gray-700 text-center text-3xl lg:text-5xl font-sarang '>
+            <h3 className='text-gray-700 text-center text-3xl md:text-5xl font-sarang '>
               Coating Application
             </h3>
             <p className='my-4 font-godic-thin text-center leading-normal'>
@@ -117,28 +118,28 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
           </div>
           <Image
             src='/img/ceramic-coating/coating.webp'
-            width={1200}
-            height={800}
+            width={1024}
+            height={467}
             className='w-full pt-8'
             alt='coating application'
           />
         </div>
 
         {/* Benefits */}
-        <div className='mx-auto container pt-16 pb-8 px-8 lg:text-xl'>
-          <h2 className='uppercase text-3xl lg:text-6xl text-color-primary font-godic-thin'>
+        <div className='mx-auto container pt-16 pb-8 px-8 md:text-xl'>
+          <h2 className='uppercase text-3xl md:text-6xl text-color-primary font-godic-thin'>
             Major
             <br /> <span className='font-godic-bold font-bold'>benefits</span>
           </h2>
-          <p className='uppercase text-color-primary text-sm lg:text-lg'>
+          <p className='uppercase text-color-primary text-sm md:text-lg'>
             SPECIALIZED CERAMIC COATING BENEFITS <br />
             APPLIES TO ALL PAINT & CERTIFIED COATINGS
           </p>
           <Image
             src='/img/ceramic-coating/benefits.webp'
-            width={870}
-            height={221}
-            className='mt-4 w-full lg:w-2/3'
+            width={640}
+            height={163}
+            className='mt-4 w-full md:w-2/3'
             alt='ceramic coating benefits'
           />
           {/* Details */}
@@ -156,12 +157,12 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
           <div className='space-y-4 pt-8'>
             <div className='container mx-auto px-8'>
               <div className='border border-b border-gray-700 w-32 mx-auto my-4'></div>
-              <h3 className='text-gray-700 text-center text-3xl lg:text-5xl font-sarang '>
+              <h3 className='text-gray-700 text-center text-3xl md:text-5xl font-sarang '>
                 Quality Assurance
               </h3>
               <p className='my-4 text-center font-godic-thin  leading-normal text-base'>
                 Our ceramic coating for cars with Gyeonquartz warranty on the
-                product itself, <br className='hidden lg:block'></br>and
+                product itself, <br className='hidden md:block'></br>and
                 Specialized Auto Tint 1 year limited warranty as well.
               </p>
             </div>

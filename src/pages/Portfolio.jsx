@@ -17,6 +17,7 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
         height={6155}
         className='inset-0 absolute h-full'
         alt='gradient background'
+        priority
       />
       <Navbar setOpenNav={setOpenNav} setOpenQuote={setOpenQuote} />
       <Image
@@ -25,12 +26,13 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
         height={1243}
         alt='super car'
         className='absolute inset-0 w-full z-20'
+        priority
       />
 
       {/* main */}
-      <section className='relative z-20 pt-56 lg:pt-108'>
+      <section className='relative z-20 pt-56 md:pt-100 lg:pt-108'>
         <div className='max-w-screen-md mx-auto px-8'>
-          <h1 className='text-white uppercase text-center text-2xl lg:text-6xl'>
+          <h1 className='text-white uppercase text-center text-2xl md:text-6xl'>
             portfolio
           </h1>
           <p className='font-thin text-gray-100 mt-4 '>
@@ -48,7 +50,7 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
             className='w-full my-4'
             alt='owner of Specialized Auto Tint'
           />
-          <h2 className='relative text-gray-400 text-center text-2xl font-thin'>
+          <h2 className='relative text-gray-400 text-center text-2xl md:text-3xl font-thin'>
             Check our customer reviews on Google and Yelp.
           </h2>
           <p className='max-w-lg mx-auto  font-thin text-gray-100 mt-4 text-center'>
@@ -66,7 +68,7 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
       {/* Portfolio images */}
       <section className='py-8'>
         <div className='container mx-auto px-8'>
-          <h3 className='relative text-xl lg:text-2xl text-white font-thin'>
+          <h3 className='relative text-xl md:text-2xl text-white font-thin'>
             SUV & Truck
           </h3>
           <div className='grid grid-cols-2 gap-4 mt-2 relative'>
@@ -96,7 +98,7 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
               })}
             </Gallery>
           </div>
-          <h3 className='relative text-xl lg:text-2xl text-white font-thin mt-8'>
+          <h3 className='relative text-xl md:text-2xl text-white font-thin mt-8'>
             Sedan & Sports
           </h3>
           <div className='grid grid-cols-2 gap-4 mt-2 relative'>

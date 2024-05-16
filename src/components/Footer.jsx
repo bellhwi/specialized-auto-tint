@@ -16,8 +16,8 @@ const Footer = () => {
           >
             <Image
               src='/img/logos/yelp.webp'
-              width={1224}
-              height={1533}
+              width={32}
+              height={40}
               className='w-4'
               alt='yelp logo'
             />
@@ -29,8 +29,8 @@ const Footer = () => {
           >
             <Image
               src='/img/logos/google.webp'
-              width={900}
-              height={900}
+              width={32}
+              height={32}
               className='w-4'
               alt='google logo'
             />

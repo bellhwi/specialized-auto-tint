@@ -38,6 +38,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
     }
   }, [])
 
+  // Preload all product images
   useEffect(() => {
     const preloadDiv = document.createElement('div')
     preloadDiv.style.display = 'none'
@@ -58,43 +59,44 @@ export default function Main({ setOpenNav, setOpenQuote }) {
 
   return (
     <section className='relative lg:mx-auto lg:w-2/3 lg:max-w-screen-lg'>
-      <Navbar main setOpenNav={setOpenNav} setOpenQuote={setOpenQuote} />
+      <Navbar setOpenNav={setOpenNav} setOpenQuote={setOpenQuote} />
       <Image
         src='/img/services/bg-main.webp'
         width={1036}
         height={7200}
         alt='main background'
         className='absolute inset-0 z-20'
+        priority
       />
 
       {/* main */}
-      <section className='relative z-20 pt-48 lg:pt-96 xl:pt-100 2xl:pt-104'>
-        <div className='container mx-auto'>
-          <div className='text-white w-full pt-8 px-8'>
-            <p className='text-xl lg:text-4xl font-godic-bold text-gray-300'>
+      <section className='relative z-20 pt-48 md:pt-96 xl:pt-100 2xl:pt-104'>
+        <div>
+          <div className='container mx-auto text-white w-full pt-8 px-8'>
+            <p className='text-xl md:text-3xl lg:text-4xl font-godic-bold text-gray-300'>
               The Highest Standard of
             </p>
-            <h1 className='lg:my-2 uppercase lg:text-5xl text-xl tracking-tight'>
+            <h1 className='md:my-2 uppercase md:text-4xl lg:text-5xl text-xl tracking-tight'>
               window tinting {''}
-              <span className='text-xs lg:text-2xl'>in irvine</span>
+              <span className='text-xs md:text-2xl'>in irvine</span>
             </h1>
             <div className='flex items-center space-x-2'>
               <Image
                 src='/img/logos/3m.webp'
-                width={574}
-                height={296}
-                className='w-16 lg:w-20'
+                width={128}
+                height={66}
+                className='w-16 md:w-20'
                 alt='3m logo'
               />
               <div className='w-5/6'>
-                <p className=' text-primary text-xl lg:text-3xl font-godic-bold -mb-1'>
+                <p className=' text-primary text-xl md:text-3xl font-godic-bold -mb-1'>
                   Authorized Dealer
                 </p>
                 <div className='flex items-center space-x-2'>
-                  <p className='w-max text-xs lg:text-sm text-white'>
+                  <p className='w-max text-xs md:text-sm text-white'>
                     Automotive Window Films
                   </p>
-                  <div className='h-2 flex flex-grow lg:w-48 lg:flex-none'>
+                  <div className='h-2 flex flex-grow md:w-48 md:flex-none'>
                     <div className='bg-white h-full w-1/6'></div>
                     <div className='bg-zinc-200 h-full w-1/6'></div>
                     <div className='bg-zinc-400 h-full w-1/6'></div>
@@ -109,15 +111,15 @@ export default function Main({ setOpenNav, setOpenQuote }) {
           {/* Top Products */}
           <div
             id='products'
-            className='flex text-white mt-8 items-start space-x-2 px-8'
+            className='container mx-auto flex text-white mt-8 items-start space-x-2 px-8'
           >
-            <h2 className='font-bold relative top-0.5 uppercase text-xl lg:text-2xl'>
+            <h2 className='font-bold relative top-0.5 uppercase text-xl md:text-2xl'>
               Product
             </h2>
             <Products isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
           {/* Mobile Products */}
-          <div className='lg:hidden'>
+          <div className='md:hidden'>
             {mobileProductsImageName.map((imageName, index) => (
               <Image
                 key={imageName}
@@ -126,12 +128,12 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 height={6388}
                 style={{ display: isOpen === index ? 'block' : 'none' }}
                 alt={`${imageName} features`}
-                className='w-full md:w-1/2 md:mx-auto'
+                className='w-full'
               />
             ))}
           </div>
           {/* Desktop Products */}
-          <div className='hidden lg:block'>
+          <div className='hidden md:block'>
             {desktopProductsImageName.map((imageName, index) => (
               <Image
                 key={imageName}
@@ -154,6 +156,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
           height={7867}
           alt='gradient background'
           className='absolute inset-0 h-full'
+          priority
         />
         <div className='relative container mx-auto justify-between px-8 flex text-white items-start '>
           {isOpen === null || isOpen === 3 ? null : (
@@ -171,7 +174,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
         {/* why choose us */}
         <section className='relative z-20 pt-12'>
           <div className='container mx-auto px-8 text-sm text-gray-300 space-y-4 lg:text-base'>
-            <h2 className='flex justify-center relative text-3xl	font-godic-regular text-gray-300 w-full px-4 lg:text-4xl lg:w-max lg:mx-auto lg:px-8'>
+            <h2 className='flex justify-center relative text-3xl	font-godic-regular text-gray-300 w-full px-4 md:text-4xl  md:w-max md:mx-auto md:px-8'>
               <Image
                 src='/img/auto-window-tint/quote-1.webp'
                 width={63}
@@ -179,7 +182,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 className='w-6 absolute top-0 left-0'
                 alt='quote icon left'
               />
-              How we provide <br className='lg:hidden' />
+              How we provide <br className='md:hidden' />
               best quality of services
               <Image
                 src='/img/auto-window-tint/quote-2.webp'
@@ -190,12 +193,12 @@ export default function Main({ setOpenNav, setOpenQuote }) {
               />
             </h2>
             {/* Service 1 */}
-            <div className='text-gray-100 lg:pt-8'>
-              <p className='font-godic-bold  text-white text-lg lg:text-xl mb-4'>
+            <div className='text-gray-100 md:pt-8'>
+              <p className='font-godic-bold  text-white text-lg md:text-xl mb-4'>
                 <span className='text-5xl font-godic-bold mr-1 relative top-1'>
                   1
                 </span>{' '}
-                More than <span className='text-xl lg:text-2xl'>15 years</span>{' '}
+                More than <span className='text-xl md:text-2xl'>15 years</span>{' '}
                 of experience
               </p>
 
@@ -208,9 +211,9 @@ export default function Main({ setOpenNav, setOpenQuote }) {
               </p>
             </div>
             {/* Service 2 */}
-            <div className='text-gray-100 flex items-start lg:py-8'>
-              <div className='lg:w-2/3 lg:mr-4 space-y-4'>
-                <p className='font-godic-bold text-white text-lg lg:text-xl mb-4'>
+            <div className='text-gray-100 flex items-start md:py-8'>
+              <div className='md:w-2/3 md:mr-4 space-y-4'>
+                <p className='font-godic-bold text-white text-lg md:text-xl mb-4'>
                   <span className='text-5xl font-godic-bold mr-1 relative top-1'>
                     2
                   </span>{' '}
@@ -220,7 +223,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                   src='/img/services/computerized-film-cutting-system.webp'
                   width={600}
                   height={400}
-                  className='aspect-thumb rounded lg:hidden'
+                  className='aspect-thumb rounded md:hidden'
                   alt='computerized film cutting system'
                 />
                 <p className='font-godic-thin text-gray-100'>
@@ -244,14 +247,14 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 src='/img/services/computerized-film-cutting-system.webp'
                 width={600}
                 height={400}
-                className='hidden aspect-thumb rounded w-1/3 lg:block'
+                className='hidden aspect-thumb rounded w-1/3 md:block'
                 alt='computerized film cutting system'
               />
             </div>
             {/* Service 3 */}
-            <div className='text-gray-100 flex items-start lg:py-8'>
-              <div className='lg:w-2/3 lg:mr-4 space-y-4'>
-                <p className='font-godic-bold  text-white text-lg lg:text-xl mb-4'>
+            <div className='text-gray-100 flex items-start md:py-8'>
+              <div className='md:w-2/3 md:mr-4 space-y-4'>
+                <p className='font-godic-bold  text-white text-lg md:text-xl mb-4'>
                   <span className='text-5xl font-godic-bold mr-1'>3</span>{' '}
                   Shaved Top Window Edge
                 </p>
@@ -261,7 +264,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                   height='240'
                   controls
                   muted
-                  className='rounded w-full aspect-thumb lg:hidden object-cover'
+                  className='rounded w-full aspect-thumb md:hidden object-cover'
                   poster='/img/auto-window-tint/topshaving-thumb.webp'
                 >
                   <source
@@ -285,7 +288,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 height='240'
                 controls
                 muted
-                className='rounded hidden w-full aspect-thumb lg:block lg:h-full lg:w-1/3 object-cover'
+                className='rounded hidden w-full aspect-thumb md:block md:h-full md:w-1/3 object-cover'
                 poster='/img/auto-window-tint/topshaving-thumb.webp'
               >
                 <source
@@ -297,12 +300,12 @@ export default function Main({ setOpenNav, setOpenQuote }) {
             </div>
             {/* Service 4 */}
             <div className='text-gray-100 flex items-start'>
-              <div className='lg:w-2/3 lg:mr-4 space-y-4'>
-                <div className='flex items-center lg:mb-4'>
+              <div className='md:w-2/3 md:mr-4 space-y-4'>
+                <div className='flex items-center md:mb-4'>
                   <p className='text-5xl text-white font-godic-bold mr-2'>4</p>
 
-                  <p className='font-godic-bold  text-white text-lg leading-6 lg:text-xl'>
-                    Prepare with <br className='lg:hidden'></br>Heat Shrinking
+                  <p className='font-godic-bold  text-white text-lg leading-6 md:text-xl'>
+                    Prepare with <br className='md:hidden'></br>Heat Shrinking
                     Method
                   </p>
                 </div>
@@ -311,7 +314,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                   height='240'
                   controls
                   muted
-                  className='rounded w-full aspect-thumb lg:hidden object-cover'
+                  className='rounded w-full aspect-thumb md:hidden object-cover'
                   poster='/img/auto-window-tint/heat-shrinking-thumb.webp'
                 >
                   <source
@@ -341,7 +344,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 height='240'
                 controls
                 muted
-                className='rounded w-full aspect-thumb hidden lg:block lg:w-1/3 lg:h-full object-cover'
+                className='rounded w-full aspect-thumb hidden md:block md:w-1/3 md:h-full object-cover'
                 poster='/img/auto-window-tint/heat-shrinking-thumb.webp'
               >
                 <source
@@ -353,7 +356,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
             </div>
             {/* Service 5 */}
             <div className='text-gray-100'>
-              <p className='font-godic-bold text-white text-lg lg:text-xl mb-4'>
+              <p className='font-godic-bold text-white text-lg md:text-xl mb-4'>
                 <span className='text-5xl font-godic-bold mr-1 relative top-1'>
                   5
                 </span>{' '}
@@ -391,12 +394,12 @@ export default function Main({ setOpenNav, setOpenQuote }) {
 
         {/* contact */}
         <section
-          className='mt-8 relative z-20 pb-8 contact bg-none'
+          className='mt-8 relative z-20 pb-8 bg-none footer-gradient'
           id='contact'
         >
-          <div className='flex justify-between container mx-auto px-8 text-gray-100 text-sm mt-8 space-y-4 lg:space-y-0'>
+          <div className='flex justify-between container mx-auto px-8 text-gray-100 text-sm mt-8 space-y-4 md:space-y-0'>
             <div className='w-max'>
-              <h2 className='relative text-xl text-white uppercase font-godic-bold mb-8 lg:text-2xl'>
+              <h2 className='relative text-xl text-white uppercase font-godic-bold mb-4 md:text-2xl'>
                 contact us & map
               </h2>
               <div className='font-godic-regular relative flex text-white justify-between space-x-4'>
@@ -451,11 +454,40 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                   </p>
                 </div>
               </div>
-              <div className='hidden lg:block mx-auto w-max mt-8'>
+              <div className='hidden md:block mx-auto w-max mt-8'>
                 <Logo footer />
               </div>
+              {/* SNS CONTAINER */}
+              <div className='hidden mx-auto w-max mt-4 flex items-center space-x-6 md:flex'>
+                <a
+                  href='https://www.yelp.com/biz/specialized-auto-tint-irvine'
+                  rel='noopener'
+                  target='_blank'
+                >
+                  <Image
+                    src='/img/logos/yelp.webp'
+                    width={32}
+                    height={40}
+                    className='w-4'
+                    alt='yelp logo'
+                  />
+                </a>
+                <a
+                  href='https://goo.gl/maps/8FHaqqzckjixYKap6'
+                  rel='noopener'
+                  target='_blank'
+                >
+                  <Image
+                    src='/img/logos/google.webp'
+                    width={32}
+                    height={32}
+                    className='w-4'
+                    alt='google logo'
+                  />
+                </a>
+              </div>
               {/* COPYWRITING */}
-              <p className='hidden lg:block text-xs text-center text-gray-600 mt-4'>
+              <p className='hidden md:block text-xs text-center text-gray-600 mt-4'>
                 &copy; {currentYear} Specialized Auto Tint x Powered by{' '}
                 <a
                   href='https://webtamin.co/'
@@ -467,7 +499,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 </a>
               </p>
             </div>
-            <div className='hidden lg:block relative w-1/2'>
+            <div className='hidden md:block relative w-1/2'>
               <iframe
                 width='600'
                 height='450'
@@ -482,7 +514,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
 
         {/* map and footer */}
         <section
-          className='relative z-20 lg:hidden'
+          className='relative z-20 md:hidden'
           style={{
             backgroundImage:
               'linear-gradient(to bottom, transparent 30%, white 85%)',

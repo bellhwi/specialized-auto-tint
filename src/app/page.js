@@ -11,9 +11,9 @@ export default function Home() {
   return (
     <section className='relative overflow-hidden'>
       <div className='absolute flex justify-between inset-0'>
-        <div className='w-1/12' style={{ backgroundColor: '#030303' }}></div>
-        <div className='w-1/12' style={{ backgroundColor: '#0a0a0a' }}></div>
-        <div className='w-8/12' style={{ backgroundColor: '#0f0f0f' }}></div>
+        <div className='w-1/12' style={{ backgroundColor: '#0d0d0d' }}></div>
+        <div className='w-1/12' style={{ backgroundColor: '#111' }}></div>
+        <div className='w-8/12' style={{ backgroundColor: '#151515' }}></div>
         <div className='w-1/12' style={{ backgroundColor: '#0a0a0a' }}></div>
         <div className='w-1/12' style={{ backgroundColor: '#030303' }}></div>
       </div>

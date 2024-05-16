@@ -4,22 +4,27 @@
 @font-face {
   font-family: 'Batman';
   src: url('/fonts/batman.TTF') format('truetype');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Sarang';
   src: url('/fonts/sarang.ttf') format('truetype');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Godic_thin';
   src: url('/fonts/godic_thin.ttf') format('truetype');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Godic_regular';
   src: url('/fonts/godic_regular.TTF') format('truetype');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Godic_bold';
   src: url('/fonts/godic_bold.ttf') format('truetype');
+  font-display: swap;
 }
 
 body {
@@ -49,34 +54,12 @@ p {
 .font-sarang {
   font-family: 'Sarang', sans-serif;
 }
-.animation-cursor {
-  animation: cursor-blink 1s infinite; /* Add blinking animation */
-}
-
-.slider {
-  animation: flowAnimation 10s linear infinite; /* Adjust the animation duration as needed */
-}
-
-.brightness-dark {
-  filter: brightness(30%);
-}
-
 .text-color-primary {
   color: #364f84;
 }
 
 .aspect-thumb {
   aspect-ratio: 4/3;
-}
-
-@keyframes cursor-blink {
-  0%,
-  100% {
-    opacity: 1; /* Set opacity to 1 for the starting and ending keyframes */
-  }
-  50% {
-    opacity: 0; /* Set opacity to 0 for the middle keyframe */
-  }
 }
 
 @keyframes fadeIn {
@@ -91,8 +74,8 @@ p {
   animation: fadeIn 0.4s ease-in;
 }
 
-@media (min-width: 1024px) {
-  .contact {
+@media (min-width: 768px) {
+  .footer-gradient {
     background-image: linear-gradient(to bottom, transparent 50%, white 80%);
   }
 }
