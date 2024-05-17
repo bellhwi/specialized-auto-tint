@@ -79,8 +79,8 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
                     key={index}
                     original={`/img/portfolio/suv-and-truck/${pic}.webp`}
                     thumbnail={`/img/portfolio/suv-and-truck/${pic}.webp`}
-                    width='4000'
-                    height='3000'
+                    width='1280'
+                    height='960'
                   >
                     {({ ref, open }) => (
                       <Image
@@ -88,8 +88,8 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
                         onClick={open}
                         src={`/img/portfolio/suv-and-truck/${pic}.webp`}
                         className='object-cover aspect-thumb'
-                        width='4000'
-                        height='3000'
+                        width='1280'
+                        height='960'
                         alt={`suv and truck ${pic}`}
                       />
                     )}
@@ -109,17 +109,17 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
                     key={index}
                     original={`/img/portfolio/sedan-and-sport/${pic}.webp`}
                     thumbnail={`/img/portfolio/sedan-and-sport/${pic}.webp`}
-                    width='4000'
-                    height='3000'
+                    width='1280'
+                    height='960'
                   >
                     {({ ref, open }) => (
                       <Image
                         ref={ref}
                         onClick={open}
                         src={`/img/portfolio/sedan-and-sport/${pic}.webp`}
-                        className='object-cover w-full h-full'
-                        width='4000'
-                        height='3000'
+                        className='object-cover aspect-thumb'
+                        width='1280'
+                        height='960'
                         alt={`sedan and sports car ${pic}`}
                       />
                     )}

@@ -23,9 +23,11 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
             <p className='text-gray-600 md:text-3xl lg:text-4xl font-godic-bold'>
               Best Quality of Auto Surface Protection
             </p>
-            <h1 className='md:py-2 text-color-primary uppercase text-2xl md:text-5xl'>
+            <h1 className='md:py-2 text-color-primary uppercase text-xl md:text-5xl'>
               ceramic coating <br className='lg:hidden'></br>
-              <span className='lg:text-2xl'>for cars</span>
+              <span className='lg:text-2xl sm:mt-2 sm:inline-block'>
+                for cars
+              </span>
             </h1>
             <div className='mt-4 text-left'>
               <p className='font-godic-bold text-color-primary md:text-xl'>

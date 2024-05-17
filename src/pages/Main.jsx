@@ -73,12 +73,13 @@ export default function Main({ setOpenNav, setOpenQuote }) {
       <section className='relative z-20 pt-48 md:pt-96 xl:pt-100 2xl:pt-104'>
         <div>
           <div className='container mx-auto text-white w-full pt-8 px-8'>
-            <p className='text-xl md:text-3xl lg:text-4xl font-godic-bold text-gray-300'>
+            <p className='text-xl md:text-3xl xl:text-4xl font-godic-bold text-gray-300'>
               The Highest Standard of
             </p>
-            <h1 className='md:my-2 uppercase md:text-4xl lg:text-5xl text-xl tracking-tight'>
+            <h1 className='my-1 sm:my-2 uppercase sm:text-4xl xl:text-5xl text-xl tracking-tight'>
               window tinting {''}
-              <span className='text-xs md:text-2xl'>in irvine</span>
+              <br className='sm:hidden'></br>
+              <span className='text-xl sm:text-2xl'>in irvine</span>
             </h1>
             <div className='flex items-center space-x-2'>
               <Image
@@ -176,7 +177,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
         {/* why choose us */}
         <section className='relative z-20 pt-12'>
           <div className='container mx-auto px-8 text-sm text-gray-300 space-y-4 lg:text-base'>
-            <h2 className='flex justify-center relative text-3xl	font-godic-regular text-gray-300 w-full px-4 md:text-4xl  md:w-max md:mx-auto md:px-8'>
+            <h2 className='flex justify-center relative text-2xl	font-godic-regular text-gray-300 w-full px-4 sm:text-4xl  sm:w-max sm:mx-auto sm:px-8 '>
               <Image
                 src='/img/auto-window-tint/quote-1.webp'
                 width={63}
