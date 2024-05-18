@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import { useState, useEffect } from 'react'
 import Logo from '@/components/Logo'
+import Link from 'next/link'
 
 export default function Main({ setOpenNav, setOpenQuote }) {
   const currentYear = new Date().getFullYear()
@@ -76,10 +77,10 @@ export default function Main({ setOpenNav, setOpenQuote }) {
             <p className='text-xl md:text-3xl xl:text-4xl font-godic-bold text-gray-300'>
               The Highest Standard of
             </p>
-            <h1 className='my-1 sm:my-2 uppercase sm:text-4xl xl:text-5xl text-xl tracking-tight'>
+            <h1 className='my-1 sm:my-2 uppercase sm:text-4xl xl:text-5xl text-2xl tracking-tight'>
               window tinting {''}
               <br className='sm:hidden'></br>
-              <span className='text-xl sm:text-2xl'>in irvine</span>
+              <span className='text-2xl sm:text-2xl'>in irvine</span>
             </h1>
             <div className='flex items-center space-x-2'>
               <Image
@@ -177,7 +178,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
         {/* why choose us */}
         <section className='relative z-20 pt-12'>
           <div className='container mx-auto px-8 text-sm text-gray-300 space-y-4 lg:text-base'>
-            <h2 className='flex justify-center relative text-2xl	font-godic-regular text-gray-300 w-full px-4 sm:text-4xl  sm:w-max sm:mx-auto sm:px-8 '>
+            <h2 className='text-custom flex justify-center relative	font-godic-regular text-gray-300 w-full px-4 sm:text-4xl  sm:w-max sm:mx-auto sm:px-8'>
               <Image
                 src='/img/auto-window-tint/quote-1.webp'
                 width={63}
@@ -530,6 +531,14 @@ export default function Main({ setOpenNav, setOpenQuote }) {
           </div>
         </section>
       </section>
+
+      {/* Pager */}
+      <Link
+        href='/ceramic-coating'
+        className='lg:hidden fixed top-1/2 right-0 transform -translate-y-1/2 z-20'
+      >
+        <Image src='/img/pager-right.png' width={32} height={32} />
+      </Link>
     </section>
   )
 }

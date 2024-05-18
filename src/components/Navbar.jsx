@@ -30,22 +30,22 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
         />
       </div>
 
-      <div className='container mx-auto px-3 pt-2 flex justify-between items-center relative lg:px-8'>
+      <div className='container mx-auto px-3 pt-0.5 flex justify-between items-center relative lg:px-8'>
         <Link href={`/`}>
           <Logo />
         </Link>
         <div className='flex items-center space-x-4 lg:hidden'>
           <button
-            className='contact-text bg-primary p-1 rounded-full text-xs uppercase font-sarang'
+            className='text-xs bg-primary px-2 py-1.5 rounded-full uppercase font-sarang'
             onClick={handleQuotationModal}
           >
-            contact & appointment
+            get quote
           </button>
           <Link href='#' onClick={handleMobileMenu}>
             <Image
               src='/icons/menu.svg'
-              width={24}
-              height={24}
+              width={36}
+              height={36}
               alt='menu icon'
             />
           </Link>

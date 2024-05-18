@@ -4,6 +4,7 @@ import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import 'photoswipe/dist/photoswipe.css'
 import { Gallery, Item } from 'react-photoswipe-gallery'
+import Link from 'next/link'
 
 export default function Portfolio({ setOpenNav, setOpenQuote }) {
   const suvTruckArr = Array.from({ length: 27 }, (_, index) => index)
@@ -38,9 +39,9 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
           <p className='font-thin text-gray-100 mt-4 '>
             We sincerely thank our customers for their support over the past 15
             years. We promise to continue to provide the best quality and
-            service for customer satisfaction. <br />
+            service for customer satisfaction.{' '}
           </p>
-          <p className='text-white w-max text-sm ml-auto font-thin text-gray-100 mt-2'>
+          <p className='text-white text-right text-sm font-thin text-gray-100 mt-2'>
             -Specialized Auto Tint owner / Jae H Park
           </p>
           <Image
@@ -68,9 +69,23 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
       {/* Portfolio images */}
       <section className='py-8'>
         <div className='container mx-auto px-8'>
-          <h3 className='relative text-xl md:text-2xl text-white font-thin'>
-            SUV & Truck
-          </h3>
+          <div className='flex justify-between items-center lg:justify-start'>
+            <h3 className='relative text-xl md:text-2xl text-white font-thin lg:mr-4'>
+              SUV & Truck
+            </h3>
+            <div className='text-white relative text-xs flex items-center'>
+              <Image
+                src='/icons/expand.svg'
+                width={16}
+                height={16}
+                alt='expand icon'
+                className='mr-1'
+              />
+              <span className='relative top-0.5 text-gray-400'>
+                Click images to expand
+              </span>
+            </div>
+          </div>
           <div className='grid grid-cols-2 gap-4 mt-2 relative'>
             <Gallery>
               {suvTruckArr.map((pic, index) => {
@@ -98,9 +113,23 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
               })}
             </Gallery>
           </div>
-          <h3 className='relative text-xl md:text-2xl text-white font-thin mt-8'>
-            Sedan & Sports
-          </h3>
+          <div className='mt-16 flex justify-between items-center lg:justify-start'>
+            <h3 className='relative text-xl md:text-2xl text-white font-thin lg:mr-4'>
+              Sedan & Sports
+            </h3>
+            <div className='text-white relative text-xs flex items-center'>
+              <Image
+                src='/icons/expand.svg'
+                width={16}
+                height={16}
+                alt='expand icon'
+                className='mr-1'
+              />
+              <span className='relative top-0.5 text-gray-400'>
+                Click images to expand
+              </span>
+            </div>
+          </div>
           <div className='grid grid-cols-2 gap-4 mt-2 relative'>
             <Gallery>
               {sedanSportArr.map((pic, index) => {
@@ -142,6 +171,14 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
           <Footer />
         </section>
       </section>
+
+      {/* Pager */}
+      <Link
+        href='/ceramic-coating'
+        className='lg:hidden fixed top-1/2 left-0 transform -translate-y-1/2 z-20'
+      >
+        <Image src='/img/pager-left.png' width={32} height={32} />
+      </Link>
     </section>
   )
 }

@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
+import Link from 'next/link'
 
 export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
   return (
@@ -183,6 +184,23 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
           <Footer />
         </section>
       </section>
+
+      {/* Pager */}
+      <div className='lg:hidden'>
+        <Link
+          href='/'
+          className='fixed top-1/2 left-0 transform -translate-y-1/2 z-20'
+        >
+          <Image src='/img/pager-left.png' width={32} height={32} />
+        </Link>
+
+        <Link
+          href='/portfolio'
+          className='fixed top-1/2 right-0 transform -translate-y-1/2 z-20'
+        >
+          <Image src='/img/pager-right.png' width={32} height={32} />
+        </Link>
+      </div>
     </section>
   )
 }
