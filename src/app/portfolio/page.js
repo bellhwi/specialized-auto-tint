@@ -8,11 +8,19 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <section className='relative overflow-hidden'>
+    <section
+      className='relative overflow-hidden'
+      style={{ backgroundColor: '#030303' }}
+    >
       <div className='absolute flex justify-between inset-0'>
         <div className='w-1/12' style={{ backgroundColor: '#030303' }}></div>
         <div className='w-1/12' style={{ backgroundColor: '#0a0a0a' }}></div>
-        <div className='w-8/12' style={{ backgroundColor: '#0f0f0f' }}></div>
+        <div
+          style={{
+            width: 'calc(100% - (4/12 * 100%))',
+            backgroundColor: '#0f0f0f',
+          }}
+        ></div>
         <div className='w-1/12' style={{ backgroundColor: '#0a0a0a' }}></div>
         <div className='w-1/12' style={{ backgroundColor: '#030303' }}></div>
       </div>

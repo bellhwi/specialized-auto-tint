@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar'
 import { useState, useEffect } from 'react'
 import Logo from '@/components/Logo'
 import Link from 'next/link'
+import QuoteModal from '@/components/QuoteModal'
 
 export default function Main({ setOpenNav, setOpenQuote }) {
   const currentYear = new Date().getFullYear()
@@ -59,7 +60,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
   }, [])
 
   return (
-    <section className='relative lg:mx-auto lg:w-2/3 lg:max-w-screen-lg'>
+    <section className='relative lg:mx-auto lg:w-1/2 lg:max-w-screen-lg'>
       <Navbar setOpenNav={setOpenNav} setOpenQuote={setOpenQuote} />
       <Image
         src='/img/services/bg-main.webp'
@@ -71,27 +72,27 @@ export default function Main({ setOpenNav, setOpenQuote }) {
       />
 
       {/* main */}
-      <section className='relative z-20 pt-48 md:pt-96 xl:pt-100 2xl:pt-104'>
+      <section className='relative z-20 pt-48 sm:pt-88 lg:pt-80'>
         <div>
           <div className='container mx-auto text-white w-full pt-8 px-8'>
-            <p className='text-xl md:text-3xl xl:text-4xl font-godic-bold text-gray-300'>
+            <p className='text-xl sm:text-3xl font-godic-bold text-gray-300'>
               The Highest Standard of
             </p>
-            <h1 className='my-1 sm:my-2 uppercase sm:text-4xl xl:text-5xl text-2xl tracking-tight'>
+            <h1 className='my-1 sm:my-2 uppercase sm:text-4xl text-2xl tracking-tight'>
               window tinting {''}
               <br className='sm:hidden'></br>
-              <span className='text-2xl sm:text-2xl'>in irvine</span>
+              <span className='text-2xl lg:text-xl'>in irvine</span>
             </h1>
-            <div className='flex items-center space-x-2'>
+            <div className='flex items-center space-x-2 sm:space-x-4'>
               <Image
                 src='/img/logos/3m.webp'
                 width={128}
                 height={66}
-                className='w-16 md:w-20'
+                className='w-20 md:w-24'
                 alt='3m logo'
               />
               <div className='w-5/6'>
-                <p className=' text-primary text-xl md:text-3xl font-godic-bold -mb-1'>
+                <p className=' text-primary text-2xl md:text-4xl font-godic-bold -mb-1'>
                   Authorized Dealer
                 </p>
                 <div className='flex items-center space-x-2'>
@@ -177,7 +178,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
         </div>
         {/* why choose us */}
         <section className='relative z-20 pt-12'>
-          <div className='container mx-auto px-8 text-sm text-gray-300 space-y-4 lg:text-base'>
+          <div className='container mx-auto px-8 text-sm text-gray-300 space-y-8 sm:space-y-16 lg:text-base'>
             <h2 className='text-custom flex justify-center relative	font-godic-regular text-gray-300 w-full px-4 sm:text-4xl  sm:w-max sm:mx-auto sm:px-8'>
               <Image
                 src='/img/auto-window-tint/quote-1.webp'
@@ -202,8 +203,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
                 <span className='text-5xl font-godic-bold mr-1 relative top-1'>
                   1
                 </span>{' '}
-                More than <span className='text-xl md:text-2xl'>15 years</span>{' '}
-                of experience
+                More Than 15 Years of Experience
               </p>
 
               <p className='font-godic-thin text-gray-100'>
@@ -215,7 +215,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
               </p>
             </div>
             {/* Service 2 */}
-            <div className='text-gray-100 flex items-start md:py-8'>
+            <div className='text-gray-100 flex items-start '>
               <div className='md:w-2/3 md:mr-4 space-y-4'>
                 <p className='font-godic-bold text-white text-lg md:text-xl mb-4'>
                   <span className='text-5xl font-godic-bold mr-1 relative top-1'>
@@ -256,7 +256,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
               />
             </div>
             {/* Service 3 */}
-            <div className='text-gray-100 flex items-start md:py-8'>
+            <div className='text-gray-100 flex items-start '>
               <div className='md:w-2/3 md:mr-4 space-y-4'>
                 <p className='font-godic-bold  text-white text-lg md:text-xl mb-4'>
                   <span className='text-5xl font-godic-bold mr-1'>3</span>{' '}
@@ -539,6 +539,9 @@ export default function Main({ setOpenNav, setOpenQuote }) {
       >
         <Image src='/img/pager-right.png' width={32} height={32} />
       </Link>
+
+      {/* Contact Button */}
+      <QuoteModal />
     </section>
   )
 }

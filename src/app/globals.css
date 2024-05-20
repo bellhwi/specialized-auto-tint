@@ -63,6 +63,11 @@ p {
   line-height: 2rem;
 }
 
+/* Maintain portfolio image ratio in full screen size */
+.pswp__img {
+  object-fit: cover;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -79,4 +84,21 @@ p {
   .footer-gradient {
     background-image: linear-gradient(to bottom, transparent 50%, white 80%);
   }
+}
+
+.sticky-container {
+  position: relative;
+}
+
+.sticky-element {
+  position: relative;
+}
+
+.sticky-element.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.sentinel {
+  height: 1px;
 }
