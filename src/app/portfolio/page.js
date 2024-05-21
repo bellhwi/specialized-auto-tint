@@ -1,5 +1,8 @@
 import NavbarDesktop from '@/components/NavbarDesktop'
 import Portfolio from '@/pages/Portfolio'
+import Head from 'next/head'
+import Script from 'next/script'
+
 export const metadata = {
   title: 'Portfolio | Specialized Auto Tint',
   description:
