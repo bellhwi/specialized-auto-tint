@@ -11,7 +11,7 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
   const suvTruckArr = Array.from({ length: 27 }, (_, index) => index)
   const sedanSportArr = Array.from({ length: 40 }, (_, index) => index)
   return (
-    <section className='lg:mx-auto relative  lg:w-1/2 lg:max-w-screen-lg'>
+    <section className='lg:mx-auto relative  lg:w-1/2 lg:max-w-screen-lg '>
       <Image
         src='/img/bg-overlay.webp'
         width={1025}
@@ -31,7 +31,7 @@ export default function Portfolio({ setOpenNav, setOpenQuote }) {
       />
 
       {/* main */}
-      <section className='relative z-20 pt-56 md:pt-100 lg:pt-96'>
+      <section className='relative z-20 pt-56 md:pt-100 lg:pt-96  2xl:pt-108'>
         <div className='max-w-screen-md mx-auto px-8'>
           <h1 className='text-white uppercase text-center text-2xl md:text-4xl'>
             portfolio

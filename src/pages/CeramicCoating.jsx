@@ -19,7 +19,7 @@ export default function CeramicCoating({ setOpenNav, setOpenQuote }) {
       />
 
       {/* main */}
-      <section className='relative z-20 pt-44 md:pt-88 lg:pt-80 '>
+      <section className='relative z-20 pt-44 md:pt-88 lg:pt-80  2xl:pt-104'>
         <div className='container mx-auto'>
           <div className='pt-8 px-8'>
             <p className='text-gray-600 md:text-3xl font-godic-bold'>

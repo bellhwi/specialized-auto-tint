@@ -72,7 +72,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
       />
 
       {/* main */}
-      <section className='relative z-20 pt-48 sm:pt-88 lg:pt-80'>
+      <section className='relative z-20 pt-48 sm:pt-88 lg:pt-80 2xl:pt-104'>
         <div>
           <div className='container mx-auto text-white w-full pt-8 px-8'>
             <p className='text-xl sm:text-3xl font-godic-bold text-gray-300'>
@@ -177,7 +177,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
           )}
         </div>
         {/* why choose us */}
-        <section className='relative z-20 pt-12'>
+        <section className='relative z-20 mt-16'>
           <div className='container mx-auto px-8 text-sm text-gray-300 space-y-8 sm:space-y-16 lg:text-base'>
             <h2 className='text-custom flex justify-center relative	font-godic-regular text-gray-300 w-full px-4 sm:text-4xl  sm:w-max sm:mx-auto sm:px-8'>
               <Image
@@ -198,7 +198,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
               />
             </h2>
             {/* Service 1 */}
-            <div className='text-gray-100 md:pt-8'>
+            <div className='text-gray-100'>
               <p className='font-godic-bold  text-white text-lg md:text-xl mb-4'>
                 <span className='text-5xl font-godic-bold mr-1 relative top-1'>
                   1
@@ -398,7 +398,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
 
         {/* contact */}
         <section
-          className='mt-8 relative z-20 pb-8 bg-none footer-gradient'
+          className='mt-16 relative z-20 pb-8 bg-none footer-gradient'
           id='contact'
         >
           <div className='flex justify-between container mx-auto px-8 text-gray-100 text-sm mt-8 space-y-4 md:space-y-0'>
