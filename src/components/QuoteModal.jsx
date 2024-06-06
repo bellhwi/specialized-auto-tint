@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-const QuoteModal = () => {
+const QuoteModal = ({ ko }) => {
   const [showModal, setShowModal] = useState(false)
 
   const handleQuotationModal = () => {
@@ -21,7 +21,7 @@ const QuoteModal = () => {
         className='absolute cursor-pointer mr-2	 right-0 top-0 z-30  mt-2 text-sm bg-primary px-3 py-2 rounded-full uppercase font-sarang text-white'
         onClick={handleQuotationModal}
       >
-        get quote
+        {ko ? '견적 문의하기' : 'get quote'}
       </button>
 
       {showModal && (
@@ -34,7 +34,7 @@ const QuoteModal = () => {
             onClick={handleModalContentClick}
           >
             <h2 className='text-2xl text-center font-godic-bold mb-4 uppercase'>
-              request a quote by
+              {ko ? '견적 문의하기' : 'request a quote by'}
             </h2>
             <div className='flex items-center mb-2'>
               <Image

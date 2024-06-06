@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 // Modify the Accordion component
-const Accordion = ({ title, isOpen, onToggle }) => {
+const Accordion = ({ title, isOpen, onToggle, ko }) => {
   const toggleAccordion = (e) => {
     e.preventDefault()
     onToggle() // Notify the parent component to toggle the open state
@@ -14,7 +14,7 @@ const Accordion = ({ title, isOpen, onToggle }) => {
       }`}
       onClick={toggleAccordion}
     >
-      <div className='flex justify-between items-center relative top-0.5 lg:top-0'>
+      <div className='flex justify-between items-center relative'>
         <div className='flex items-center'>
           <p
             className={`font-bold text-lg sm:text-xl ${
@@ -34,8 +34,12 @@ const Accordion = ({ title, isOpen, onToggle }) => {
             />
           ) : (
             <>
-              <span className='font-godic-bold sm:hidden'>Learn More</span>
-              <span className='hidden text-lg sm:inline-block'>Learn More</span>
+              <span className='font-godic-bold sm:hidden'>
+                {ko ? '더 알아보기' : 'Learn More'}
+              </span>
+              <span className='hidden text-lg sm:inline-block'>
+                {ko ? '더 알아보기' : 'Learn More'}
+              </span>
             </>
           )}
         </button>

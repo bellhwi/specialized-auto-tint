@@ -5,7 +5,7 @@ import Logo from './Logo'
 import { useState } from 'react'
 import Image from 'next/image'
 
-const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
+const Navbar = ({ setOpenNav, setOpenQuote, ko }) => {
   const handleMobileMenu = () => {
     setShowMobileNav(!showMobileNav)
     setOpenNav()
@@ -31,7 +31,7 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
       </div>
 
       <div className='container mx-auto px-3 pt-0.5 flex justify-between items-center relative lg:px-8'>
-        <Link href={`/`}>
+        <Link href={ko ? '/ko' : '/'}>
           <Logo />
         </Link>
         <div className='flex items-center space-x-4 lg:hidden'>
@@ -39,7 +39,7 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
             className='text-xs bg-primary px-2 py-1.5 rounded-full uppercase font-sarang'
             onClick={handleQuotationModal}
           >
-            get quote
+            {ko ? '견적 문의하기' : 'get quote'}
           </button>
           <Link href='#' onClick={handleMobileMenu}>
             <Image
@@ -81,16 +81,19 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
           showMobileNav ? 'translate-x-0' : 'translate-x-48'
         } bg-gradient-to-r from-zinc-900 from-30% via-zinc-800 via-60% to-zinc-600`}
       >
-        <Link href='/' className='uppercase'>
-          window tint
+        <Link href={ko ? '/ko' : '/'} className='uppercase'>
+          {ko ? '윈도우 틴트' : 'window tint'}
         </Link>
         <hr className={`w-full border-gray-200 `} />
-        <Link href='/ceramic-coating' className='uppercase'>
-          ceramic coating
+        <Link
+          href={ko ? '/ko/ceramic-coating' : '/ceramic-coating'}
+          className='uppercase'
+        >
+          {ko ? '세라믹 코팅' : 'ceramic coating'}
         </Link>
         <hr className={`w-full border-gray-200 `} />
-        <Link href='/portfolio' className='uppercase'>
-          portfolio
+        <Link href={ko ? '/ko/portfolio' : '/portfolio'} className='uppercase'>
+          {ko ? '포트폴리오' : 'portfolio'}
         </Link>
         <div
           className={`top-8 mx-auto relative w-8 h-8 rounded-full flex items-center justify-center border cursor-pointer transition hover:rotate-90`}
@@ -103,6 +106,27 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
             alt='close icon'
           />
         </div>
+        {/* Language Change */}
+        {/* <div
+          className={`top-16 mx-auto relative space-x-6 flex items-center justify-center`}
+        >
+          <Link href={'/'}>
+            <Image
+              src='/img/us-flag.webp'
+              width={32}
+              height={32}
+              alt='united states flag'
+            />
+          </Link>
+          <Link href={'/ko'}>
+            <Image
+              src='/img/ko-flag.webp'
+              width={32}
+              height={32}
+              alt='korea flag'
+            />
+          </Link>
+        </div> */}
       </ul>
 
       {/* MOBILE MENU OVERLAY */}
@@ -124,7 +148,7 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
           ></div>
           <div className='absolute mt-24 left-1/2 transform -translate-x-1/2 p-8 z-50 w-4/5 rounded text-center bg-gradient-to-b from-zinc-400 from-20% to-white'>
             <p className='text-lg uppercase font-godic-bold text-black'>
-              request a quote by
+              {ko ? '견적 문의하기' : 'request a quote by'}
             </p>
             <div className='flex items-center justify-center mt-4 space-x-2'>
               <a href='tel:949-341-9100' className='p-4'>
@@ -135,7 +159,9 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
                     height={24}
                     alt='phone icon'
                   />
-                  <p className='text-sm mt-2 '>Calling Us</p>
+                  <p className='text-sm mt-2 '>
+                    {ko ? '전화하기' : 'Calling Us'}
+                  </p>
                 </div>
               </a>
               <div className='h-16 border-l border-black'></div>
@@ -147,7 +173,9 @@ const Navbar = ({ main, setOpenNav, setOpenQuote }) => {
                     height={24}
                     alt='mail icon'
                   />
-                  <p className='text-sm mt-2 '>Emailing Us</p>
+                  <p className='text-sm mt-2 '>
+                    {ko ? '이메일 보내기' : 'Emailing Us'}
+                  </p>
                 </div>
               </a>
             </div>
