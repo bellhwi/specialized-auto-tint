@@ -107,26 +107,28 @@ const Navbar = ({ setOpenNav, setOpenQuote, ko }) => {
           />
         </div>
         {/* Language Change */}
-        {/* <div
-          className={`top-16 mx-auto relative space-x-6 flex items-center justify-center`}
-        >
-          <Link href={'/'}>
-            <Image
-              src='/img/us-flag.webp'
-              width={32}
-              height={32}
-              alt='united states flag'
-            />
-          </Link>
-          <Link href={'/ko'}>
-            <Image
-              src='/img/ko-flag.webp'
-              width={32}
-              height={32}
-              alt='korea flag'
-            />
-          </Link>
-        </div> */}
+        {ko ? (
+          <div
+            className={`top-16 mx-auto relative space-x-6 flex items-center justify-center`}
+          >
+            <Link href={'/'}>
+              <Image
+                src='/img/us-flag.webp'
+                width={32}
+                height={32}
+                alt='united states flag'
+              />
+            </Link>
+            <Link href={'/ko'}>
+              <Image
+                src='/img/ko-flag.webp'
+                width={32}
+                height={32}
+                alt='korea flag'
+              />
+            </Link>
+          </div>
+        ) : null}
       </ul>
 
       {/* MOBILE MENU OVERLAY */}
