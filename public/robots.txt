@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://s-worktint.com/
+
+# Sitemaps
+Sitemap: https://s-worktint.com/sitemap.xml
