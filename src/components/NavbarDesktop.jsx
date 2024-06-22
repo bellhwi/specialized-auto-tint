@@ -82,29 +82,6 @@ const NavbarDesktop = ({ main, ceramic, portfolio, ko }) => {
           />
         </li>
       </ul>
-
-      <div
-        className={`top-16 mx-auto relative space-x-6 flex items-center justify-center`}
-      >
-        <Link href={'/'}>
-          <Image
-            src='/img/us-flag.webp'
-            width={32}
-            height={32}
-            alt='united states flag'
-            priority
-          />
-        </Link>
-        <Link href={'/ko'}>
-          <Image
-            src='/img/ko-flag.webp'
-            width={32}
-            height={32}
-            alt='korea flag'
-            priority
-          />
-        </Link>
-      </div>
     </div>
   )
 }

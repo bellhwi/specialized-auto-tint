@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { useState } from 'react'
+import Link from 'next/link'
 
 const QuoteModal = ({ ko }) => {
   const [showModal, setShowModal] = useState(false)
@@ -17,6 +18,29 @@ const QuoteModal = ({ ko }) => {
   }
   return (
     <div className='hidden lg:block'>
+      <div
+        className={`absolute right-36 top-3.5 space-x-3 z-30 flex items-center justify-center`}
+      >
+        <p className='text-white font-bold'>{ko ? '언어:' : 'Language:'} </p>
+        <Link className='mr-6' href={'/'}>
+          <Image
+            src='/img/us-flag.webp'
+            width={32}
+            height={32}
+            alt='united states flag'
+            priority
+          />
+        </Link>
+        <Link href={'/ko'}>
+          <Image
+            src='/img/ko-flag.webp'
+            width={32}
+            height={32}
+            alt='korea flag'
+            priority
+          />
+        </Link>
+      </div>
       <button
         className='absolute cursor-pointer mr-2	 right-0 top-0 z-30  mt-2 text-sm bg-primary px-3 py-2 rounded-full uppercase font-sarang text-white'
         onClick={handleQuotationModal}

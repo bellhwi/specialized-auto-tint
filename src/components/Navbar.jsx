@@ -35,6 +35,29 @@ const Navbar = ({ setOpenNav, setOpenQuote, ko }) => {
           <Logo />
         </Link>
         <div className='flex items-center space-x-4 lg:hidden'>
+          {/* Language Change */}
+
+          <div
+            className={`mx-auto relative space-x-3 flex items-center justify-center`}
+          >
+            <Link href={'/'}>
+              <Image
+                src='/img/us-flag.webp'
+                width={24}
+                height={24}
+                alt='united states flag'
+              />
+            </Link>
+            <Link href={'/ko'}>
+              <Image
+                src='/img/ko-flag.webp'
+                width={24}
+                height={24}
+                alt='korea flag'
+              />
+            </Link>
+          </div>
+
           <button
             className='text-xs bg-primary px-2 py-1.5 rounded-full uppercase font-sarang'
             onClick={handleQuotationModal}
@@ -106,29 +129,6 @@ const Navbar = ({ setOpenNav, setOpenQuote, ko }) => {
             alt='close icon'
           />
         </div>
-        {/* Language Change */}
-        {ko ? (
-          <div
-            className={`top-16 mx-auto relative space-x-6 flex items-center justify-center`}
-          >
-            <Link href={'/'}>
-              <Image
-                src='/img/us-flag.webp'
-                width={32}
-                height={32}
-                alt='united states flag'
-              />
-            </Link>
-            <Link href={'/ko'}>
-              <Image
-                src='/img/ko-flag.webp'
-                width={32}
-                height={32}
-                alt='korea flag'
-              />
-            </Link>
-          </div>
-        ) : null}
       </ul>
 
       {/* MOBILE MENU OVERLAY */}
