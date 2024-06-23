@@ -19,7 +19,7 @@ const QuoteModal = ({ ko }) => {
   return (
     <div className='hidden lg:block'>
       <div
-        className={`absolute right-36 top-3.5 space-x-3 z-30 flex items-center justify-center`}
+        className={`absolute right-36 top-2.5 space-x-3 z-30 flex items-center justify-center`}
       >
         <p className='text-white font-bold'>{ko ? '언어:' : 'Language:'} </p>
         <Link className='mr-6' href={'/'}>

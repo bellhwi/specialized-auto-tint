@@ -43,16 +43,16 @@ const Navbar = ({ setOpenNav, setOpenQuote, ko }) => {
             <Link href={'/'}>
               <Image
                 src='/img/us-flag.webp'
-                width={24}
-                height={24}
+                width={26}
+                height={26}
                 alt='united states flag'
               />
             </Link>
             <Link href={'/ko'}>
               <Image
                 src='/img/ko-flag.webp'
-                width={24}
-                height={24}
+                width={26}
+                height={26}
                 alt='korea flag'
               />
             </Link>
