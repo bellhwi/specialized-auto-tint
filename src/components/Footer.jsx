@@ -40,7 +40,7 @@ const Footer = () => {
         <p className='text-sm text-center text-gray-800'>
           &copy; {currentYear} Specialized Auto Tint <br /> Powered by{' '}
           <a
-            href='https://webtamin.co/'
+            href='https://webtamin.com/'
             target='_blank'
             rel='noopener'
             className='hover:text-primary'

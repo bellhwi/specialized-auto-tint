@@ -494,7 +494,7 @@ export default function Main({ setOpenNav, setOpenQuote }) {
               <p className='hidden md:block text-xs text-center text-gray-600 mt-4'>
                 &copy; {currentYear} Specialized Auto Tint x Powered by{' '}
                 <a
-                  href='https://webtamin.co/'
+                  href='https://webtamin.com/'
                   target='_blank'
                   rel='noopener'
                   className='hover:text-primary'
